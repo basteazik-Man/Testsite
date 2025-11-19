@@ -7,7 +7,7 @@ import AdminAuth from "../components/AdminAuth";
 import { getBrandStatus } from "../utils/priceUtils";
 import { BRANDS } from "../data/brands";
 import { brandData } from "../data/brandData";
-import { syncData, saveToCloud, loadFromCloud } from "../utils/syncUtils";
+import { syncData, saveToCloud, loadFromCloud } from '../utils/syncUtils';
 
 // Вспомогательная функция для получения всех моделей из brandData
 const getAllModelsFromBrandData = (brandKey) => {
@@ -419,7 +419,6 @@ export default function AdminPanel() {
     }
   }, []);
 
-  // ФУНКЦИИ СИНХРОНИЗАЦИИ
   const handleSync = async () => {
     setIsSyncing(true);
     setSyncStatus('Синхронизация...');
@@ -435,92 +434,59 @@ export default function AdminPanel() {
   };
 
   const handleForceUpload = async () => {
-  console.log('=== НАЧАЛО ЗАГРУЗКИ В ОБЛАКО ===');
-  
-  if (!confirm('Вы уверены? Это перезапишет данные в облаке текущими локальными данными.')) return;
-  
-  setIsSyncing(true);
-  setSyncStatus('Загрузка в облако...');
-  
-  try {
-    // Собираем данные из localStorage
-    const prices = localStorage.getItem('chipgadget_prices');
-    const categoryServices = localStorage.getItem('chipgadget_category_services');
-    const delivery = localStorage.getItem('chipgadget_delivery');
+    if (!confirm('Вы уверены? Это перезапишет данные в облаке текущими локальными данными.')) return;
     
-    console.log('Данные из localStorage:');
-    console.log('- prices:', prices ? `есть (${prices.length} символов)` : 'нет');
-    console.log('- categoryServices:', categoryServices ? `есть (${categoryServices.length} символов)` : 'нет');
-    console.log('- delivery:', delivery ? `есть (${delivery.length} символов)` : 'нет');
-
-    const data = {
-      prices: prices ? JSON.parse(prices) : {},
-      categoryServices: categoryServices ? JSON.parse(categoryServices) : {},
-      delivery: delivery ? JSON.parse(delivery) : {},
-      lastSync: new Date().toISOString(),
-    };
-
-    console.log('Подготовленные данные для облака:', {
-      pricesKeys: Object.keys(data.prices),
-      categoryServicesKeys: Object.keys(data.categoryServices),
-      deliveryKeys: Object.keys(data.delivery)
-    });
-
-    // Пробуем отправить в облако
-    console.log('Отправляем данные в облако...');
-    const result = await saveToCloud(data);
-    console.log('Результат сохранения в облако:', result);
-    
-    setSyncStatus('✅ Данные загружены в облако');
-    
-  } catch (error) {
-    console.error('❌ ОШИБКА при загрузке в облако:', error);
-    setSyncStatus('❌ Ошибка загрузки в облако: ' + error.message);
-  } finally {
-    setIsSyncing(false);
-    setTimeout(() => setSyncStatus(''), 5000);
-  }
-};
+    setIsSyncing(true);
+    setSyncStatus('Загрузка в облако...');
+    try {
+      const data = {
+        prices: JSON.parse(localStorage.getItem('chipgadget_prices') || '{}'),
+        categoryServices: JSON.parse(localStorage.getItem('chipgadget_category_services') || '{}'),
+        delivery: JSON.parse(localStorage.getItem('chipgadget_delivery') || '{}'),
+        lastSync: new Date().toISOString(),
+      };
+      await saveToCloud(data);
+      setSyncStatus('✅ Данные загружены в облако');
+    } catch (error) {
+      setSyncStatus('❌ Ошибка загрузки в облако');
+    } finally {
+      setIsSyncing(false);
+      setTimeout(() => setSyncStatus(''), 3000);
+    }
+  };
 
   const handleForceDownload = async () => {
-  console.log("🔽 Кнопка 'Загрузить из облака' нажата");
-  
-  try {
+    if (!confirm('Вы уверены? Это перезапишет локальные данные данными из облака.')) return;
+    
     setIsSyncing(true);
     setSyncStatus('Загрузка из облака...');
-    
-    // Загружаем из облака
-    const cloudData = await loadFromCloud();
-    console.log("☁️ Данные из облака:", cloudData);
-    
-    // Сохраняем в localStorage
-    localStorage.setItem('chipgadget_prices', JSON.stringify(cloudData.prices || {}));
-    localStorage.setItem('chipgadget_category_services', JSON.stringify(cloudData.categoryServices || {}));
-    localStorage.setItem('chipgadget_delivery', JSON.stringify(cloudData.delivery || {}));
-    
-    // ПЕРЕЗАГРУЖАЕМ ВСЕ СОСТОЯНИЯ ДЛЯ ОБНОВЛЕНИЯ ИНТЕРФЕЙСА
-    setData(buildInitialData());
-    setCategoryServices(cloudData.categoryServices || {});
-    setBrandKey(""); // Сбрасываем выбранный бренд
-    
-    console.log("🔄 Все состояния обновлены, интерфейс должен перерисоваться");
-    
-    setSyncStatus('✅ Данные загружены из облака! Интерфейс обновлен.');
-    
-    // Показываем уведомление о успешной загрузке
-    setTimeout(() => {
-      if (window.confirm('Данные успешно загружены из облака! Хотите перезагрузить страницу для полного обновления?')) {
-        window.location.reload();
-      }
-    }, 1000);
-    
-  } catch (error) {
-    console.error("❌ Ошибка:", error);
-    setSyncStatus('❌ Ошибка: ' + error.message);
-  } finally {
-    setIsSyncing(false);
-  }
-};
+    try {
+      const cloudData = await loadFromCloud();
+      localStorage.setItem('chipgadget_prices', JSON.stringify(cloudData.prices));
+      localStorage.setItem('chipgadget_category_services', JSON.stringify(cloudData.categoryServices));
+      localStorage.setItem('chipgadget_delivery', JSON.stringify(cloudData.delivery));
+      
+      // Перезагружаем данные в состоянии
+      setData(buildInitialData());
+      setCategoryServices(cloudData.categoryServices || {});
+      setBrandKey(""); // Сбрасываем выбранный бренд
+      
+      setSyncStatus('✅ Данные загружены из облака! Интерфейс обновлен.');
+      
+      // Показываем уведомление о успешной загрузке
+      setTimeout(() => {
+        if (window.confirm('Данные успешно загружены из облака! Хотите перезагрузить страницу для полного обновления?')) {
+          window.location.reload();
+        }
+      }, 1000);
+      
+    } catch (error) {
+      setSyncStatus('❌ Ошибка загрузки из облака');
+    } finally {
+      setIsSyncing(false);
+      setTimeout(() => setSyncStatus(''), 3000);
+    }
+  };
 
   const handleImport = (event) => {
     const file = event.target.files[0];
@@ -840,31 +806,6 @@ export default function AdminPanel() {
         >
           🚚 Экспорт доставки
         </button>
-        <button
-          onClick={() => importJsonRef.current?.click()}
-          className="px-4 py-2 rounded-lg text-white font-medium bg-blue-600 hover:bg-blue-700"
-        >
-          📤 Импорт JSON
-        </button>
-        <button
-          onClick={() => importJsRef.current?.click()}
-          className="px-4 py-2 rounded-lg text-white font-medium bg-purple-600 hover:bg-purple-700"
-        >
-          📤 Импорт JS
-        </button>
-        <button
-          onClick={addBrand}
-          className="px-4 py-2 rounded-lg text-white font-medium bg-emerald-600 hover:bg-emerald-700"
-        >
-          ➕ Добавить бренд
-        </button>
-        <button
-          onClick={deleteBrand}
-          className="px-4 py-2 rounded-lg text-white font-medium bg-rose-600 hover:bg-rose-700"
-        >
-          🗑️ Удалить бренд
-        </button>
-
         {/* Кнопки синхронизации */}
         <button
           onClick={handleSync}
@@ -892,6 +833,30 @@ export default function AdminPanel() {
           }`}
         >
           📥 Загрузить из облака
+        </button>
+        <button
+          onClick={() => importJsonRef.current?.click()}
+          className="px-4 py-2 rounded-lg text-white font-medium bg-blue-600 hover:bg-blue-700"
+        >
+          📤 Импорт JSON
+        </button>
+        <button
+          onClick={() => importJsRef.current?.click()}
+          className="px-4 py-2 rounded-lg text-white font-medium bg-purple-600 hover:bg-purple-700"
+        >
+          📤 Импорт JS
+        </button>
+        <button
+          onClick={addBrand}
+          className="px-4 py-2 rounded-lg text-white font-medium bg-emerald-600 hover:bg-emerald-700"
+        >
+          ➕ Добавить бренд
+        </button>
+        <button
+          onClick={deleteBrand}
+          className="px-4 py-2 rounded-lg text-white font-medium bg-rose-600 hover:bg-rose-700"
+        >
+          🗑️ Удалить бренд
         </button>
       </div>
 

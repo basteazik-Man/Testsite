@@ -7,6 +7,7 @@ import AdminAuth from "../components/AdminAuth";
 import { getBrandStatus } from "../utils/priceUtils";
 import { BRANDS } from "../data/brands";
 import { brandData } from "../data/brandData";
+import { syncData, saveToCloud, loadFromCloud } from "../utils/syncUtils";
 
 // Вспомогательная функция для получения всех моделей из brandData
 const getAllModelsFromBrandData = (brandKey) => {
@@ -382,6 +383,8 @@ export default function AdminPanel() {
   const [unsaved, setUnsaved] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [activeTab, setActiveTab] = useState("brands");
+  const [syncStatus, setSyncStatus] = useState('');
+  const [isSyncing, setIsSyncing] = useState(false);
   const saveTimer = useRef(null);
   const importJsonRef = useRef(null);
   const importJsRef = useRef(null);
@@ -415,6 +418,67 @@ export default function AdminPanel() {
       setTimeout(() => setMessage(""), 3000);
     }
   }, []);
+
+  // ФУНКЦИИ СИНХРОНИЗАЦИИ
+  const handleSync = async () => {
+    setIsSyncing(true);
+    setSyncStatus('Синхронизация...');
+    try {
+      const result = await syncData();
+      setSyncStatus(`✅ ${result.action === 'upload' ? 'Данные загружены в облако' : 'Данные загружены из облака'}`);
+    } catch (error) {
+      setSyncStatus('❌ Ошибка синхронизации');
+    } finally {
+      setIsSyncing(false);
+      setTimeout(() => setSyncStatus(''), 3000);
+    }
+  };
+
+  const handleForceUpload = async () => {
+    if (!confirm('Вы уверены? Это перезапишет данные в облаке текущими локальными данными.')) return;
+    
+    setIsSyncing(true);
+    setSyncStatus('Загрузка в облако...');
+    try {
+      const data = {
+        prices: JSON.parse(localStorage.getItem('chipgadget_prices') || '{}'),
+        categoryServices: JSON.parse(localStorage.getItem('chipgadget_category_services') || '{}'),
+        delivery: JSON.parse(localStorage.getItem('chipgadget_delivery') || '{}'),
+        lastSync: new Date().toISOString(),
+      };
+      await saveToCloud(data);
+      setSyncStatus('✅ Данные загружены в облако');
+    } catch (error) {
+      setSyncStatus('❌ Ошибка загрузки в облако');
+    } finally {
+      setIsSyncing(false);
+      setTimeout(() => setSyncStatus(''), 3000);
+    }
+  };
+
+  const handleForceDownload = async () => {
+    if (!confirm('Вы уверены? Это перезапишет локальные данные данными из облака.')) return;
+    
+    setIsSyncing(true);
+    setSyncStatus('Загрузка из облака...');
+    try {
+      const cloudData = await loadFromCloud();
+      localStorage.setItem('chipgadget_prices', JSON.stringify(cloudData.prices));
+      localStorage.setItem('chipgadget_category_services', JSON.stringify(cloudData.categoryServices));
+      localStorage.setItem('chipgadget_delivery', JSON.stringify(cloudData.delivery));
+      
+      // Перезагружаем данные в состоянии
+      setData(buildInitialData());
+      setCategoryServices(cloudData.categoryServices || {});
+      
+      setSyncStatus('✅ Данные загружены из облака');
+    } catch (error) {
+      setSyncStatus('❌ Ошибка загрузки из облака');
+    } finally {
+      setIsSyncing(false);
+      setTimeout(() => setSyncStatus(''), 3000);
+    }
+  };
 
   const handleImport = (event) => {
     const file = event.target.files[0];
@@ -758,6 +822,35 @@ export default function AdminPanel() {
         >
           🗑️ Удалить бренд
         </button>
+
+        {/* Кнопки синхронизации */}
+        <button
+          onClick={handleSync}
+          disabled={isSyncing}
+          className={`px-4 py-2 rounded-lg text-white font-medium ${
+            isSyncing ? 'bg-gray-400' : 'bg-blue-600 hover:bg-blue-700'
+          }`}
+        >
+          🔄 Синхронизация
+        </button>
+        <button
+          onClick={handleForceUpload}
+          disabled={isSyncing}
+          className={`px-4 py-2 rounded-lg text-white font-medium ${
+            isSyncing ? 'bg-gray-400' : 'bg-green-600 hover:bg-green-700'
+          }`}
+        >
+          ☁️ Загрузить в облако
+        </button>
+        <button
+          onClick={handleForceDownload}
+          disabled={isSyncing}
+          className={`px-4 py-2 rounded-lg text-white font-medium ${
+            isSyncing ? 'bg-gray-400' : 'bg-orange-600 hover:bg-orange-700'
+          }`}
+        >
+          📥 Загрузить из облака
+        </button>
       </div>
 
       {/* Скрытые input'ы для импорта */}
@@ -781,6 +874,14 @@ export default function AdminPanel() {
           message.includes('❌') ? 'text-red-700' : 'text-green-700'
         }`}>
           {message}
+        </div>
+      )}
+
+      {syncStatus && (
+        <div className={`text-center font-medium mb-4 ${
+          syncStatus.includes('❌') ? 'text-red-700' : 'text-green-700'
+        }`}>
+          {syncStatus}
         </div>
       )}
 

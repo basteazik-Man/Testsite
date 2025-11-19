@@ -1,6 +1,6 @@
-// CategoryServicesEditor.jsx
+// CategoryServicesEditor.jsx (обновленная версия с редактированием названий и перемещением)
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, Reorder } from 'framer-motion';
 
 const CategoryServicesEditor = ({ data, onChange }) => {
   const [expandedCategory, setExpandedCategory] = useState(null);
@@ -39,6 +39,12 @@ const CategoryServicesEditor = ({ data, onChange }) => {
       newData[categoryId][index][field] = value;
       onChange(newData);
     }
+  };
+
+  const handleServiceReorder = (categoryId, reorderedServices) => {
+    const newData = { ...data };
+    newData[categoryId] = reorderedServices;
+    onChange(newData);
   };
 
   const handleAddCategory = () => {
@@ -140,41 +146,52 @@ const CategoryServicesEditor = ({ data, onChange }) => {
                 )}
               </div>
 
-              <AnimatePresence>
-                {expandedCategory === category.id && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="p-4 bg-gray-50">
-                      <div className="flex justify-between items-center mb-4">
-                        <h3 className="text-lg font-semibold text-gray-800">
-                          Услуги для {category.title}
-                        </h3>
-                        <button
-                          onClick={() => handleAddService(category.id)}
-                          className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
-                        >
-                          ➕ Добавить услугу
-                        </button>
-                      </div>
+              {expandedCategory === category.id && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="p-4 bg-gray-50">
+                    <div className="flex justify-between items-center mb-4">
+                      <h3 className="text-lg font-semibold text-gray-800">
+                        Услуги для {category.title}
+                      </h3>
+                      <button
+                        onClick={() => handleAddService(category.id)}
+                        className="px-3 py-1 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700"
+                      >
+                        ➕ Добавить услугу
+                      </button>
+                    </div>
 
-                      {(!data || !data[category.id] || data[category.id].length === 0) ? (
-                        <div className="text-center py-8 text-gray-500">
-                          Услуги пока не добавлены
-                        </div>
-                      ) : (
-                        <div className="space-y-3">
-                          {data[category.id].map((service, index) => (
+                    {(!data || !data[category.id] || data[category.id].length === 0) ? (
+                      <div className="text-center py-8 text-gray-500">
+                        Услуги пока не добавлены
+                      </div>
+                    ) : (
+                      <Reorder.Group 
+                        axis="y" 
+                        values={data[category.id] || []} 
+                        onReorder={(reordered) => handleServiceReorder(category.id, reordered)}
+                        className="space-y-3"
+                      >
+                        {(data[category.id] || []).map((service, index) => (
+                          <Reorder.Item key={index} value={service}>
                             <motion.div
-                              key={index}
-                              className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200"
+                              className="flex items-center gap-3 p-3 bg-white rounded-lg border border-gray-200 hover:shadow-md transition-all"
                               initial={{ opacity: 0, y: 10 }}
                               animate={{ opacity: 1, y: 0 }}
                               transition={{ delay: index * 0.1 }}
                             >
+                              {/* Handle для перетаскивания */}
+                              <div className="flex flex-col items-center">
+                                <button className="text-gray-400 hover:text-gray-600 cursor-grab text-lg">
+                                  ⋮⋮
+                                </button>
+                              </div>
+
                               <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-3">
                                 <div>
                                   <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -209,13 +226,19 @@ const CategoryServicesEditor = ({ data, onChange }) => {
                                 🗑️
                               </button>
                             </motion.div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+
+                            {/* Подсказка по перетаскиванию */}
+                            <div className="mt-1 text-xs text-gray-500 flex items-center gap-1 pl-10">
+                              <span>⋮⋮</span>
+                              <span>Перетащите для изменения порядка</span>
+                            </div>
+                          </Reorder.Item>
+                        ))}
+                      </Reorder.Group>
+                    )}
+                  </div>
+                </motion.div>
+              )}
             </motion.div>
           ))}
         </div>

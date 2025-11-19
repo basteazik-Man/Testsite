@@ -6,7 +6,7 @@ import ModelPage from "./pages/ModelPage";
 import SearchResults from "./pages/SearchResults";
 import Services from "./pages/Services";
 import DeliveryPage from "./pages/DeliveryPage";
-import DeliveryOrderPage from "./pages/DeliveryOrderPage"; // ДОБАВЛЕНО
+import DeliveryOrderPage from "./pages/DeliveryOrderPage";
 import ScrollToTop from "./components/ScrollToTop";
 import HeaderMain from "./components/HeaderMain";
 import FooterMain from "./components/FooterMain";
@@ -30,7 +30,7 @@ function MainLayout() {
             <Route path="/search" element={<SearchResults />} />
             <Route path="/services" element={<Services />} />
             <Route path="/delivery" element={<DeliveryPage />} />
-            <Route path="/delivery-order" element={<DeliveryOrderPage />} /> {/* ДОБАВЛЕНО */}
+            <Route path="/delivery-order" element={<DeliveryOrderPage />} />
           </Routes>
           <ShareButton />
           <DeliveryButton />

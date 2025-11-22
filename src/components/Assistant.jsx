@@ -43,10 +43,10 @@ export default function Assistant({ size = 180, onClick }) {
       return () => clearInterval(interval);
   }, []);
 
-  const remove Item = (id) => {
+  // ИСПРАВЛЕНО ЗДЕСЬ: removeItem пишется слитно
+  const removeItem = (id) => {
     setItems(prev => prev.filter(item => item.id !== id));
   };
-
 
   // Анимация ТРЯСКИ (быстрая вибрация)
   const shakeVariant = {
@@ -107,7 +107,8 @@ export default function Assistant({ size = 180, onClick }) {
                 initial={{ y: 0, opacity: 1, rotate: 0 }}
                 animate={{ y: 180, opacity: 0, rotate: Math.random() * 360 }}
                 transition={{ duration: 2, ease: "easeIn" }}
-                onAnimationComplete={() => remove Item(item.id)}
+                // ИСПРАВЛЕНО ЗДЕСЬ: removeItem слитно
+                onAnimationComplete={() => removeItem(item.id)}
             >
                 {item.type === 'gift' ? <GiftIcon/> : <DiscountIcon/>}
             </motion.div>
@@ -169,7 +170,7 @@ export default function Assistant({ size = 180, onClick }) {
             <path d="M10 120 Q-10 150 5 170" stroke="#EAB308" strokeWidth="10" strokeLinecap="round" fill="none" />
              <circle cx="5" cy="170" r="8" fill="#1F2937" />
 
-            {/* Правая рука (ДЕРЖИТСЯ ЗА СТВОЛ) - Исправлено крепление */}
+            {/* Правая рука (ДЕРЖИТСЯ ЗА СТВОЛ) */}
             <path d="M90 120 C 110 120, 120 140, 145 190" stroke="#EAB308" strokeWidth="10" strokeLinecap="round" fill="none" />
             <circle cx="145" cy="190" r="8" fill="#1F2937" /> {/* Перчатка на стволе */}
 

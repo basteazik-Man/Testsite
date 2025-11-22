@@ -1,0 +1,47 @@
+/* assistant.css */
+.assistant-wrapper { position: relative; z-index: 60; }
+.assistant-window {
+  width: 320px;
+  max-width: 36vw;
+  min-width: 260px;
+  background: linear-gradient(180deg,#e8f3ff, #d7ebff);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 10px 30px rgba(15,40,100,0.12);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+.assistant-topline { font-weight:700; color:#06306b; font-size:14px; margin-bottom:8px; text-align:center;}
+.assistant-stage { display:flex; gap:12px; align-items:center; justify-content:flex-start; padding:6px; }
+.character { width:120px; height:120px; cursor:pointer; position:relative; display:flex; align-items:center; justify-content:center; }
+.char-svg { width:120px; height:120px; }
+.hover-label { position:absolute; bottom:-18px; left:0; right:0; text-align:center; font-size:12px; color:#03306b; opacity:0.9; }
+
+.bubble-area { flex:1; display:flex; align-items:center; justify-content:center; padding-right:8px; }
+.speech-bubble {
+  background: white;
+  padding:10px 14px;
+  border-radius:12px;
+  box-shadow: 0 6px 16px rgba(11,34,73,0.08);
+  font-size:13px;
+  color:#08306b;
+  max-width: 180px;
+  text-align:center;
+}
+
+/* Diagnosis page */
+.diagnosis-page { padding:18px; max-width:920px; margin:18px auto; }
+.diagnosis-card { background:#ffffff; border-radius:12px; padding:16px; box-shadow:0 6px 20px rgba(3,24,60,0.06); }
+.lead { margin-bottom:12px; color:#173e6b; }
+.controls { display:flex; gap:8px; align-items:center; margin-bottom:12px; flex-wrap:wrap; }
+.controls input[type="text"], .controls input, .booking input, .booking textarea { padding:10px; border-radius:8px; border:1px solid #e6eefc; min-width:220px; }
+.controls .mic { padding:10px 12px; border-radius:10px; background:linear-gradient(180deg,#fff,#f1f8ff); border:1px solid #cfe8ff; cursor:pointer; }
+.controls .mic.listening { box-shadow: 0 0 0 6px rgba(107,155,255,0.08); transform:scale(1.02); }
+
+.result-area { margin-top:10px; }
+.result-ok .service-card { margin-top:8px; padding:8px; border-radius:10px; background:linear-gradient(180deg,#f7fbff,#eef7ff); display:flex; justify-content:space-between; gap:8px; align-items:center; }
+.s-title { font-weight:700; color:#05306a; }
+.s-price { font-weight:700; color:#0b6cff; }
+
+.booking { margin-top:12px; }
+.booking .messengers { display:flex; gap:8px; margin:8px 0; }
+.booking .send { margin-top:8px; padding:10px 12px; border-radius:10px; background:#0b6cff; color:#fff; border:none; cursor:pointer; }

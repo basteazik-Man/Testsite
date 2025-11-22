@@ -1,60 +1,52 @@
-/* assistant.css - Полная замена */
+/* assistant.css - Стили для ассистента и облачка */
 
-/* Контейнер для облачка с текстом */
 .speech-bubble-container {
   position: absolute;
-  top: -90px; /* Высота над головой */
+  top: -85px; /* Высота над головой */
   left: 50%;
   transform: translateX(-50%);
-  width: 220px;
-  pointer-events: none; /* Чтобы клики проходили сквозь пустоту */
+  width: 200px;
+  pointer-events: none;
   z-index: 100;
-  animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s forwards;
   opacity: 0;
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s forwards;
 }
 
-/* Сам текст облачка */
 .speech-bubble-text {
-  background: #ffffff;
-  padding: 14px 18px;
-  border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 50, 100, 0.15);
+  background: white;
+  padding: 12px 16px;
+  border-radius: 18px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   color: #1f2937;
-  font-family: sans-serif;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.4;
   text-align: center;
   position: relative;
-  border: 2px solid #eef2ff;
+  border: 1px solid #e5e7eb;
 }
 
-/* Треугольный хвостик снизу облачка */
+/* Хвостик облачка */
 .speech-bubble-text::after {
   content: '';
   position: absolute;
-  bottom: -10px;
+  bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 10px 10px 0;
+  border-width: 8px 8px 0;
   border-style: solid;
-  border-color: #ffffff transparent transparent transparent;
-  filter: drop-shadow(0 2px 1px rgba(0,0,0,0.05));
+  border-color: #fff transparent transparent transparent;
 }
 
-/* Анимация появления */
 @keyframes popIn {
-  0% { opacity: 0; transform: translateX(-50%) scale(0.5) translateY(20px); }
+  0% { opacity: 0; transform: translateX(-50%) scale(0.5) translateY(10px); }
   100% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
 }
 
-/* Стили для страницы диагностики (чтобы красиво выглядело внутри оверлея) */
-.diagnosis-page {
-  padding: 10px;
-  max-width: 100%;
-}
-.diagnosis-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 24px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+/* Дополнительные стили для модального окна диагностики */
+.diagnosis-modal-scroll {
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

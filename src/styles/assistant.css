@@ -1,17 +1,17 @@
-/* assistant.css - Стиль Миньона */
+/* assistant.css - Миньон с елкой */
 
 /* Контейнер для облачка */
 .speech-bubble-container {
   position: absolute;
-  top: -95px; /* Чуть выше, так как миньон может быть высоким */
+  top: -90px;
   left: 50%;
   transform: translateX(-50%);
-  width: 210px;
+  width: 220px;
   pointer-events: none;
   z-index: 100;
   opacity: 0;
-  /* Анимация цикла: всего 15 секунд. */
-  animation: bubbleCycle 15s infinite ease-in-out;
+  /* Цикл 12 секунд */
+  animation: bubbleCycle 12s infinite ease-in-out;
 }
 
 /* Сам текст */
@@ -25,7 +25,7 @@
   line-height: 1.4;
   text-align: center;
   position: relative;
-  border: 2px solid #FEF08A; /* Желтая рамочка под цвет миньона */
+  border: 3px solid #FACC15; /* Желтая рамочка */
 }
 
 /* Хвостик */
@@ -40,18 +40,22 @@
   border-color: #fff transparent transparent transparent;
 }
 
-/* Логика анимации (15 секунд цикл):
-  0% - 5%: Появление
-  5% - 35%: Висит (около 5 сек)
-  35% - 40%: Исчезает
-  40% - 100%: Пустота (около 9-10 сек)
-*/
+/* Тайминг: висит 4 сек, отдыхает 8 сек */
 @keyframes bubbleCycle {
-  0% { opacity: 0; transform: translateX(-50%) scale(0.8) translateY(10px); }
+  0% { opacity: 0; transform: translateX(-50%) scale(0.9) translateY(10px); }
   5% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
-  35% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
-  40% { opacity: 0; transform: translateX(-50%) scale(0.8) translateY(-10px); }
+  35% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); } /* ~4 сек */
+  40% { opacity: 0; transform: translateX(-50%) scale(0.9) translateY(-10px); }
   100% { opacity: 0; }
+}
+
+/* Стили для падающих подарков */
+.falling-item {
+  position: absolute;
+  font-size: 20px;
+  pointer-events: none;
+  z-index: 30;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.2));
 }
 
 .diagnosis-modal-scroll {

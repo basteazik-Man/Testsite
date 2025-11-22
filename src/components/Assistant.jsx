@@ -1,45 +1,81 @@
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
-import "../styles/assistant.css"; 
+import React, { useEffect, useState } from "react";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
+import "../styles/assistant.css";
 
-export default function Assistant({ size = 130, onClick }) {
+// Иконки для падающих элементов (SVG)
+const GiftIcon = () => (
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20 12V22H4V12" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M22 7H2V12H22V7Z" fill="#EF4444" stroke="#B91C1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12 22V7" stroke="#B91C1C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12 7H7.5C6.83696 7 6.20107 6.73661 5.73223 6.26777C5.26339 5.79893 5 5.16304 5 4.5C5 3.83696 5.26339 3.20107 5.73223 2.73223C6.20107 2.26339 6.83696 2 7.5 2C11 2 12 7 12 7Z" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+    <path d="M12 7H16.5C17.163 7 17.7989 6.73661 18.2678 6.26777C18.7366 5.79893 19 5.16304 19 4.5C19 3.83696 18.7366 3.20107 18.2678 2.73223C17.7989 2.26339 17.163 2 16.5 2C13 2 12 7 12 7Z" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
+
+const DiscountIcon = () => (
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="12" r="10" fill="#FBBF24" stroke="#D97706" strokeWidth="2"/>
+      <path d="M16 8L8 16" stroke="#B45309" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="9.5" cy="9.5" r="1.5" fill="#B45309"/>
+      <circle cx="14.5" cy="14.5" r="1.5" fill="#B45309"/>
+    </svg>
+);
+
+export default function Assistant({ size = 180, onClick }) {
   const controls = useAnimation();
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    controls.start("idle");
+    controls.start("shake");
   }, [controls]);
 
-  // Анимация тела (дыхание + легкое покачивание)
-  const variants = {
-    idle: {
-      y: [0, -4, 0],
-      rotate: [0, 1, -1, 0],
+  // Генератор падающих подарков
+  useEffect(() => {
+      const interval = setInterval(() => {
+          const id = Date.now();
+          const type = Math.random() > 0.5 ? 'gift' : 'discount';
+          // Случайная позиция вылета из кроны дерева (примерно от 120 до 180 по X)
+          const startX = 120 + Math.random() * 60; 
+          setItems(prev => [...prev, { id, type, startX }]);
+      }, 600); // Каждые 600мс падает новый предмет
+
+      return () => clearInterval(interval);
+  }, []);
+
+  const remove Item = (id) => {
+    setItems(prev => prev.filter(item => item.id !== id));
+  };
+
+
+  // Анимация ТРЯСКИ (быстрая вибрация)
+  const shakeVariant = {
+    shake: {
+      x: [0, -3, 3, -2, 2, 0],
+      y: [0, 2, -2, 1, -1, 0],
+      rotate: [0, -2, 2, -1, 1, 0],
       transition: {
-        duration: 4,
+        duration: 0.4,
         repeat: Infinity,
-        ease: "easeInOut"
+        repeatType: "mirror",
+        ease: "linear"
       }
     },
     click: {
-      scale: [1, 1.2, 0.1], // Увеличение -> Исчезновение в точку
-      y: [0, -20, -200],
-      opacity: [1, 1, 0],
-      transition: { duration: 0.5, ease: "backIn" }
-    }
-  };
-
-  // Анимация махания рукой
-  const armVariants = {
-    wave: {
-      rotate: [0, 20, -10, 20, 0],
-      transition: {
-        duration: 1.5,
-        repeat: Infinity,
-        repeatDelay: 2.5,
-        ease: "easeInOut"
+        scale: [1, 1.2, 0.1],
+        y: [0, -20, -200],
+        opacity: [1, 1, 0],
+        transition: { duration: 0.5, ease: "backIn" }
       }
-    }
   };
+  
+  const treeShakeVariant = {
+    shake: {
+        rotate: [0, 2, -2, 1, -1, 0],
+        originX: "150px", originY: "220px", // Точка вращения у основания ствола
+        transition: { duration: 0.4, repeat: Infinity, repeatType: "mirror", ease: "linear" }
+    }
+  }
 
   const handleClick = async () => {
     await controls.start("click");
@@ -50,104 +86,113 @@ export default function Assistant({ size = 130, onClick }) {
     <div 
       className="relative group cursor-pointer" 
       onClick={handleClick}
-      style={{ width: size, height: size * 1.2 }} // Чуть выше пропорции для миньона
+      style={{ width: size, height: size }}
     >
-      {/* Облачко (анимация в CSS) */}
+      {/* Облачко */}
       <div className="speech-bubble-container">
         <div className="speech-bubble-text">
-          👋 <strong>Банана?</strong><br/>
-          Ой, то есть... <strong>Ремонт?</strong><br/>
-          Жми сюда!
+          🎄 <strong>Трясу ёлку!</strong><br/>
+          Смотри, сколько подарков и скидок!
+          <strong>Жми сюда!</strong>
         </div>
       </div>
 
-      <motion.div
-        animate={controls}
-        initial={{ y: 0 }}
-        variants={variants}
-        whileHover={{ scale: 1.1 }}
-        className="w-full h-full relative z-20"
-      >
-        <svg viewBox="0 0 200 240" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      {/* Падающие элементы */}
+      <AnimatePresence>
+        {items.map(item => (
+            <motion.div
+                key={item.id}
+                className="falling-item"
+                style={{ left: item.startX, top: 60 }}
+                initial={{ y: 0, opacity: 1, rotate: 0 }}
+                animate={{ y: 180, opacity: 0, rotate: Math.random() * 360 }}
+                transition={{ duration: 2, ease: "easeIn" }}
+                onAnimationComplete={() => remove Item(item.id)}
+            >
+                {item.type === 'gift' ? <GiftIcon/> : <DiscountIcon/>}
+            </motion.div>
+        ))}
+      </AnimatePresence>
+
+      {/* Основная сцена */}
+      <div className="w-full h-full relative z-20">
+        <svg viewBox="0 0 240 240" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="yellowSkin" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stopColor="#FACC15"/> {/* Яркий желтый */}
+              <stop offset="0%" stopColor="#FACC15"/>
               <stop offset="100%" stopColor="#EAB308"/>
             </linearGradient>
             <linearGradient id="bluePants" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#3B82F6"/>
               <stop offset="100%" stopColor="#1D4ED8"/>
             </linearGradient>
-            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-              <feDropShadow dx="0" dy="4" stdDeviation="3" floodOpacity="0.3"/>
-            </filter>
+             <linearGradient id="treeGreen" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#22c55e"/>
+              <stop offset="100%" stopColor="#15803d"/>
+            </linearGradient>
           </defs>
 
-          {/* Тень на земле */}
-          <ellipse cx="100" cy="230" rx="50" ry="8" fill="rgba(0,0,0,0.2)" />
+          {/* Тень общая */}
+          <ellipse cx="120" cy="230" rx="70" ry="8" fill="rgba(0,0,0,0.2)" />
 
-          {/* --- НОГИ (растут из тела) --- */}
-          <path d="M85 200 L85 225" stroke="#1D4ED8" strokeWidth="12" strokeLinecap="round" />
-          <path d="M115 200 L115 225" stroke="#1D4ED8" strokeWidth="12" strokeLinecap="round" />
-          {/* Ботинки */}
-          <path d="M75 225 L92 225" stroke="#1F2937" strokeWidth="10" strokeLinecap="round" />
-          <path d="M108 225 L125 225" stroke="#1F2937" strokeWidth="10" strokeLinecap="round" />
-
-          {/* --- ТЕЛО (Капсула) --- */}
-          <rect x="50" y="40" width="100" height="170" rx="50" fill="url(#yellowSkin)" filter="url(#shadow)" />
-
-          {/* --- ШТАНЫ (Комбинезон) --- */}
-          <path d="M50 160 L50 190 A50 50 0 0 0 150 190 L150 160 L50 160 Z" fill="url(#bluePants)" />
-          <rect x="70" y="130" width="60" height="40" fill="url(#bluePants)" /> {/* Нагрудник */}
-          {/* Лямки */}
-          <path d="M55 100 L70 130" stroke="#1D4ED8" strokeWidth="10" strokeLinecap="round"/>
-          <path d="M145 100 L130 130" stroke="#1D4ED8" strokeWidth="10" strokeLinecap="round"/>
-          <circle cx="70" cy="135" r="4" fill="#1F2937"/> {/* Пуговица */}
-          <circle cx="130" cy="135" r="4" fill="#1F2937"/> {/* Пуговица */}
-          
-          {/* Логотип на кармашке */}
-          <circle cx="100" cy="155" r="10" fill="rgba(0,0,0,0.2)" />
-          <path d="M96 155 L100 159 L104 151" stroke="#fff" strokeWidth="2" fill="none"/>
-
-          {/* --- РУКИ (растут из тела) --- */}
-          {/* Левая (статичная) */}
-          <path d="M52 110 Q30 140 40 160" stroke="#EAB308" strokeWidth="12" strokeLinecap="round" fill="none" />
-          <circle cx="40" cy="160" r="10" fill="#1F2937" /> {/* Перчатка */}
-
-          {/* Правая (МАШЕТ) */}
-          <motion.g style={{ originX: "148px", originY: "110px" }} variants={armVariants} animate="wave">
-            <path d="M148 110 Q170 140 175 120" stroke="#EAB308" strokeWidth="12" strokeLinecap="round" fill="none" />
-            <circle cx="175" cy="120" r="10" fill="#1F2937" /> {/* Перчатка */}
+          {/* === ЁЛКА (Трясется) === */}
+          <motion.g variants={treeShakeVariant} animate={controls}>
+              {/* Ствол */}
+              <rect x="140" y="180" width="20" height="50" fill="#78350f" />
+              {/* Крона */}
+              <path d="M150 20 L110 100 L130 100 L100 180 L200 180 L170 100 L190 100 Z" fill="url(#treeGreen)" stroke="#166534" strokeWidth="2" strokeLinejoin="round" />
+              {/* Украшения на елке */}
+              <circle cx="130" cy="120" r="5" fill="#ef4444" />
+              <circle cx="170" cy="150" r="5" fill="#facc15" />
+              <circle cx="150" cy="60" r="5" fill="#3b82f6" />
           </motion.g>
 
-          {/* --- ЛИЦО --- */}
-          <g transform="translate(0, 10)">
-             {/* Ремешок очков */}
-             <rect x="48" y="65" width="104" height="15" fill="#1F2937" rx="2" />
-             
-             {/* Очки (Два глаза) */}
-             <circle cx="80" cy="72" r="22" fill="#9CA3AF" stroke="#4B5563" strokeWidth="2" />
-             <circle cx="120" cy="72" r="22" fill="#9CA3AF" stroke="#4B5563" strokeWidth="2" />
-             <circle cx="80" cy="72" r="16" fill="white" />
-             <circle cx="120" cy="72" r="16" fill="white" />
+          {/* === МИНЬОН (Трясется всем телом) === */}
+          <motion.g variants={shakeVariant} animate={controls}>
+            
+            {/* Ноги */}
+            <path d="M35 200 L35 225" stroke="#1D4ED8" strokeWidth="12" strokeLinecap="round" />
+            <path d="M65 200 L65 225" stroke="#1D4ED8" strokeWidth="12" strokeLinecap="round" />
+            <path d="M25 225 L42 225" stroke="#1F2937" strokeWidth="10" strokeLinecap="round" />
+            <path d="M58 225 L75 225" stroke="#1F2937" strokeWidth="10" strokeLinecap="round" />
 
-             {/* Зрачки (Анимация моргания CSS) */}
-             <g>
-                <circle cx="80" cy="72" r="6" fill="#4B2C20" />
-                <circle cx="120" cy="72" r="6" fill="#4B2C20" />
-                <circle cx="82" cy="70" r="2" fill="white" opacity="0.8" />
-                <circle cx="122" cy="70" r="2" fill="white" opacity="0.8" />
-                <animateTransform attributeName="transform" type="scale" values="1 1; 1 0.1; 1 1" keyTimes="0; 0.05; 0.1" dur="4s" repeatCount="indefinite" additive="sum" calcMode="spline" keySplines="0.4 0 0.2 1; 0.4 0 0.2 1" centerY="72" />
-             </g>
+            {/* Тело */}
+            <rect x="10" y="60" width="80" height="150" rx="40" fill="url(#yellowSkin)" />
 
-             {/* Рот (Улыбка) */}
-             <path d="M85 105 Q100 115 115 105" stroke="#4B2C20" strokeWidth="3" fill="none" strokeLinecap="round" />
-          </g>
+            {/* Штаны */}
+            <path d="M10 160 L10 180 A40 40 0 0 0 90 180 L90 160 L10 160 Z" fill="url(#bluePants)" />
+            <rect x="25" y="140" width="50" height="40" fill="url(#bluePants)" />
+            <path d="M15 110 L25 140" stroke="#1D4ED8" strokeWidth="8" strokeLinecap="round"/>
+            <path d="M85 110 L75 140" stroke="#1D4ED8" strokeWidth="8" strokeLinecap="round"/>
 
-          {/* Волоски на голове */}
-          <path d="M90 40 Q95 20 100 40 Q105 20 110 40" stroke="#1F2937" strokeWidth="2" fill="none" />
+            {/* Левая рука (отведена назад для баланса) */}
+            <path d="M10 120 Q-10 150 5 170" stroke="#EAB308" strokeWidth="10" strokeLinecap="round" fill="none" />
+             <circle cx="5" cy="170" r="8" fill="#1F2937" />
+
+            {/* Правая рука (ДЕРЖИТСЯ ЗА СТВОЛ) - Исправлено крепление */}
+            <path d="M90 120 C 110 120, 120 140, 145 190" stroke="#EAB308" strokeWidth="10" strokeLinecap="round" fill="none" />
+            <circle cx="145" cy="190" r="8" fill="#1F2937" /> {/* Перчатка на стволе */}
+
+            {/* Лицо (напряженное от тряски) */}
+            <g transform="translate(-40, 20)">
+                <rect x="48" y="65" width="84" height="12" fill="#1F2937" rx="2" />
+                <circle cx="70" cy="72" r="18" fill="#9CA3AF" stroke="#4B5563" strokeWidth="2" />
+                <circle cx="110" cy="72" r="18" fill="#9CA3AF" stroke="#4B5563" strokeWidth="2" />
+                <circle cx="70" cy="72" r="13" fill="white" />
+                <circle cx="110" cy="72" r="13" fill="white" />
+                {/* Зрачки бегают */}
+                <motion.g animate={{ x: [-1, 1, -1], y:[-1, -1, 0] }} transition={{duration: 0.2, repeat: Infinity}}>
+                    <circle cx="70" cy="72" r="5" fill="#4B2C20" />
+                    <circle cx="110" cy="72" r="5" fill="#4B2C20" />
+                </motion.g>
+                {/* Рот (напряженный) */}
+                 <path d="M75 105 Q90 100 105 105" stroke="#4B2C20" strokeWidth="3" fill="none" strokeLinecap="round" />
+            </g>
+            
+            <path d="M40 60 Q45 40 50 60 Q55 40 60 60" stroke="#1F2937" strokeWidth="2" fill="none" />
+          </motion.g>
         </svg>
-      </motion.div>
+      </div>
     </div>
   );
 }

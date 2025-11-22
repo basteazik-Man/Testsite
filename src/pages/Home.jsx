@@ -195,7 +195,7 @@ export default function Home() {
             {/* Миньон - Справа */}
             <div className="relative z-20 md:mr-4">
                {/* На ПК стоит рядом, на мобильном под текстом */}
-               <Assistant size={130} onClick={handleAssistantClick} />
+               <Assistant size={260} onClick={handleAssistantClick} />
             </div>
 
           </div>

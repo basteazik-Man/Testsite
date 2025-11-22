@@ -1,4 +1,4 @@
-// App.jsx
+// App.jsx - modified: Assistant no longer fixed here. It's embedded in Home.jsx
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import BrandPage from "./components/BrandPage";
@@ -16,8 +16,8 @@ import AdminPanel from "./pages/AdminPanel";
 import AdminLayout from "./components/AdminLayout";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-// ⬇ добавлено для ассистента и диагностики
-import Assistant from "./components/Assistant";
+// removed Assistant fixed wrapper here - moved into Home.jsx
+// import Assistant from "./components/Assistant";
 import Diagnosis from "./pages/Diagnosis";
 
 function MainLayout() {
@@ -45,10 +45,7 @@ function MainLayout() {
           <ShareButton />
           <DeliveryButton />
 
-          {/* ⬇ Ассистент вставлен в правый нижний угол */}
-          <div className="fixed bottom-4 right-4 z-50">
-            <Assistant />
-          </div>
+          {/* Assistant moved into Home.jsx to be inside the blue greeting block */}
         </main>
 
         <FooterMain />

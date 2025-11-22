@@ -1,9 +1,10 @@
-// Home.jsx (убрана кнопка доставки)
+// Home.jsx - Assistant embedded into the blue greeting block
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { useSearch } from "../hooks/useSearch";
 import { BRANDS } from "../data/brands";
+import Assistant from "../components/Assistant";
 
 const FALLBACK_BRANDS = [
   { id: "apple", title: "Apple", logo: "/logos/apple.svg" },
@@ -170,10 +171,19 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <h1 className="text-3xl md:text-4xl font-extrabold text-white">
-          Добро пожаловать в <span className="text-white/90">Чип&Гаджет</span>
-        </h1>
-        <p className="text-white/90 mt-2 text-lg">Ремонт смартфонов, планшетов и ноутбуков всех брендов</p>
+        <div className="flex items-center justify-between">
+          <div className="text-left pr-4 flex-1">
+            <h1 className="text-3xl md:text-4xl font-extrabold text-white">
+              Добро пожаловать в <span className="text-white/90">Чип&Гаджет</span>
+            </h1>
+            <p className="text-white/90 mt-2 text-lg">Ремонт смартфонов, планшетов и ноутбуков всех брендов</p>
+          </div>
+
+          {/* Assistant встроен справа от текста приветствия */}
+          <div className="flex-shrink-0 ml-4">
+            <Assistant size={90} />
+          </div>
+        </div>
       </motion.section>
 
       {/* === Кнопки брендов === */}

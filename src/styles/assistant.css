@@ -1,31 +1,34 @@
-/* assistant.css - Стили для ассистента и облачка */
+/* assistant.css - Стиль Миньона */
 
+/* Контейнер для облачка */
 .speech-bubble-container {
   position: absolute;
-  top: -85px; /* Высота над головой */
+  top: -95px; /* Чуть выше, так как миньон может быть высоким */
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
+  width: 210px;
   pointer-events: none;
   z-index: 100;
   opacity: 0;
-  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s forwards;
+  /* Анимация цикла: всего 15 секунд. */
+  animation: bubbleCycle 15s infinite ease-in-out;
 }
 
+/* Сам текст */
 .speech-bubble-text {
   background: white;
   padding: 12px 16px;
   border-radius: 18px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
   color: #1f2937;
   font-size: 13px;
   line-height: 1.4;
   text-align: center;
   position: relative;
-  border: 1px solid #e5e7eb;
+  border: 2px solid #FEF08A; /* Желтая рамочка под цвет миньона */
 }
 
-/* Хвостик облачка */
+/* Хвостик */
 .speech-bubble-text::after {
   content: '';
   position: absolute;
@@ -37,12 +40,20 @@
   border-color: #fff transparent transparent transparent;
 }
 
-@keyframes popIn {
-  0% { opacity: 0; transform: translateX(-50%) scale(0.5) translateY(10px); }
-  100% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
+/* Логика анимации (15 секунд цикл):
+  0% - 5%: Появление
+  5% - 35%: Висит (около 5 сек)
+  35% - 40%: Исчезает
+  40% - 100%: Пустота (около 9-10 сек)
+*/
+@keyframes bubbleCycle {
+  0% { opacity: 0; transform: translateX(-50%) scale(0.8) translateY(10px); }
+  5% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
+  35% { opacity: 1; transform: translateX(-50%) scale(1) translateY(0); }
+  40% { opacity: 0; transform: translateX(-50%) scale(0.8) translateY(-10px); }
+  100% { opacity: 0; }
 }
 
-/* Дополнительные стили для модального окна диагностики */
 .diagnosis-modal-scroll {
   max-height: 90vh;
   overflow-y: auto;

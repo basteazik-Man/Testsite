@@ -16,14 +16,13 @@ const FALLBACK_BRANDS = [
 export default function Home() {
   const [query, setQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
-  const [assistantMode, setAssistantMode] = useState(false); // Режим диагностики
+  const [assistantMode, setAssistantMode] = useState(false);
 
   const navigate = useNavigate();
   const searchHook = useSearch || (() => ({ searchResults: [] }));
   const { searchResults: results = [] } = searchHook(query);
   const searchRef = useRef(null);
 
-  // Закрытие поиска при клике вне
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -53,6 +52,10 @@ export default function Home() {
     setShowSuggestions(value.trim().length > 0);
   };
 
+  const handleAssistantClick = () => {
+    setAssistantMode(true);
+  };
+
   const hasQuery = query.trim().length > 0;
   const hasResults = results.length > 0;
   const brandsToShow = BRANDS && BRANDS.length > 0 ? BRANDS : FALLBACK_BRANDS;
@@ -78,15 +81,10 @@ export default function Home() {
     navigate(`/services?category=${categoryId}`);
   };
 
-  // Запуск режима ассистента
-  const handleAssistantClick = () => {
-    setAssistantMode(true);
-  };
-
   return (
     <div className="flex flex-col items-center text-center px-4 sm:px-6 relative z-10 pt-16 min-h-screen">
       
-      {/* === ОВЕРЛЕЙ ДИАГНОСТИКИ (Появляется при клике на ассистента) === */}
+      {/* --- ОВЕРЛЕЙ АССИСТЕНТА --- */}
       <AnimatePresence>
         {assistantMode && (
           <motion.div 
@@ -104,7 +102,6 @@ export default function Home() {
                 </button>
              </div>
              
-             {/* Контейнер для скролла */}
              <div className="diagnosis-modal-scroll p-4">
                 <div className="w-full max-w-3xl mt-10">
                    <Diagnosis />
@@ -114,7 +111,7 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* === ОСНОВНОЙ КОНТЕНТ (Скрывается при assistantMode) === */}
+      {/* --- ОСНОВНОЙ САЙТ --- */}
       <motion.div
          className="w-full flex flex-col items-center"
          animate={{ 
@@ -125,8 +122,8 @@ export default function Home() {
          transition={{ duration: 0.4 }}
       >
 
-        {/* === Поиск === */}
-        <div ref={searchRef} className="w-full max-w-4xl mb-8 relative">
+        {/* --- ПОИСК --- */}
+        <div ref={searchRef} className="w-full max-w-4xl mb-6 relative">
           <div className="flex">
             <input
               type="text"
@@ -179,41 +176,35 @@ export default function Home() {
           </AnimatePresence>
         </div>
 
-        {/* === Блок Приветствия с Ассистентом === */}
+        {/* --- ПРИВЕТСТВИЕ С МИНЬОНОМ --- */}
         <section className="w-full max-w-5xl mb-8 relative">
-          <div className="rounded-3xl bg-gradient-to-r from-blue-500 to-blue-600 p-8 shadow-lg relative overflow-visible min-h-[200px] flex items-center justify-center">
+          {/* Убрал min-h, уменьшил padding до p-6 */}
+          <div className="rounded-3xl bg-gradient-to-r from-blue-500 to-blue-600 p-6 md:p-8 shadow-lg relative flex flex-col md:flex-row items-center justify-between">
             
-            {/* Текст строго по центру */}
-            <div className="z-10 text-center max-w-2xl px-4">
-              <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-2 leading-tight">
+            {/* Текст (Центр на мобильных, лево на ПК) */}
+            <div className="z-10 text-center md:text-left max-w-lg mb-6 md:mb-0 w-full md:w-auto">
+              <h1 className="text-3xl md:text-4xl font-extrabold text-white mb-2 leading-tight">
                 Добро пожаловать в <br/>
-                <span className="text-blue-100">Чип&Гаджет</span>
+                <span className="text-yellow-300">Чип&Гаджет</span>
               </h1>
-              <p className="text-white/90 mt-2 text-lg">
-                Ремонт смартфонов, планшетов и ноутбуков всех брендов
+              <p className="text-blue-50 mt-1 text-lg">
+                Ремонт смартфонов, планшетов и ноутбуков
               </p>
             </div>
 
-            {/* Ассистент - Позиционирован абсолютно справа внизу блока */}
-            <div className="absolute right-[-10px] bottom-[-20px] md:right-8 md:bottom-[-30px] z-20 hidden sm:block">
-               <Assistant size={160} onClick={handleAssistantClick} />
-            </div>
-            
-            {/* Ассистент для мобильных (под текстом, чтобы не перекрывал) */}
-            <div className="absolute bottom-[-50px] right-0 sm:hidden z-20">
-               <Assistant size={120} onClick={handleAssistantClick} />
+            {/* Миньон - Справа */}
+            <div className="relative z-20 md:mr-4">
+               {/* На ПК стоит рядом, на мобильном под текстом */}
+               <Assistant size={130} onClick={handleAssistantClick} />
             </div>
 
           </div>
-          {/* Отступ снизу, чтобы ноги ассистента не наезжали на кнопки */}
-          <div className="h-8 sm:h-0"></div>
         </section>
 
-        {/* === Кнопки брендов (Восстановлено) === */}
+        {/* --- БРЕНДЫ --- */}
         {brandsToShow && brandsToShow.length > 0 ? (
-          <section className="w-full max-w-5xl bg-white p-6 md:p-8 rounded-3xl shadow-xl mb-6 z-10 relative">
-            <h2 className="text-2xl font-semibold mb-6 md:mb-8 text-gray-800 text-left">Выберите бренд</h2>
-
+          <section className="w-full max-w-5xl bg-white p-6 rounded-3xl shadow-xl mb-6 z-10 relative">
+            <h2 className="text-2xl font-semibold mb-6 text-gray-800 text-left">Выберите бренд</h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
               {brandsToShow.map((brand) => (
                 <motion.button
@@ -221,12 +212,12 @@ export default function Home() {
                   onClick={() => navigate(`/brand/${brand.id}`)}
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex flex-col items-center p-4 md:p-6 rounded-2xl bg-white shadow-lg hover:shadow-2xl cursor-pointer transition-all border border-gray-100"
+                  className="flex flex-col items-center p-4 rounded-2xl bg-white shadow-lg hover:shadow-2xl cursor-pointer transition-all border border-gray-100"
                 >
                   <img
                     src={brand.logo}
                     alt={brand.title}
-                    className="w-14 h-14 md:w-20 md:h-20 mb-3 object-contain"
+                    className="w-12 h-12 md:w-16 md:h-16 mb-3 object-contain"
                   />
                   <p className="font-medium text-gray-700 text-sm md:text-base">{brand.title}</p>
                 </motion.button>
@@ -234,13 +225,14 @@ export default function Home() {
             </div>
           </section>
         ) : (
-          <div className="w-full max-w-5xl bg-yellow-50 p-6 rounded-3xl border border-yellow-200 mb-6">
-            <h2 className="text-xl font-semibold text-yellow-800">Бренды не загружены</h2>
+           /* Заглушка если бренды не подгрузились */
+          <div className="w-full max-w-5xl bg-gray-50 p-6 rounded-3xl border mb-6">
+            <p>Загрузка брендов...</p>
           </div>
         )}
 
-        {/* === Категории === */}
-        <section className="w-full max-w-5xl bg-white p-6 md:p-8 rounded-3xl shadow-xl mb-12">
+        {/* --- КАТЕГОРИИ --- */}
+        <section className="w-full max-w-5xl bg-white p-6 rounded-3xl shadow-xl mb-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {categories.map((cat) => (
               <motion.button
@@ -248,11 +240,10 @@ export default function Home() {
                 onClick={() => handleCategoryClick(cat.id)}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full flex flex-col items-center justify-center p-6 md:p-8 rounded-2xl bg-gradient-to-r ${cat.gradient} shadow-xl hover:shadow-2xl text-white min-h-[140px]`}
+                className={`w-full flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-r ${cat.gradient} shadow-xl text-white min-h-[120px]`}
               >
-                <span className="text-3xl md:text-4xl mb-3">{cat.icon}</span>
+                <span className="text-3xl md:text-4xl mb-2">{cat.icon}</span>
                 <span className="text-xl font-bold">{cat.title}</span>
-                <span className="text-white/80 text-sm mt-2">Посмотреть услуги и цены</span>
               </motion.button>
             ))}
           </div>

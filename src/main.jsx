@@ -62,7 +62,7 @@ window.addEventListener('unhandledrejection', (event) => {
 
 // ✅ Резервная обработка для критических ошибок
 window.addEventListener('error', (event) => {
-  // Если ошибка критическая и React не загружился
+  // Если ошибка критическая и React не загрузился
   if (!document.getElementById('root').hasChildNodes()) {
     setTimeout(() => {
       if (!document.getElementById('root').hasChildNodes()) {

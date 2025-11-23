@@ -1,4 +1,4 @@
-// App.jsx - modified: Assistant no longer fixed here. It's embedded in Home.jsx
+// App.jsx
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import BrandPage from "./components/BrandPage";
@@ -16,19 +16,13 @@ import AdminPanel from "./pages/AdminPanel";
 import AdminLayout from "./components/AdminLayout";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-// removed Assistant fixed wrapper here - moved into Home.jsx
-// import Assistant from "./components/Assistant";
-import Diagnosis from "./pages/Diagnosis";
-
 function MainLayout() {
   return (
     <ErrorBoundary>
       <div className="flex flex-col min-h-screen">
         <HeaderMain />
-
         <main className="flex-grow relative">
           <ScrollToTop />
-
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/brand/:brand" element={<BrandPage />} />
@@ -37,17 +31,10 @@ function MainLayout() {
             <Route path="/services" element={<Services />} />
             <Route path="/delivery" element={<DeliveryPage />} />
             <Route path="/delivery-order" element={<DeliveryOrderPage />} />
-
-            {/* ⬇ Страница диагностики доступна только здесь */}
-            <Route path="/diagnosis" element={<Diagnosis />} />
           </Routes>
-
           <ShareButton />
           <DeliveryButton />
-
-          {/* Assistant moved into Home.jsx to be inside the blue greeting block */}
         </main>
-
         <FooterMain />
       </div>
     </ErrorBoundary>
@@ -58,16 +45,14 @@ function App() {
   return (
     <ErrorBoundary>
       <Routes>
-        <Route
-          path="/admin/*"
+        <Route 
+          path="/admin/*" 
           element={
             <AdminLayout>
               <AdminPanel />
             </AdminLayout>
-          }
+          } 
         />
-
-        {/* ⬇ основной сайт */}
         <Route path="/*" element={<MainLayout />} />
       </Routes>
     </ErrorBoundary>

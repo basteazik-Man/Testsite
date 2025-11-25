@@ -1,7 +1,9 @@
-// ModelEditor.jsx (с рабочим перетаскиванием, улучшенной логикой цен и подписями)
+// src/components/admin/ModelEditor.jsx
+// ИСПРАВЛЕНО: Пустые поля для новых услуг
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { calculateFinalPrice, safeParseFloat } from "../../utils/priceUtils";
+import { calculateFinalPrice, safeParseFloat } from "../../../utils/priceUtils";
 
 export default function ModelEditor({ modelKey, services, onChange }) {
   const [localServices, setLocalServices] = useState(services || []);
@@ -21,11 +23,12 @@ export default function ModelEditor({ modelKey, services, onChange }) {
     onChange(updated);
   };
 
+  // ИСПРАВЛЕНО: Новая услуга с пустыми полями
   const addService = () => {
     const newService = {
-      name: "Новая услуга",
-      price: 0,
-      discount: 0,
+      name: "", // ПУСТОЕ поле вместо "Новая услуга"
+      price: "",
+      discount: "",
       finalPrice: 0,
       active: true
     };
@@ -67,7 +70,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
   // Улучшенная логика ввода цен
   const handlePriceFocus = (index) => {
     const service = localServices[index];
-    if (service.price === 0 || service.price === "0") {
+    if (service.price === 0 || service.price === "0" || service.price === "") {
       updateService(index, { price: "" });
     }
   };
@@ -155,7 +158,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
                         value={service.name || ""}
                         onChange={(e) => updateService(index, { name: e.target.value })}
                         className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
-                        placeholder="Название услуги"
+                        placeholder="Название услуги" // ДОБАВЛЕН placeholder
                       />
                     </div>
 
@@ -171,6 +174,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
                           updateService(index, { price: raw === "" ? "" : raw });
                         }}
                         className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-center"
+                        placeholder="0" // ДОБАВЛЕН placeholder
                         min="0"
                         step="100"
                       />
@@ -187,6 +191,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
                         }}
                         onBlur={() => handleDiscountBlur(index)}
                         className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-center"
+                        placeholder="0" // ДОБАВЛЕН placeholder
                         min="0"
                         max="100"
                         step="5"

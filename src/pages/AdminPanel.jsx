@@ -1,5 +1,5 @@
 // src/pages/AdminPanel.jsx
-// Полная версия с кнопкой экспорта BrandData
+// ПОЛНАЯ ВЕРСИЯ с исправленным именем файла BrandData
 
 import React, { useState, useEffect, useRef } from "react";
 import BrandEditor from "../components/admin/BrandEditor";
@@ -371,7 +371,7 @@ const parseJSFile = (fileContent, fileName) => {
   }
 };
 
-// НОВАЯ ФУНКЦИЯ: Экспорт обновленного BrandData
+// ИСПРАВЛЕННАЯ ФУНКЦИЯ: Экспорт обновленного BrandData с правильным именем файла
 const exportBrandData = async (data) => {
   try {
     // Динамически импортируем утилиту
@@ -385,11 +385,11 @@ const exportBrandData = async (data) => {
       return false;
     }
 
-    // Создаем и скачиваем файл
+    // ИСПРАВЛЕНО: Скачиваем файл с именем brandData.js (готов к замене)
     const blob = new Blob([result.content], { type: "application/javascript" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = `brandData-updated-${new Date().toISOString().split('T')[0]}.js`;
+    a.download = `brandData.js`; // ПРАВИЛЬНОЕ ИМЯ - готов к замене
     a.click();
     
     // Освобождаем память
@@ -397,10 +397,10 @@ const exportBrandData = async (data) => {
     
     // Показываем отчет
     const modelList = result.addedModels.map(item => 
-      `• ${item.brand} - ${item.name}`
+      `• ${item.brand} - ${item.name} (${item.category})`
     ).join('\n');
     
-    alert(`✅ BrandData обновлен!\n\nДобавлено моделей: ${result.addedModels.length}\n\n${modelList}\n\nСкопируйте файл в папку src/data/brandData.js`);
+    alert(`✅ BrandData обновлен!\n\nДобавлено моделей: ${result.addedModels.length}\n\n${modelList}\n\nФайл "brandData.js" готов для замены существующего файла!`);
     
     return true;
   } catch (error) {
@@ -746,7 +746,7 @@ export default function AdminPanel() {
     }
   };
 
-  // НОВАЯ ФУНКЦИЯ: Экспорт BrandData
+  // ФУНКЦИЯ: Экспорт BrandData
   const handleExportBrandData = async () => {
     setIsExporting(true);
     setMessage("🔄 Генерация обновленного BrandData...");
@@ -851,7 +851,7 @@ export default function AdminPanel() {
         >
           {isExporting ? "📦 Архив..." : "📁 Экспорт ZIP"}
         </button>
-        {/* НОВАЯ КНОПКА: Экспорт BrandData */}
+        {/* КНОПКА: Экспорт BrandData */}
         <button
           onClick={handleExportBrandData}
           disabled={isExporting}

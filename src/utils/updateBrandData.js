@@ -1,7 +1,7 @@
 // src/utils/updateBrandData.js
-// Этот файл создает обновленную структуру моделей на основе данных из админки
+// ИСПРАВЛЕННЫЙ ПУТЬ К brandData
 
-import { brandData as existingBrandData } from '../data/brandData';
+import { brandData as existingBrandData } from '../data/brandData'; // ИСПРАВЛЕН ПУТЬ!
 
 /**
  * Генерирует обновленный brandData.js с новыми моделями из админки

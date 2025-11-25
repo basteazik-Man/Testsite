@@ -1,10 +1,10 @@
 // src/components/admin/BrandEditor.jsx
-// Полная версия с возможностью добавления моделей
+// ИСПРАВЛЕННЫЙ ПУТЬ К brandData
 
 import React, { useState, useMemo } from "react";
 import ModelEditor from "./ModelEditor";
-import { brandData } from "../../../data/brandData";
-import { getBrandStatus, getModelStatus } from "../../../utils/priceUtils";
+import { brandData } from "../../data/brandData"; // ИСПРАВЛЕН ПУТЬ!
+import { getBrandStatus, getModelStatus } from "../../utils/priceUtils";
 
 export default function BrandEditor({ brandKey, data, onChange }) {
   const brand = data[brandKey];

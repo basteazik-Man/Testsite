@@ -1,17 +1,17 @@
 // src/utils/updateBrandData.js
-// УЛУЧШЕННАЯ ВЕРСИЯ - модели добавляются ТОЛЬКО в выбранные категории из админки
+// ДОБАВЛЕНО: Удаление моделей при экспорте
 
 import { brandData as existingBrandData } from '../data/brandData';
 
 /**
  * Генерирует обновленный brandData.js с новыми моделями из админки
  * @param {Object} pricesData - Данные цен из админки
- * @returns {Object} { content: string, addedModels: array, hasChanges: boolean }
+ * @returns {Object} { content: string, addedModels: array, removedModels: array, hasChanges: boolean }
  */
 export const generateUpdatedBrandData = (pricesData) => {
-  // Создаем копию существующих данных
   const updatedBrandData = JSON.parse(JSON.stringify(existingBrandData));
   let addedModels = [];
+  let removedModels = [];
 
   // Перебираем все бренды из цен
   Object.entries(pricesData).forEach(([brandKey, brandInfo]) => {
@@ -21,52 +21,66 @@ export const generateUpdatedBrandData = (pricesData) => {
       return;
     }
 
-    // Перебираем все модели этого бренда из цен
-    Object.entries(brandInfo.models || {}).forEach(([modelKey, modelData]) => {
-      // Проверяем, есть ли уже эта модель в основном каталоге
-      let modelExists = false;
+    // Создаем список моделей, которые есть в админке
+    const adminModels = new Set(Object.keys(brandInfo.models || {}));
+
+    // Перебираем все категории бренда
+    Object.entries(updatedBrandData[brandKey].categories).forEach(([categoryName, categoryModels]) => {
+      const originalCount = categoryModels.length;
       
-      // Ищем модель во всех категориях бренда
-      Object.entries(updatedBrandData[brandKey].categories).forEach(([categoryName, category]) => {
-        if (category.find(model => model.id === modelKey)) {
-          modelExists = true;
+      // Фильтруем модели - оставляем только те, которые есть в админке ИЛИ не из админки
+      const filteredModels = categoryModels.filter(model => {
+        const existsInAdmin = adminModels.has(model.id);
+        
+        // Если модели нет в админке, но она была добавлена через админку (имеет _customName) - удаляем
+        const modelData = brandInfo.models[model.id];
+        if (!existsInAdmin && modelData && typeof modelData === 'object' && modelData._customName) {
+          removedModels.push({
+            brand: brandKey,
+            model: model.id,
+            name: model.name,
+            category: categoryName
+          });
+          return false; // Удаляем модель
         }
+        
+        return true; // Сохраняем модель
       });
 
-      // Если модели нет - добавляем в категорию из админки
-      if (!modelExists) {
-        // Получаем категорию из данных админки
-        let targetCategory = null;
-        
-        // Если в данных модели есть информация о категории - используем её
-        if (modelData && typeof modelData === 'object' && modelData._category) {
-          targetCategory = modelData._category;
-        }
-        
-        // Проверяем, что категория существует в brandData
-        if (targetCategory && updatedBrandData[brandKey].categories[targetCategory]) {
-          // Создаем человеко-читаемое название
+      // Обновляем категорию
+      updatedBrandData[brandKey].categories[categoryName] = filteredModels;
+
+      // Добавляем новые модели из админки
+      adminModels.forEach(modelKey => {
+        const modelExists = filteredModels.some(model => model.id === modelKey);
+        if (!modelExists) {
+          const modelData = brandInfo.models[modelKey];
           const modelName = getModelDisplayName(modelKey, modelData);
           
-          // Добавляем модель в указанную категорию
-          updatedBrandData[brandKey].categories[targetCategory].push({
-            id: modelKey,
-            name: modelName,
-            image: "/logos/default-phone.jpg"
-          });
-
-          addedModels.push({ 
-            brand: brandKey, 
-            model: modelKey,
-            name: modelName,
-            category: targetCategory
-          });
+          // Определяем категорию для новой модели
+          let targetCategory = categoryName; // По умолчанию используем текущую категорию
           
-          console.log(`✅ Добавлена модель: ${brandKey} -> ${targetCategory} -> ${modelName}`);
-        } else {
-          console.log(`❌ Не удалось добавить модель ${modelKey}: категория "${targetCategory}" не найдена в brandData`);
+          if (modelData && typeof modelData === 'object' && modelData._category) {
+            targetCategory = modelData._category;
+          }
+          
+          // Если категория существует, добавляем модель
+          if (updatedBrandData[brandKey].categories[targetCategory]) {
+            updatedBrandData[brandKey].categories[targetCategory].push({
+              id: modelKey,
+              name: modelName,
+              image: "/logos/default-phone.jpg"
+            });
+
+            addedModels.push({
+              brand: brandKey,
+              model: modelKey,
+              name: modelName,
+              category: targetCategory
+            });
+          }
         }
-      }
+      });
     });
   });
 
@@ -75,6 +89,7 @@ export const generateUpdatedBrandData = (pricesData) => {
 // Автоматически обновлено через админку Chip&Gadget
 // Сгенерировано: ${new Date().toLocaleString()}
 // Новые модели: ${addedModels.length}
+// Удаленные модели: ${removedModels.length}
 
 export const brandData = ${JSON.stringify(updatedBrandData, null, 2)};
 `;
@@ -82,7 +97,8 @@ export const brandData = ${JSON.stringify(updatedBrandData, null, 2)};
   return {
     content,
     addedModels,
-    hasChanges: addedModels.length > 0
+    removedModels,
+    hasChanges: addedModels.length > 0 || removedModels.length > 0
   };
 };
 
@@ -90,12 +106,10 @@ export const brandData = ${JSON.stringify(updatedBrandData, null, 2)};
  * Получить отображаемое название модели
  */
 const getModelDisplayName = (modelKey, modelData) => {
-  // Если в данных есть кастомное название - используем его
   if (modelData && typeof modelData === 'object' && modelData._customName) {
     return modelData._customName;
   }
   
-  // Иначе генерируем из ключа
   return modelKey
     .replace(/-/g, ' ')
     .replace(/\b\w/g, letter => letter.toUpperCase());

@@ -1,5 +1,5 @@
 // src/components/admin/BrandEditor.jsx
-// ИСПРАВЛЕНО: Модели добавляются только в существующие категории из brandData
+// ДОБАВЛЕНО: Правильное удаление моделей
 
 import React, { useState, useMemo } from "react";
 import ModelEditor from "./ModelEditor";
@@ -57,7 +57,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     // СОЗДАЕМ МОДЕЛЬ С КАТЕГОРИЕЙ
     const newModel = {
       _customName: modelName,
-      _category: selectedCategory, // Сохраняем категорию
+      _category: selectedCategory,
       services: []
     };
 
@@ -70,6 +70,26 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     setSelectedModel(modelId);
     
     alert(`✅ Модель "${modelName}" создана в категории "${getCategoryDisplayName(selectedCategory)}"!\n\nТеперь заполните услуги и цены.`);
+  };
+
+  // ФУНКЦИЯ: Полное удаление модели с предупреждением
+  const deleteModel = (modelKey, e) => {
+    if (e) e.stopPropagation();
+    
+    const modelName = getModelDisplayName(modelKey);
+    
+    if (!confirm(`❌ УДАЛИТЬ МОДЕЛЬ "${modelName}"?\n\n⚠️ ВНИМАНИЕ: Чтобы удалить модель с сайта полностью, нужно:\n1. Сделать экспорт BrandData (удалит из каталога)\n2. Сделать экспорт ZIP (удалит цены)\n3. Подождать обновления сайта\n\nПродолжить удаление из админки?`)) return;
+    
+    const newModels = { ...brand.models };
+    delete newModels[modelKey];
+    
+    updateBrand({ models: newModels });
+    
+    if (selectedModel === modelKey) {
+      setSelectedModel("");
+    }
+    
+    alert(`✅ Модель "${modelName}" удалена из админки!\n\n📋 ДАЛЬНЕЙШИЕ ДЕЙСТВИЯ:\n1. Нажмите "📝 Экспорт BrandData" - удалит модель из каталога\n2. Нажмите "📁 Экспорт ZIP" - удалит цены модели\n3. Подождите 2-3 минуты - сайт обновится`);
   };
 
   // ФУНКЦИЯ: Редактирование названия модели
@@ -86,7 +106,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       updatedModel = {
         services: modelData,
         _customName: newName,
-        _category: findModelCategory(modelKey) // Находим категорию
+        _category: findModelCategory(modelKey)
       };
     } else {
       updatedModel = {
@@ -108,23 +128,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       }
     }
     return null;
-  };
-
-  // ФУНКЦИЯ: Полное удаление модели
-  const deleteModel = (modelKey) => {
-    const modelName = getModelDisplayName(modelKey);
-    if (!confirm(`❌ Удалить модель "${modelName}"?\n\nЭто действие нельзя отменить.`)) return;
-    
-    const newModels = { ...brand.models };
-    delete newModels[modelKey];
-    
-    updateBrand({ models: newModels });
-    
-    if (selectedModel === modelKey) {
-      setSelectedModel("");
-    }
-    
-    alert(`✅ Модель "${modelName}" успешно удалена!`);
   };
 
   const handleModelChange = (modelKey, updated) => {
@@ -188,18 +191,15 @@ export default function BrandEditor({ brandKey, data, onChange }) {
   const getModelDisplayName = (modelKey) => {
     const modelData = brand.models[modelKey];
     
-    // Сначала проверяем кастомное название
     if (modelData && typeof modelData === 'object' && modelData._customName) {
       return modelData._customName;
     }
     
-    // Затем ищем в brandData
     for (const category of Object.values(brandCategories)) {
       const model = category.find(m => m.id === modelKey);
       if (model) return model.name;
     }
     
-    // Если ничего не нашли - генерируем из ключа
     return modelKey.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
   };
 
@@ -220,7 +220,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
 
     const allModels = Object.keys(brand.models || {});
     
-    // Показываем модели из выбранной категории brandData + кастомные с этой категорией
     const modelsFromBrandData = (brandCategories[selectedCategory] || [])
       .map(model => model.id)
       .filter(modelKey => brand.models[modelKey]);
@@ -232,7 +231,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
              modelData._category === selectedCategory;
     });
 
-    // Объединяем и убираем дубликаты
     return [...new Set([...modelsFromBrandData, ...customModelsInCategory])];
   };
 
@@ -292,7 +290,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
         </select>
       </div>
 
-      {/* Блок добавления моделей - ТОЛЬКО для существующих категорий */}
+      {/* Блок добавления моделей */}
       {selectedCategory && (
         <div className="bg-white p-4 rounded-lg border border-gray-200 mb-6">
           <h3 className="font-semibold text-gray-700 mb-3">
@@ -355,10 +353,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
                           ✏️
                         </button>
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            deleteModel(modelKey);
-                          }}
+                          onClick={(e) => deleteModel(modelKey, e)}
                           className="text-red-400 hover:text-red-600 text-sm"
                           title="Удалить модель"
                         >

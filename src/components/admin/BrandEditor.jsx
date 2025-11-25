@@ -1,5 +1,5 @@
 // src/components/admin/BrandEditor.jsx
-// ИСПРАВЛЕНО: Модели добавляются в выбранную категорию
+// ПОЛНОСТЬЮ ПЕРЕПИСАН - модели добавляются в выбранные категории
 
 import React, { useState, useMemo } from "react";
 import ModelEditor from "./ModelEditor";
@@ -11,7 +11,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
   const [selectedModel, setSelectedModel] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
 
-  // Получаем категории и модели из brandData
+  // Получаем категории из brandData
   const brandCategories = useMemo(() => {
     const brandInfo = brandData[brandKey];
     return brandInfo?.categories || {};
@@ -23,7 +23,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     green: "border-green-400 bg-green-50",
   };
 
-  // Список доступных валют
   const currencies = ["₽", "$", "€", "¥", "£", "₹"];
 
   // --- Управление изменениями бренда ---
@@ -39,11 +38,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       return;
     }
 
-    if (selectedCategory === "custom") {
-      alert("❌ Выберите конкретную категорию (Galaxy S, Galaxy A, etc.), а не 'Другие модели'");
-      return;
-    }
-
     const modelName = prompt("Введите название новой модели:");
     if (!modelName) return;
 
@@ -55,16 +49,27 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       return;
     }
 
-    // Создаем новую модель с пустыми услугами
+    // СОЗДАЕМ МОДЕЛЬ С КАТЕГОРИЕЙ
+    const newModel = {
+      _customName: modelName,
+      _category: selectedCategory, // Сохраняем категорию
+      services: []
+    };
+
     const newModels = {
       ...brand.models,
-      [modelId]: []
+      [modelId]: newModel
     };
 
     updateBrand({ models: newModels });
     setSelectedModel(modelId);
     
-    alert(`✅ Модель "${modelName}" создана в категории "${selectedCategory.replace(/_/g, ' ').toUpperCase()}!"\n\nТеперь заполните услуги и цены.`);
+    alert(`✅ Модель "${modelName}" создана в категории "${getCategoryDisplayName(selectedCategory)}"!\n\nТеперь заполните услуги и цены.`);
+  };
+
+  // ФУНКЦИЯ: Получить отображаемое название категории
+  const getCategoryDisplayName = (category) => {
+    return category.replace(/_/g, ' ').toUpperCase();
   };
 
   // ФУНКЦИЯ: Редактирование названия модели
@@ -74,18 +79,35 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     const newName = prompt("Введите новое название модели:", currentName);
     if (!newName || newName === currentName) return;
 
-    const updatedModels = { ...brand.models };
-    if (Array.isArray(updatedModels[modelKey])) {
-      updatedModels[modelKey] = {
-        services: updatedModels[modelKey],
+    const modelData = brand.models[modelKey];
+    let updatedModel;
+    
+    if (Array.isArray(modelData)) {
+      updatedModel = {
+        services: modelData,
+        _customName: newName,
+        _category: findModelCategory(modelKey) // Находим категорию
+      };
+    } else {
+      updatedModel = {
+        ...modelData,
         _customName: newName
       };
-    } else if (typeof updatedModels[modelKey] === 'object') {
-      updatedModels[modelKey]._customName = newName;
     }
     
+    const updatedModels = { ...brand.models, [modelKey]: updatedModel };
     updateBrand({ models: updatedModels });
     alert(`✅ Название изменено на: ${newName}`);
+  };
+
+  // ФУНКЦИЯ: Найти категорию модели в brandData
+  const findModelCategory = (modelKey) => {
+    for (const [categoryName, category] of Object.entries(brandCategories)) {
+      if (category.find(model => model.id === modelKey)) {
+        return categoryName;
+      }
+    }
+    return null;
   };
 
   // ФУНКЦИЯ: Полное удаление модели
@@ -113,7 +135,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     onChange(brandKey, newBrand);
   };
 
-  // Изменение валюты через выпадающий список
   const handleCurrencyChange = (e) => {
     const newCurrency = e.target.value;
     if (newCurrency) updateBrand({ currency: newCurrency });
@@ -166,15 +187,19 @@ export default function BrandEditor({ brandKey, data, onChange }) {
   // Функция для получения человеко-читаемого имени модели
   const getModelDisplayName = (modelKey) => {
     const modelData = brand.models[modelKey];
+    
+    // Сначала проверяем кастомное название
     if (modelData && typeof modelData === 'object' && modelData._customName) {
       return modelData._customName;
     }
     
+    // Затем ищем в brandData
     for (const category of Object.values(brandCategories)) {
       const model = category.find(m => m.id === modelKey);
       if (model) return model.name;
     }
     
+    // Если ничего не нашли - генерируем из ключа
     return modelKey.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
   };
 
@@ -189,27 +214,62 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     return [];
   };
 
-  // Получаем модели для выбранной категории
+  // НОВАЯ ФУНКЦИЯ: Получить ВСЕ модели для выбранной категории
   const getModelsForCategory = () => {
     if (!selectedCategory) return [];
 
-    if (selectedCategory === "custom") {
-      return Object.keys(brand.models || {}).filter(modelKey => {
+    const allModels = Object.keys(brand.models || {});
+    
+    if (selectedCategory === "all") {
+      // Показываем все модели
+      return allModels;
+    } else if (selectedCategory === "custom") {
+      // Показываем только кастомные модели (которых нет в brandData)
+      return allModels.filter(modelKey => {
+        let existsInBrandData = false;
         for (const category of Object.values(brandCategories)) {
-          if (category.find(m => m.id === modelKey)) return false;
+          if (category.find(m => m.id === modelKey)) {
+            existsInBrandData = true;
+            break;
+          }
         }
-        return true;
+        return !existsInBrandData;
       });
-    }
+    } else {
+      // Показываем модели из выбранной категории brandData + кастомные с этой категорией
+      const modelsFromBrandData = (brandCategories[selectedCategory] || [])
+        .map(model => model.id)
+        .filter(modelKey => brand.models[modelKey]);
 
-    // Модели из выбранной категории
-    const modelsInCategory = brandCategories[selectedCategory] || [];
-    return modelsInCategory
-      .map(model => model.id)
-      .filter(modelKey => brand.models[modelKey]);
+      const customModelsInCategory = allModels.filter(modelKey => {
+        const modelData = brand.models[modelKey];
+        return modelData && 
+               typeof modelData === 'object' && 
+               modelData._category === selectedCategory;
+      });
+
+      // Объединяем и убираем дубликаты
+      return [...new Set([...modelsFromBrandData, ...customModelsInCategory])];
+    }
   };
 
   const modelsToShow = getModelsForCategory();
+
+  // НОВАЯ ФУНКЦИЯ: Получить список категорий для отображения
+  const getDisplayCategories = () => {
+    const categories = [];
+    
+    // Категории из brandData
+    Object.keys(brandCategories).forEach(cat => {
+      categories.push(cat);
+    });
+    
+    // Специальные категории
+    categories.push("custom"); // Кастомные модели
+    categories.push("all");    // Все модели
+    
+    return categories;
+  };
 
   return (
     <div className={`p-6 rounded-2xl border shadow-md mb-8 ${colorMap[brandStatus]}`}>
@@ -257,42 +317,29 @@ export default function BrandEditor({ brandKey, data, onChange }) {
           className="w-full max-w-md border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">— Выберите категорию —</option>
-          {Object.keys(brandCategories).map(category => (
+          {getDisplayCategories().map(category => (
             <option key={category} value={category}>
-              {category.replace(/_/g, ' ').toUpperCase()} ({brandCategories[category].filter(model => brand.models[model.id]).length})
+              {category === "all" ? "📱 ВСЕ МОДЕЛИ" : 
+               category === "custom" ? "✨ КАСТОМНЫЕ МОДЕЛИ" : 
+               getCategoryDisplayName(category)} 
+              ({getModelsForCategoryCount(category)})
             </option>
           ))}
-          {/* Опция для кастомных моделей */}
-          {Object.keys(brand.models || {}).filter(modelKey => {
-            for (const category of Object.values(brandCategories)) {
-              if (category.find(m => m.id === modelKey)) return false;
-            }
-            return true;
-          }).length > 0 && (
-            <option value="custom">
-              Другие модели ({Object.keys(brand.models || {}).filter(modelKey => {
-                for (const category of Object.values(brandCategories)) {
-                  if (category.find(m => m.id === modelKey)) return false;
-                }
-                return true;
-              }).length})
-            </option>
-          )}
         </select>
       </div>
 
-      {/* Блок добавления моделей - ТЕПЕРЬ В ВЫБРАННУЮ КАТЕГОРИЮ */}
-      {selectedCategory && selectedCategory !== "custom" && (
+      {/* Блок добавления моделей */}
+      {selectedCategory && selectedCategory !== "all" && selectedCategory !== "custom" && (
         <div className="bg-white p-4 rounded-lg border border-gray-200 mb-6">
           <h3 className="font-semibold text-gray-700 mb-3">
-            Добавить модель в категорию: <span className="text-blue-600">{selectedCategory.replace(/_/g, ' ').toUpperCase()}</span>
+            Добавить модель в категорию: <span className="text-blue-600">{getCategoryDisplayName(selectedCategory)}</span>
           </h3>
           <div className="flex flex-wrap gap-2 items-center">
             <button
               onClick={addModelToCategory}
               className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
             >
-              ➕ Добавить модель в {selectedCategory.replace(/_/g, ' ').toUpperCase()}
+              ➕ Добавить модель в {getCategoryDisplayName(selectedCategory)}
             </button>
             <span className="text-sm text-gray-500">
               Модель будет добавлена именно в эту категорию
@@ -306,10 +353,9 @@ export default function BrandEditor({ brandKey, data, onChange }) {
         <div className="mb-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="font-semibold text-gray-700 text-lg">
-              {selectedCategory === "custom" 
-                ? "Другие модели" 
-                : selectedCategory.replace(/_/g, ' ').toUpperCase()
-              } 
+              {selectedCategory === "all" ? "📱 Все модели" : 
+               selectedCategory === "custom" ? "✨ Кастомные модели" : 
+               getCategoryDisplayName(selectedCategory)} 
               ({modelsToShow.length})
             </h3>
           </div>
@@ -373,7 +419,9 @@ export default function BrandEditor({ brandKey, data, onChange }) {
             <div className="text-center py-8 text-gray-500 border-2 border-dashed border-gray-300 rounded-lg">
               {selectedCategory === "custom" 
                 ? "Нет кастомных моделей" 
-                : `В категории "${selectedCategory.replace(/_/g, ' ').toUpperCase()}" нет моделей с данными`
+                : selectedCategory === "all"
+                ? "Нет моделей в базе"
+                : `В категории "${getCategoryDisplayName(selectedCategory)}" нет моделей с данными`
               }
             </div>
           )}
@@ -412,4 +460,39 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       )}
     </div>
   );
+
+  // Вспомогательная функция для подсчета моделей в категории
+  function getModelsForCategoryCount(category) {
+    if (!category) return 0;
+    
+    const allModels = Object.keys(brand.models || {});
+    
+    if (category === "all") {
+      return allModels.length;
+    } else if (category === "custom") {
+      return allModels.filter(modelKey => {
+        let existsInBrandData = false;
+        for (const cat of Object.values(brandCategories)) {
+          if (cat.find(m => m.id === modelKey)) {
+            existsInBrandData = true;
+            break;
+          }
+        }
+        return !existsInBrandData;
+      }).length;
+    } else {
+      const modelsFromBrandData = (brandCategories[category] || [])
+        .map(model => model.id)
+        .filter(modelKey => brand.models[modelKey]).length;
+
+      const customModelsInCategory = allModels.filter(modelKey => {
+        const modelData = brand.models[modelKey];
+        return modelData && 
+               typeof modelData === 'object' && 
+               modelData._category === category;
+      }).length;
+
+      return modelsFromBrandData + customModelsInCategory;
+    }
+  }
 }

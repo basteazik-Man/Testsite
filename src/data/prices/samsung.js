@@ -1554,35 +1554,11 @@ export default {
     "tab-s7": [],
     "tab-s8": [],
     "tab-s9": [],
-    "galaxy-a31": [
+    "galaxy-a22": [
       {
-        "name": "Замена дисплейного модуля",
-        "price": 4000,
-        "finalPrice": 4000,
-        "active": true
-      },
-      {
-        "name": "Замена Аккумулятора",
-        "price": 2500,
-        "finalPrice": 2500,
-        "active": true
-      },
-      {
-        "name": "Замена разъема питания",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      },
-      {
-        "name": "Замена микрофона",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      },
-      {
-        "name": "Новая услуга",
-        "price": 0,
-        "finalPrice": 0,
+        "name": "Замена экрана",
+        "price": 1000,
+        "finalPrice": 1000,
         "active": true
       }
     ]

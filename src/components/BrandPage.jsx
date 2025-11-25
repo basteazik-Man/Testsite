@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { brandData } from "../data/brandData";
+import { PRICES } from "../data/prices";
 
 export default function BrandPage() {
   const { brand } = useParams();
@@ -17,6 +18,7 @@ export default function BrandPage() {
   const [selectedCategory, setSelectedCategory] = useState(getInitialCategory);
 
   const data = brandData[brand?.toLowerCase()];
+  const brandPrices = PRICES[brand?.toLowerCase()];
 
   // Обработка ошибок - проверка наличия бренда
   if (!brand) {
@@ -62,10 +64,52 @@ export default function BrandPage() {
     }
   }, [selectedCategory, brand]);
 
-  // Получаем модели для выбранной категории
-  const models = hasCategories && selectedCategory
-    ? data.categories[selectedCategory] || []
-    : [];
+  // НОВАЯ ФУНКЦИЯ: Получить ВСЕ модели для отображения (из brandData + из PRICES)
+  const getAllModelsForCategory = () => {
+    if (!selectedCategory) return [];
+
+    // Модели из brandData для выбранной категории
+    const modelsFromBrandData = hasCategories && selectedCategory
+      ? data.categories[selectedCategory] || []
+      : [];
+
+    // Модели из PRICES (данных цен) для этого бренда
+    const modelsFromPrices = brandPrices?.models ? Object.keys(brandPrices.models) : [];
+
+    // Объединяем модели, убираем дубликаты
+    const allModelsMap = new Map();
+
+    // Сначала добавляем модели из brandData
+    modelsFromBrandData.forEach(model => {
+      allModelsMap.set(model.id, {
+        id: model.id,
+        name: model.name,
+        image: model.image,
+        from: 'brandData'
+      });
+    });
+
+    // Затем добавляем модели из PRICES, которых нет в brandData
+    modelsFromPrices.forEach(modelKey => {
+      if (!allModelsMap.has(modelKey)) {
+        // Создаем человеко-читаемое название из ключа модели
+        const modelName = modelKey
+          .replace(/-/g, ' ')
+          .replace(/\b\w/g, letter => letter.toUpperCase());
+        
+        allModelsMap.set(modelKey, {
+          id: modelKey,
+          name: modelName,
+          image: "/logos/default-phone.jpg",
+          from: 'prices'
+        });
+      }
+    });
+
+    return Array.from(allModelsMap.values());
+  };
+
+  const modelsToDisplay = getAllModelsForCategory();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-10 px-4" style={{ position: 'relative', zIndex: 1 }}>
@@ -95,33 +139,50 @@ export default function BrandPage() {
                 style={{ cursor: 'pointer' }}
               >
                 {cat.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+                {getCategoryModelCount(cat) > 0 && ` (${getCategoryModelCount(cat)})`}
               </button>
             ))}
           </div>
         )}
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 relative z-10">
-          {models.length > 0 ? (
-            models.map((model) => (
+          {modelsToDisplay.length > 0 ? (
+            modelsToDisplay.map((model) => (
               <button
                 key={model.id}
                 onClick={() => navigate(`/brand/${brand}/model/${encodeURIComponent(model.id)}`)}
-                className="bg-white rounded-2xl py-4 px-6 text-gray-800 font-semibold border border-gray-200 shadow-md hover:shadow-xl transition-all text-base md:text-lg w-full text-center relative z-10 hover:border-blue-300 hover:bg-blue-50"
+                className="bg-white rounded-2xl py-4 px-6 text-gray-800 font-semibold border border-gray-200 shadow-md hover:shadow-xl transition-all text-base md:text-lg w-full text-center relative z-10 hover:border-blue-300 hover:bg-blue-50 group"
                 style={{ cursor: 'pointer' }}
+                title={model.from === 'prices' ? "Модель из данных цен" : "Модель из каталога"}
               >
-                {model.name}
+                <div className="flex flex-col items-center">
+                  <span>{model.name}</span>
+                  {model.from === 'prices' && (
+                    <span className="text-xs text-green-600 mt-1 bg-green-100 px-2 py-1 rounded-full">
+                      ✓ с ценами
+                    </span>
+                  )}
+                </div>
               </button>
             ))
           ) : (
             <p className="col-span-full text-center text-gray-500 relative z-10">
               {hasCategories && categories.length > 0
-                ? "Выберите серию, чтобы увидеть модели."
+                ? "В этой категории пока нет моделей с данными."
                 : "Модели не найдены."}
             </p>
           )}
         </div>
 
-        {/* БЛОК ДОСТАВКИ - ОБНОВЛЕН */}
+        {/* Информация о количестве моделей */}
+        <div className="mt-6 text-center text-sm text-gray-600">
+          Всего моделей: {modelsToDisplay.length} 
+          {modelsToDisplay.filter(m => m.from === 'prices').length > 0 && 
+            ` (${modelsToDisplay.filter(m => m.from === 'prices').length} с ценами)`
+          }
+        </div>
+
+        {/* БЛОК ДОСТАВКИ */}
         <div className="mt-12 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl text-center">
           <h3 className="text-xl font-semibold text-green-800 mb-3">
             🚚 Нужна доставка устройства?
@@ -133,7 +194,7 @@ export default function BrandPage() {
             onClick={() => navigate('/delivery-order', { 
               state: { 
                 brand: brand,
-                deviceType: 'smartphone' // ДОБАВЛЕНО: тип устройства по умолчанию для страниц брендов
+                deviceType: 'smartphone'
               }
             })}
             className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
@@ -144,4 +205,30 @@ export default function BrandPage() {
       </div>
     </div>
   );
+
+  // Вспомогательная функция для подсчета моделей в категории
+  function getCategoryModelCount(category) {
+    const modelsFromBrandData = data.categories[category]?.length || 0;
+    const modelsFromPrices = brandPrices?.models ? 
+      Object.keys(brandPrices.models).filter(modelKey => {
+        // Проверяем, относится ли модель к этой категории (простая эвристика)
+        const modelName = modelKey.toLowerCase();
+        const categoryName = category.toLowerCase();
+        
+        // Для Samsung
+        if (brand.toLowerCase() === 'samsung') {
+          if (categoryName.includes('galaxy_s') && modelName.match(/s\d+/)) return true;
+          if (categoryName.includes('galaxy_a') && modelName.match(/a\d+/)) return true;
+          if (categoryName.includes('galaxy_m') && modelName.match(/m\d+/)) return true;
+          if (categoryName.includes('galaxy_note') && modelName.includes('note')) return true;
+          if (categoryName.includes('galaxy_z') && (modelName.includes('flip') || modelName.includes('fold'))) return true;
+          if (categoryName.includes('galaxy_tab') && modelName.includes('tab')) return true;
+        }
+        
+        // Общая проверка по названию
+        return modelName.includes(categoryName.replace('galaxy_', '').replace('_', ''));
+      }).length : 0;
+    
+    return modelsFromBrandData + modelsFromPrices;
+  }
 }

@@ -1,5 +1,5 @@
 // src/utils/updateBrandData.js
-// ИСПРАВЛЕНО: Модели добавляются в правильные категории
+// УЛУЧШЕННАЯ ВЕРСИЯ - учитывает категории из админки
 
 import { brandData as existingBrandData } from '../data/brandData';
 
@@ -22,7 +22,7 @@ export const generateUpdatedBrandData = (pricesData) => {
     }
 
     // Перебираем все модели этого бренда из цен
-    Object.keys(brandInfo.models || {}).forEach(modelKey => {
+    Object.entries(brandInfo.models || {}).forEach(([modelKey, modelData]) => {
       // Проверяем, есть ли уже эта модель в основном каталоге
       let modelExists = false;
       let existingCategory = null;
@@ -37,15 +37,22 @@ export const generateUpdatedBrandData = (pricesData) => {
 
       // Если модели нет - определяем куда её добавить
       if (!modelExists) {
-        // Пытаемся определить категорию по названию модели
-        const targetCategory = determineCategoryByModelName(modelKey, brandKey, updatedBrandData[brandKey].categories);
+        // Пытаемся определить категорию из данных админки
+        let targetCategory = null;
         
-        if (targetCategory) {
+        // Если в данных модели есть информация о категории - используем её
+        if (modelData && typeof modelData === 'object' && modelData._category) {
+          targetCategory = modelData._category;
+        } else {
+          // Иначе определяем категорию по названию модели
+          targetCategory = determineCategoryByModelName(modelKey, brandKey, updatedBrandData[brandKey].categories);
+        }
+        
+        if (targetCategory && updatedBrandData[brandKey].categories[targetCategory]) {
+          // Создаем человеко-читаемое название
+          const modelName = getModelDisplayName(modelKey, modelData);
+          
           // Добавляем модель в определенную категорию
-          const modelName = modelKey
-            .replace(/-/g, ' ')
-            .replace(/\b\w/g, letter => letter.toUpperCase());
-
           updatedBrandData[brandKey].categories[targetCategory].push({
             id: modelKey,
             name: modelName,
@@ -61,29 +68,7 @@ export const generateUpdatedBrandData = (pricesData) => {
           
           console.log(`Добавлена модель: ${brandKey} -> ${targetCategory} -> ${modelName}`);
         } else {
-          // Если категорию определить не удалось - добавляем в "other"
-          if (!updatedBrandData[brandKey].categories.other) {
-            updatedBrandData[brandKey].categories.other = [];
-          }
-
-          const modelName = modelKey
-            .replace(/-/g, ' ')
-            .replace(/\b\w/g, letter => letter.toUpperCase());
-
-          updatedBrandData[brandKey].categories.other.push({
-            id: modelKey,
-            name: modelName,
-            image: "/logos/default-phone.jpg"
-          });
-
-          addedModels.push({ 
-            brand: brandKey, 
-            model: modelKey,
-            name: modelName,
-            category: 'other'
-          });
-          
-          console.log(`Добавлена модель в other: ${brandKey} -> ${modelName}`);
+          console.log(`Не удалось определить категорию для модели: ${brandKey} -> ${modelKey}`);
         }
       }
     });
@@ -106,7 +91,22 @@ export const brandData = ${JSON.stringify(updatedBrandData, null, 2)};
 };
 
 /**
- * Определяет категорию для модели по её названию
+ * Получить отображаемое название модели
+ */
+const getModelDisplayName = (modelKey, modelData) => {
+  // Если в данных есть кастомное название - используем его
+  if (modelData && typeof modelData === 'object' && modelData._customName) {
+    return modelData._customName;
+  }
+  
+  // Иначе генерируем из ключа
+  return modelKey
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, letter => letter.toUpperCase());
+};
+
+/**
+ * Определяет категорию для модели по её названию (резервный метод)
  */
 const determineCategoryByModelName = (modelKey, brandKey, categories) => {
   const modelName = modelKey.toLowerCase();

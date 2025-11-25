@@ -396,11 +396,7 @@ export const brandData = {
         }
       ],
       "galaxy_a": [
-        {
-          "id": "a10",
-          "name": "Galaxy A10",
-          "image": "/logos/samsung/a10.jpg"
-        },
+        
         {
           "id": "a12",
           "name": "Galaxy A12",

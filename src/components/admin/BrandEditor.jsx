@@ -1,8 +1,10 @@
-// BrandEditor.jsx (с исправленным удалением моделей)
+// src/components/admin/BrandEditor.jsx
+// Полная версия с возможностью добавления моделей
+
 import React, { useState, useMemo } from "react";
 import ModelEditor from "./ModelEditor";
-import { brandData } from "../../data/brandData";
-import { getBrandStatus, getModelStatus } from "../../utils/priceUtils";
+import { brandData } from "../../../data/brandData";
+import { getBrandStatus, getModelStatus } from "../../../utils/priceUtils";
 
 export default function BrandEditor({ brandKey, data, onChange }) {
   const brand = data[brandKey];
@@ -30,14 +32,14 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     onChange(brandKey, updated);
   };
 
-  // Добавление кастомной модели
+  // ФУНКЦИЯ: Добавление кастомной модели
   const addCustomModel = () => {
     const name = prompt("Введите название модели:");
     if (!name) return;
     const key = name.toLowerCase().replace(/\s+/g, "-");
     
     if (brand.models[key]) {
-      alert("Такая модель уже существует!");
+      alert("❌ Такая модель уже существует!");
       return;
     }
 
@@ -46,9 +48,11 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     updateBrand({ models: newModels });
     setSelectedModel(key);
     setSelectedCategory("custom");
+    
+    alert(`✅ Модель "${name}" создана! Теперь заполните услуги и цены.`);
   };
 
-  // Редактирование названия модели
+  // ФУНКЦИЯ: Редактирование названия модели
   const editModelName = (modelKey, e) => {
     e.stopPropagation();
     const currentName = getModelDisplayName(modelKey);
@@ -68,12 +72,13 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     }
     
     updateBrand({ models: updatedModels });
+    alert(`✅ Название изменено на: ${newName}`);
   };
 
-  // ИСПРАВЛЕННАЯ ФУНКЦИЯ: Полное удаление модели
+  // ФУНКЦИЯ: Полное удаление модели
   const deleteModel = (modelKey) => {
     const modelName = getModelDisplayName(modelKey);
-    if (!confirm(`Удалить модель "${modelName}"? Это действие нельзя отменить.`)) return;
+    if (!confirm(`❌ Удалить модель "${modelName}"?\n\nЭто действие нельзя отменить.`)) return;
     
     const newModels = { ...brand.models };
     delete newModels[modelKey];
@@ -86,8 +91,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       setSelectedModel("");
     }
     
-    // Показываем подтверждение
-    alert(`Модель "${modelName}" успешно удалена!`);
+    alert(`✅ Модель "${modelName}" успешно удалена!`);
   };
 
   const handleModelChange = (modelKey, updated) => {

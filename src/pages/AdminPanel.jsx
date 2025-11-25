@@ -1,4 +1,6 @@
-// AdminPanel.jsx
+// src/pages/AdminPanel.jsx
+// Полная версия с кнопкой экспорта BrandData
+
 import React, { useState, useEffect, useRef } from "react";
 import BrandEditor from "../components/admin/BrandEditor";
 import CategoryServicesEditor from "../components/admin/CategoryServicesEditor";
@@ -369,6 +371,45 @@ const parseJSFile = (fileContent, fileName) => {
   }
 };
 
+// НОВАЯ ФУНКЦИЯ: Экспорт обновленного BrandData
+const exportBrandData = async (data) => {
+  try {
+    // Динамически импортируем утилиту
+    const { generateUpdatedBrandData } = await import('../utils/updateBrandData');
+    
+    // Генерируем обновленный brandData
+    const result = generateUpdatedBrandData(data);
+    
+    if (!result.hasChanges) {
+      alert("ℹ️ Нет новых моделей для добавления в brandData");
+      return false;
+    }
+
+    // Создаем и скачиваем файл
+    const blob = new Blob([result.content], { type: "application/javascript" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `brandData-updated-${new Date().toISOString().split('T')[0]}.js`;
+    a.click();
+    
+    // Освобождаем память
+    URL.revokeObjectURL(a.href);
+    
+    // Показываем отчет
+    const modelList = result.addedModels.map(item => 
+      `• ${item.brand} - ${item.name}`
+    ).join('\n');
+    
+    alert(`✅ BrandData обновлен!\n\nДобавлено моделей: ${result.addedModels.length}\n\n${modelList}\n\nСкопируйте файл в папку src/data/brandData.js`);
+    
+    return true;
+  } catch (error) {
+    console.error('Ошибка при экспорте BrandData:', error);
+    alert('❌ Ошибка при обновлении brandData: ' + error.message);
+    return false;
+  }
+};
+
 export default function AdminPanel() {
   const [authenticated, setAuthenticated] = useState(() => {
     return localStorage.getItem('admin_authenticated') === 'true';
@@ -705,6 +746,24 @@ export default function AdminPanel() {
     }
   };
 
+  // НОВАЯ ФУНКЦИЯ: Экспорт BrandData
+  const handleExportBrandData = async () => {
+    setIsExporting(true);
+    setMessage("🔄 Генерация обновленного BrandData...");
+    
+    try {
+      const success = await exportBrandData(data);
+      if (success) {
+        setMessage("✅ BrandData обновлен с новыми моделями");
+      }
+    } catch (error) {
+      setMessage("❌ Ошибка при обновлении BrandData");
+    } finally {
+      setIsExporting(false);
+      setTimeout(() => setMessage(""), 5000);
+    }
+  };
+
   const getBrandStyle = (key) => {
     const { status } = getBrandStatus(data[key]);
     if (status === "empty")
@@ -791,6 +850,16 @@ export default function AdminPanel() {
           }`}
         >
           {isExporting ? "📦 Архив..." : "📁 Экспорт ZIP"}
+        </button>
+        {/* НОВАЯ КНОПКА: Экспорт BrandData */}
+        <button
+          onClick={handleExportBrandData}
+          disabled={isExporting}
+          className={`px-4 py-2 rounded-lg text-white font-medium ${
+            isExporting ? "bg-purple-400" : "bg-purple-600 hover:bg-purple-700"
+          }`}
+        >
+          📝 Экспорт BrandData
         </button>
         {/* КНОПКА: Экспорт ТВ/ноутбуки */}
         <button

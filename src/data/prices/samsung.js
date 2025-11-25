@@ -627,38 +627,6 @@ export default {
         "active": true
       }
     ],
-    "a20": [
-      {
-        "name": "Замена дисплейного модуля ",
-        "price": 4000,
-        "finalPrice": 4000,
-        "active": true
-      },
-      {
-        "name": "Замена аккумулятора",
-        "price": 2500,
-        "finalPrice": 2500,
-        "active": true
-      },
-      {
-        "name": "Замена разъема питания",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      },
-      {
-        "name": "Замена микрофона",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      },
-      {
-        "name": "Замена слухового динамика",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      }
-    ],
     "a30": [
       {
         "name": "Замена дисплейного модуля",
@@ -1552,38 +1520,6 @@ export default {
     "tab-s6": [],
     "tab-s7": [],
     "tab-s8": [],
-    "tab-s9": [],
-    "galaxy-a31": [
-      {
-        "name": "Замена дисплейного модуля",
-        "price": 4000,
-        "finalPrice": 4000,
-        "active": true
-      },
-      {
-        "name": "Змена аккумулятора",
-        "price": 2500,
-        "finalPrice": 2500,
-        "active": true
-      },
-      {
-        "name": "Замена слухового динамика",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      },
-      {
-        "name": "Замена разъема питания",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      },
-      {
-        "name": "Замена микрофона",
-        "price": 2000,
-        "finalPrice": 2000,
-        "active": true
-      }
-    ]
+    "tab-s9": []
   }
 };

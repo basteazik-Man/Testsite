@@ -1,7 +1,7 @@
 // === brandData.js ===
 // Автоматически обновлено через админку Chip&Gadget
-// Сгенерировано: 26.11.2025, 02:44:02
-// Новые модели: 1685
+// Сгенерировано: 26.11.2025, 02:49:05
+// Новые модели: 1680
 // Удаленные модели: 0
 
 export const brandData = {
@@ -971,11 +971,6 @@ export const brandData = {
           "image": "/logos/default-phone.jpg"
         },
         {
-          "id": "a20",
-          "name": "A20",
-          "image": "/logos/default-phone.jpg"
-        },
-        {
           "id": "a30",
           "name": "A30",
           "image": "/logos/default-phone.jpg"
@@ -1565,11 +1560,6 @@ export const brandData = {
           "image": "/logos/default-phone.jpg"
         },
         {
-          "id": "a20",
-          "name": "A20",
-          "image": "/logos/default-phone.jpg"
-        },
-        {
           "id": "a30",
           "name": "A30",
           "image": "/logos/default-phone.jpg"
@@ -1809,11 +1799,6 @@ export const brandData = {
         {
           "id": "a12",
           "name": "A12",
-          "image": "/logos/default-phone.jpg"
-        },
-        {
-          "id": "a20",
-          "name": "A20",
           "image": "/logos/default-phone.jpg"
         },
         {
@@ -2094,11 +2079,6 @@ export const brandData = {
           "image": "/logos/default-phone.jpg"
         },
         {
-          "id": "a20",
-          "name": "A20",
-          "image": "/logos/default-phone.jpg"
-        },
-        {
           "id": "a30",
           "name": "A30",
           "image": "/logos/default-phone.jpg"
@@ -2353,11 +2333,6 @@ export const brandData = {
         {
           "id": "a12",
           "name": "A12",
-          "image": "/logos/default-phone.jpg"
-        },
-        {
-          "id": "a20",
-          "name": "A20",
           "image": "/logos/default-phone.jpg"
         },
         {

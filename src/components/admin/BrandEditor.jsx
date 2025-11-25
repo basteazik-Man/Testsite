@@ -1,9 +1,9 @@
 // src/components/admin/BrandEditor.jsx
-// ИСПРАВЛЕННЫЙ ПУТЬ К brandData
+// ИСПРАВЛЕНО: Модели добавляются в выбранную категорию
 
 import React, { useState, useMemo } from "react";
 import ModelEditor from "./ModelEditor";
-import { brandData } from "../../data/brandData"; // ИСПРАВЛЕН ПУТЬ!
+import { brandData } from "../../data/brandData";
 import { getBrandStatus, getModelStatus } from "../../utils/priceUtils";
 
 export default function BrandEditor({ brandKey, data, onChange }) {
@@ -32,24 +32,39 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     onChange(brandKey, updated);
   };
 
-  // ФУНКЦИЯ: Добавление кастомной модели
-  const addCustomModel = () => {
-    const name = prompt("Введите название модели:");
-    if (!name) return;
-    const key = name.toLowerCase().replace(/\s+/g, "-");
-    
-    if (brand.models[key]) {
-      alert("❌ Такая модель уже существует!");
+  // ФУНКЦИЯ: Добавление модели в ВЫБРАННУЮ КАТЕГОРИЮ
+  const addModelToCategory = () => {
+    if (!selectedCategory) {
+      alert("❌ Сначала выберите категорию!");
       return;
     }
 
-    const servicesArray = [];
-    const newModels = { ...brand.models, [key]: servicesArray };
-    updateBrand({ models: newModels });
-    setSelectedModel(key);
-    setSelectedCategory("custom");
+    if (selectedCategory === "custom") {
+      alert("❌ Выберите конкретную категорию (Galaxy S, Galaxy A, etc.), а не 'Другие модели'");
+      return;
+    }
+
+    const modelName = prompt("Введите название новой модели:");
+    if (!modelName) return;
+
+    const modelId = modelName.toLowerCase().replace(/\s+/g, '-');
     
-    alert(`✅ Модель "${name}" создана! Теперь заполните услуги и цены.`);
+    // Проверяем уникальность
+    if (brand.models[modelId]) {
+      alert("❌ Модель с таким ID уже существует!");
+      return;
+    }
+
+    // Создаем новую модель с пустыми услугами
+    const newModels = {
+      ...brand.models,
+      [modelId]: []
+    };
+
+    updateBrand({ models: newModels });
+    setSelectedModel(modelId);
+    
+    alert(`✅ Модель "${modelName}" создана в категории "${selectedCategory.replace(/_/g, ' ').toUpperCase()}!"\n\nТеперь заполните услуги и цены.`);
   };
 
   // ФУНКЦИЯ: Редактирование названия модели
@@ -59,10 +74,8 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     const newName = prompt("Введите новое название модели:", currentName);
     if (!newName || newName === currentName) return;
 
-    // Обновляем кастомное имя в данных модели
     const updatedModels = { ...brand.models };
     if (Array.isArray(updatedModels[modelKey])) {
-      // Если это массив услуг, преобразуем в объект с кастомным именем
       updatedModels[modelKey] = {
         services: updatedModels[modelKey],
         _customName: newName
@@ -83,10 +96,8 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     const newModels = { ...brand.models };
     delete newModels[modelKey];
     
-    // Полностью обновляем данные бренда
     updateBrand({ models: newModels });
     
-    // Сбрасываем выбранную модель, если она была удалена
     if (selectedModel === modelKey) {
       setSelectedModel("");
     }
@@ -154,23 +165,20 @@ export default function BrandEditor({ brandKey, data, onChange }) {
 
   // Функция для получения человеко-читаемого имени модели
   const getModelDisplayName = (modelKey) => {
-    // Проверяем есть ли кастомное имя
     const modelData = brand.models[modelKey];
     if (modelData && typeof modelData === 'object' && modelData._customName) {
       return modelData._customName;
     }
     
-    // Ищем модель в brandData для получения красивого имени
     for (const category of Object.values(brandCategories)) {
       const model = category.find(m => m.id === modelKey);
       if (model) return model.name;
     }
     
-    // Если не нашли, преобразуем ключ
     return modelKey.replace(/-/g, " ").replace(/\b\w/g, l => l.toUpperCase());
   };
 
-  // Получаем услуги для модели (универсальный метод)
+  // Получаем услуги для модели
   const getModelServices = (modelKey) => {
     const modelData = brand.models[modelKey];
     if (Array.isArray(modelData)) {
@@ -186,7 +194,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     if (!selectedCategory) return [];
 
     if (selectedCategory === "custom") {
-      // Кастомные модели (не из категорий)
       return Object.keys(brand.models || {}).filter(modelKey => {
         for (const category of Object.values(brandCategories)) {
           if (category.find(m => m.id === modelKey)) return false;
@@ -238,22 +245,6 @@ export default function BrandEditor({ brandKey, data, onChange }) {
         </div>
       </div>
 
-      {/* Блок добавления моделей */}
-      <div className="bg-white p-4 rounded-lg border border-gray-200 mb-6">
-        <h3 className="font-semibold text-gray-700 mb-3">Добавить модель:</h3>
-        <div className="flex flex-wrap gap-2 items-center">
-          <button
-            onClick={addCustomModel}
-            className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
-          >
-            ➕ Создать свою модель
-          </button>
-          <span className="text-sm text-gray-500">
-            Модели из каталога добавляются автоматически при сохранении
-          </span>
-        </div>
-      </div>
-
       {/* Выбор категории */}
       <div className="bg-white p-4 rounded-lg border border-gray-200 mb-6">
         <h3 className="font-semibold text-gray-700 mb-3">Выберите категорию:</h3>
@@ -289,6 +280,26 @@ export default function BrandEditor({ brandKey, data, onChange }) {
           )}
         </select>
       </div>
+
+      {/* Блок добавления моделей - ТЕПЕРЬ В ВЫБРАННУЮ КАТЕГОРИЮ */}
+      {selectedCategory && selectedCategory !== "custom" && (
+        <div className="bg-white p-4 rounded-lg border border-gray-200 mb-6">
+          <h3 className="font-semibold text-gray-700 mb-3">
+            Добавить модель в категорию: <span className="text-blue-600">{selectedCategory.replace(/_/g, ' ').toUpperCase()}</span>
+          </h3>
+          <div className="flex flex-wrap gap-2 items-center">
+            <button
+              onClick={addModelToCategory}
+              className="px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium transition-colors"
+            >
+              ➕ Добавить модель в {selectedCategory.replace(/_/g, ' ').toUpperCase()}
+            </button>
+            <span className="text-sm text-gray-500">
+              Модель будет добавлена именно в эту категорию
+            </span>
+          </div>
+        </div>
+      )}
 
       {/* Список моделей выбранной категории */}
       {selectedCategory && (
@@ -362,7 +373,7 @@ export default function BrandEditor({ brandKey, data, onChange }) {
             <div className="text-center py-8 text-gray-500 border-2 border-dashed border-gray-300 rounded-lg">
               {selectedCategory === "custom" 
                 ? "Нет кастомных моделей" 
-                : "В этой категории нет моделей с данными"
+                : `В категории "${selectedCategory.replace(/_/g, ' ').toUpperCase()}" нет моделей с данными`
               }
             </div>
           )}

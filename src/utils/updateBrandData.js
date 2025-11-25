@@ -1,7 +1,7 @@
 // src/utils/updateBrandData.js
-// ИСПРАВЛЕННЫЙ ПУТЬ К brandData
+// ИСПРАВЛЕНО: Модели добавляются в правильные категории
 
-import { brandData as existingBrandData } from '../data/brandData'; // ИСПРАВЛЕН ПУТЬ!
+import { brandData as existingBrandData } from '../data/brandData';
 
 /**
  * Генерирует обновленный brandData.js с новыми моделями из админки
@@ -25,40 +25,66 @@ export const generateUpdatedBrandData = (pricesData) => {
     Object.keys(brandInfo.models || {}).forEach(modelKey => {
       // Проверяем, есть ли уже эта модель в основном каталоге
       let modelExists = false;
+      let existingCategory = null;
       
       // Ищем модель во всех категориях бренда
-      Object.values(updatedBrandData[brandKey].categories).forEach(category => {
+      Object.entries(updatedBrandData[brandKey].categories).forEach(([categoryName, category]) => {
         if (category.find(model => model.id === modelKey)) {
           modelExists = true;
+          existingCategory = categoryName;
         }
       });
 
-      // Если модели нет - добавляем в категорию "other"
+      // Если модели нет - определяем куда её добавить
       if (!modelExists) {
-        // Создаем категорию "other" если её нет
-        if (!updatedBrandData[brandKey].categories.other) {
-          updatedBrandData[brandKey].categories.other = [];
-        }
-
-        // Создаем красивый заголовок из ID модели
-        const modelName = modelKey
-          .replace(/-/g, ' ')
-          .replace(/\b\w/g, letter => letter.toUpperCase());
-
-        // Добавляем новую модель
-        updatedBrandData[brandKey].categories.other.push({
-          id: modelKey,
-          name: modelName,
-          image: "/logos/default-phone.jpg" // стандартное изображение
-        });
-
-        addedModels.push({ 
-          brand: brandKey, 
-          model: modelKey,
-          name: modelName
-        });
+        // Пытаемся определить категорию по названию модели
+        const targetCategory = determineCategoryByModelName(modelKey, brandKey, updatedBrandData[brandKey].categories);
         
-        console.log(`Добавлена модель: ${brandKey} -> ${modelName}`);
+        if (targetCategory) {
+          // Добавляем модель в определенную категорию
+          const modelName = modelKey
+            .replace(/-/g, ' ')
+            .replace(/\b\w/g, letter => letter.toUpperCase());
+
+          updatedBrandData[brandKey].categories[targetCategory].push({
+            id: modelKey,
+            name: modelName,
+            image: "/logos/default-phone.jpg"
+          });
+
+          addedModels.push({ 
+            brand: brandKey, 
+            model: modelKey,
+            name: modelName,
+            category: targetCategory
+          });
+          
+          console.log(`Добавлена модель: ${brandKey} -> ${targetCategory} -> ${modelName}`);
+        } else {
+          // Если категорию определить не удалось - добавляем в "other"
+          if (!updatedBrandData[brandKey].categories.other) {
+            updatedBrandData[brandKey].categories.other = [];
+          }
+
+          const modelName = modelKey
+            .replace(/-/g, ' ')
+            .replace(/\b\w/g, letter => letter.toUpperCase());
+
+          updatedBrandData[brandKey].categories.other.push({
+            id: modelKey,
+            name: modelName,
+            image: "/logos/default-phone.jpg"
+          });
+
+          addedModels.push({ 
+            brand: brandKey, 
+            model: modelKey,
+            name: modelName,
+            category: 'other'
+          });
+          
+          console.log(`Добавлена модель в other: ${brandKey} -> ${modelName}`);
+        }
       }
     });
   });
@@ -77,6 +103,85 @@ export const brandData = ${JSON.stringify(updatedBrandData, null, 2)};
     addedModels,
     hasChanges: addedModels.length > 0
   };
+};
+
+/**
+ * Определяет категорию для модели по её названию
+ */
+const determineCategoryByModelName = (modelKey, brandKey, categories) => {
+  const modelName = modelKey.toLowerCase();
+  
+  // Для Samsung
+  if (brandKey === 'samsung') {
+    if (modelName.includes('s') && /s\d+/.test(modelName)) return 'galaxy_s';
+    if (modelName.includes('a') && /a\d+/.test(modelName)) return 'galaxy_a';
+    if (modelName.includes('m') && /m\d+/.test(modelName)) return 'galaxy_m';
+    if (modelName.includes('note')) return 'galaxy_note';
+    if (modelName.includes('z') || modelName.includes('flip') || modelName.includes('fold')) return 'galaxy_z';
+    if (modelName.includes('tab')) return 'galaxy_tab';
+  }
+  
+  // Для Apple
+  if (brandKey === 'apple') {
+    if (modelName.includes('iphone')) return 'iphone';
+    if (modelName.includes('ipad')) return 'ipad';
+    if (modelName.includes('mac')) return 'macbook';
+  }
+  
+  // Для Xiaomi
+  if (brandKey === 'xiaomi') {
+    if (modelName.includes('note') || modelName.includes('redmi-note')) return 'redmi_note';
+    if (modelName.includes('redmi')) return 'redmi';
+    if (modelName.includes('mi-')) return 'mi_series';
+    if (modelName.includes('xiaomi')) return 'xiaomi';
+    if (modelName.includes('mix')) return 'mix';
+    if (modelName.includes('k')) return 'redmi_k';
+  }
+  
+  // Для Honor
+  if (brandKey === 'honor') {
+    if (modelName.includes('honor-')) return 'honor_series';
+    if (modelName.includes('x')) return 'x_series';
+    if (modelName.includes('magic')) return 'magic_series';
+  }
+  
+  // Для Huawei
+  if (brandKey === 'huawei') {
+    if (modelName.includes('p')) return 'p_series';
+    if (modelName.includes('mate')) return 'mate_series';
+    if (modelName.includes('pura')) return 'pura_series';
+    if (modelName.includes('nova')) return 'nova_series';
+  }
+  
+  // Для Realme
+  if (brandKey === 'realme') {
+    if (/realme-\d+/.test(modelName)) return 'number_series';
+    if (modelName.includes('gt')) return 'gt_series';
+    if (modelName.includes('c')) return 'c_series';
+    if (modelName.includes('narzo')) return 'narzo_series';
+    if (modelName.includes('x')) return 'x_series';
+  }
+  
+  // Для Infinix
+  if (brandKey === 'infinix') {
+    if (modelName.includes('note')) return 'note_series';
+    if (modelName.includes('hot')) return 'hot_series';
+    if (modelName.includes('smart')) return 'smart_series';
+    if (modelName.includes('zero')) return 'zero_series';
+    if (modelName.includes('gt')) return 'gt_series';
+  }
+  
+  // Для Tecno
+  if (brandKey === 'tecno') {
+    if (modelName.includes('camon')) return 'camon_series';
+    if (modelName.includes('spark')) return 'spark_series';
+    if (modelName.includes('pova')) return 'pova_series';
+    if (modelName.includes('phantom')) return 'phantom_series';
+  }
+
+  // Если не удалось определить - возвращаем первую доступную категорию
+  const availableCategories = Object.keys(categories);
+  return availableCategories.length > 0 ? availableCategories[0] : null;
 };
 
 /**

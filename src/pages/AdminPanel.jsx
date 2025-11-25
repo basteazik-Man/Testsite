@@ -1,5 +1,5 @@
 // src/pages/AdminPanel.jsx
-// ПОЛНАЯ ВЕРСИЯ с исправленным именем файла BrandData
+// ПОЛНАЯ ВЕРСИЯ с исправленным отображением удаленных моделей
 
 import React, { useState, useEffect, useRef } from "react";
 import BrandEditor from "../components/admin/BrandEditor";
@@ -381,7 +381,7 @@ const exportBrandData = async (data) => {
     const result = generateUpdatedBrandData(data);
     
     if (!result.hasChanges) {
-      alert("ℹ️ Нет новых моделей для добавления в brandData");
+      alert("ℹ️ Нет изменений для добавления в brandData");
       return false;
     }
 
@@ -395,12 +395,26 @@ const exportBrandData = async (data) => {
     // Освобождаем память
     URL.revokeObjectURL(a.href);
     
-    // Показываем отчет
-    const modelList = result.addedModels.map(item => 
-      `• ${item.brand} - ${item.name} (${item.category})`
-    ).join('\n');
+    // ИСПРАВЛЕННЫЙ ОТЧЕТ: Показываем добавленные И удаленные модели
+    let reportMessage = `✅ BrandData обновлен!\n\n`;
     
-    alert(`✅ BrandData обновлен!\n\nДобавлено моделей: ${result.addedModels.length}\n\n${modelList}\n\nФайл "brandData.js" готов для замены существующего файла!`);
+    if (result.addedModels.length > 0) {
+      const addedList = result.addedModels.map(item => 
+        `• ${item.brand} - ${item.name} (${item.category})`
+      ).join('\n');
+      reportMessage += `Добавлено моделей: ${result.addedModels.length}\n${addedList}\n\n`;
+    }
+    
+    if (result.removedModels && result.removedModels.length > 0) {
+      const removedList = result.removedModels.map(item => 
+        `• ${item.brand} - ${item.name} (${item.category})`
+      ).join('\n');
+      reportMessage += `Удалено моделей: ${result.removedModels.length}\n${removedList}\n\n`;
+    }
+    
+    reportMessage += `Файл "brandData.js" готов для замены существующего файла!`;
+    
+    alert(reportMessage);
     
     return true;
   } catch (error) {

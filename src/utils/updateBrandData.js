@@ -1,10 +1,10 @@
 // src/utils/updateBrandData.js
-// ДОБАВЛЕНО: Удаление моделей при экспорте
+// ИСПРАВЛЕНО: Учитывает удаленные модели как изменения
 
 import { brandData as existingBrandData } from '../data/brandData';
 
 /**
- * Генерирует обновленный brandData.js с новыми моделями из админки
+ * Генерирует обновленный brandData.js с учетом удаленных моделей
  * @param {Object} pricesData - Данные цен из админки
  * @returns {Object} { content: string, addedModels: array, removedModels: array, hasChanges: boolean }
  */
@@ -21,52 +21,55 @@ export const generateUpdatedBrandData = (pricesData) => {
       return;
     }
 
-    // Создаем список моделей, которые есть в админке
+    // Получаем все модели из админки для этого бренда
     const adminModels = new Set(Object.keys(brandInfo.models || {}));
 
-    // Перебираем все категории бренда
+    // Перебираем все категории бренда в существующих данных
     Object.entries(updatedBrandData[brandKey].categories).forEach(([categoryName, categoryModels]) => {
-      const originalCount = categoryModels.length;
-      
-      // Фильтруем модели - оставляем только те, которые есть в админке ИЛИ не из админки
-      const filteredModels = categoryModels.filter(model => {
-        const existsInAdmin = adminModels.has(model.id);
+      const modelsToKeep = [];
+      const currentModelIds = new Set();
+
+      // Сначала обрабатываем существующие модели в категории
+      categoryModels.forEach(existingModel => {
+        currentModelIds.add(existingModel.id);
         
-        // Если модели нет в админке, но она была добавлена через админку (имеет _customName) - удаляем
-        const modelData = brandInfo.models[model.id];
-        if (!existsInAdmin && modelData && typeof modelData === 'object' && modelData._customName) {
-          removedModels.push({
-            brand: brandKey,
-            model: model.id,
-            name: model.name,
-            category: categoryName
-          });
-          return false; // Удаляем модель
+        // Если модель есть в админке - оставляем её
+        if (adminModels.has(existingModel.id)) {
+          modelsToKeep.push(existingModel);
+        } else {
+          // Если модели нет в админке, но она была добавлена через админку - удаляем
+          const modelData = brandInfo.models[existingModel.id];
+          if (modelData && typeof modelData === 'object' && modelData._customName) {
+            removedModels.push({
+              brand: brandKey,
+              model: existingModel.id,
+              name: existingModel.name,
+              category: categoryName
+            });
+            console.log(`🗑️ Помечена на удаление: ${brandKey} -> ${existingModel.id}`);
+          } else {
+            // Модель из исходного brandData - оставляем
+            modelsToKeep.push(existingModel);
+          }
         }
-        
-        return true; // Сохраняем модель
       });
 
-      // Обновляем категорию
-      updatedBrandData[brandKey].categories[categoryName] = filteredModels;
-
-      // Добавляем новые модели из админки
+      // Теперь добавляем новые модели из админки
       adminModels.forEach(modelKey => {
-        const modelExists = filteredModels.some(model => model.id === modelKey);
-        if (!modelExists) {
+        if (!currentModelIds.has(modelKey)) {
           const modelData = brandInfo.models[modelKey];
-          const modelName = getModelDisplayName(modelKey, modelData);
           
           // Определяем категорию для новой модели
-          let targetCategory = categoryName; // По умолчанию используем текущую категорию
-          
+          let targetCategory = categoryName;
           if (modelData && typeof modelData === 'object' && modelData._category) {
             targetCategory = modelData._category;
           }
           
-          // Если категория существует, добавляем модель
-          if (updatedBrandData[brandKey].categories[targetCategory]) {
-            updatedBrandData[brandKey].categories[targetCategory].push({
+          // Добавляем только если это текущая категория
+          if (targetCategory === categoryName) {
+            const modelName = getModelDisplayName(modelKey, modelData);
+            
+            modelsToKeep.push({
               id: modelKey,
               name: modelName,
               image: "/logos/default-phone.jpg"
@@ -78,9 +81,14 @@ export const generateUpdatedBrandData = (pricesData) => {
               name: modelName,
               category: targetCategory
             });
+            
+            console.log(`✅ Добавлена модель: ${brandKey} -> ${targetCategory} -> ${modelName}`);
           }
         }
       });
+
+      // Обновляем категорию
+      updatedBrandData[brandKey].categories[categoryName] = modelsToKeep;
     });
   });
 
@@ -94,11 +102,13 @@ export const generateUpdatedBrandData = (pricesData) => {
 export const brandData = ${JSON.stringify(updatedBrandData, null, 2)};
 `;
 
+  const hasChanges = addedModels.length > 0 || removedModels.length > 0;
+
   return {
     content,
     addedModels,
     removedModels,
-    hasChanges: addedModels.length > 0 || removedModels.length > 0
+    hasChanges
   };
 };
 

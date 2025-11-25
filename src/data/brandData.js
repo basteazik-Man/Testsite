@@ -1,7 +1,8 @@
 // === brandData.js ===
 // Автоматически обновлено через админку Chip&Gadget
-// Сгенерировано: 26.11.2025, 00:42:00
-// Новые модели: 1
+// Сгенерировано: 26.11.2025, 02:44:02
+// Новые модели: 1685
+// Удаленные модели: 0
 
 export const brandData = {
   "apple": {
@@ -152,6 +153,146 @@ export const brandData = {
           "id": "iphone-16-pro-max",
           "name": "iPhone 16 Pro Max",
           "image": "/logos/apple/iphone16-pro-max.jpg"
+        },
+        {
+          "id": "ipad-2017",
+          "name": "Ipad 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2018",
+          "name": "Ipad 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2019",
+          "name": "Ipad 2019",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2020",
+          "name": "Ipad 2020",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2021",
+          "name": "Ipad 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2022",
+          "name": "Ipad 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2017",
+          "name": "Ipad Pro 12.9 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-10.5-2017",
+          "name": "Ipad Pro 10.5 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2018",
+          "name": "Ipad Pro 11 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2018",
+          "name": "Ipad Pro 12.9 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2020",
+          "name": "Ipad Pro 11 2020",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2020",
+          "name": "Ipad Pro 12.9 2020",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2021",
+          "name": "Ipad Pro 11 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2021",
+          "name": "Ipad Pro 12.9 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2022",
+          "name": "Ipad Pro 11 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2022",
+          "name": "Ipad Pro 12.9 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2024",
+          "name": "Ipad Pro 11 2024",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-13-2024",
+          "name": "Ipad Pro 13 2024",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2017",
+          "name": "Macbook Pro 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2018",
+          "name": "Macbook Pro 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2019",
+          "name": "Macbook Pro 2019",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2020-m1",
+          "name": "Macbook Pro 2020 M1",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2023-m3",
+          "name": "Macbook Pro 2023 M3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2018",
+          "name": "Macbook Air 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2019",
+          "name": "Macbook Air 2019",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2020-m1",
+          "name": "Macbook Air 2020 M1",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2022-m2",
+          "name": "Macbook Air 2022 M2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2023-m3",
+          "name": "Macbook Air 2023 M3",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "ipad": [
@@ -244,6 +385,201 @@ export const brandData = {
           "id": "ipad-pro-13-2024",
           "name": "iPad Pro 13 (2024)",
           "image": "/logos/apple/ipad-pro-13-2024.jpg"
+        },
+        {
+          "id": "iphone-8",
+          "name": "Iphone 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-8-plus",
+          "name": "Iphone 8 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-x",
+          "name": "Iphone X",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-xr",
+          "name": "Iphone Xr",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-xs",
+          "name": "Iphone Xs",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-xs-max",
+          "name": "Iphone Xs Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-11",
+          "name": "Iphone 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-11-pro",
+          "name": "Iphone 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-11-pro-max",
+          "name": "Iphone 11 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12",
+          "name": "Iphone 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12-mini",
+          "name": "Iphone 12 Mini",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12-pro",
+          "name": "Iphone 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12-pro-max",
+          "name": "Iphone 12 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13",
+          "name": "Iphone 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13-mini",
+          "name": "Iphone 13 Mini",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13-pro",
+          "name": "Iphone 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13-pro-max",
+          "name": "Iphone 13 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14",
+          "name": "Iphone 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14-plus",
+          "name": "Iphone 14 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14-pro",
+          "name": "Iphone 14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14-pro-max",
+          "name": "Iphone 14 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15",
+          "name": "Iphone 15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15-plus",
+          "name": "Iphone 15 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15-pro",
+          "name": "Iphone 15 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15-pro-max",
+          "name": "Iphone 15 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16",
+          "name": "Iphone 16",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16-plus",
+          "name": "Iphone 16 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16-pro",
+          "name": "Iphone 16 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16-pro-max",
+          "name": "Iphone 16 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2017",
+          "name": "Macbook Pro 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2018",
+          "name": "Macbook Pro 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2019",
+          "name": "Macbook Pro 2019",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2020-m1",
+          "name": "Macbook Pro 2020 M1",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-pro-2023-m3",
+          "name": "Macbook Pro 2023 M3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2018",
+          "name": "Macbook Air 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2019",
+          "name": "Macbook Air 2019",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2020-m1",
+          "name": "Macbook Air 2020 M1",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2022-m2",
+          "name": "Macbook Air 2022 M2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "macbook-air-2023-m3",
+          "name": "Macbook Air 2023 M3",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "macbook": [
@@ -296,6 +632,241 @@ export const brandData = {
           "id": "macbook-air-2023-m3",
           "name": "MacBook Air (2024, M3)",
           "image": "/logos/apple/mba2024.jpg"
+        },
+        {
+          "id": "iphone-8",
+          "name": "Iphone 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-8-plus",
+          "name": "Iphone 8 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-x",
+          "name": "Iphone X",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-xr",
+          "name": "Iphone Xr",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-xs",
+          "name": "Iphone Xs",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-xs-max",
+          "name": "Iphone Xs Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-11",
+          "name": "Iphone 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-11-pro",
+          "name": "Iphone 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-11-pro-max",
+          "name": "Iphone 11 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12",
+          "name": "Iphone 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12-mini",
+          "name": "Iphone 12 Mini",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12-pro",
+          "name": "Iphone 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-12-pro-max",
+          "name": "Iphone 12 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13",
+          "name": "Iphone 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13-mini",
+          "name": "Iphone 13 Mini",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13-pro",
+          "name": "Iphone 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-13-pro-max",
+          "name": "Iphone 13 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14",
+          "name": "Iphone 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14-plus",
+          "name": "Iphone 14 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14-pro",
+          "name": "Iphone 14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-14-pro-max",
+          "name": "Iphone 14 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15",
+          "name": "Iphone 15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15-plus",
+          "name": "Iphone 15 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15-pro",
+          "name": "Iphone 15 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-15-pro-max",
+          "name": "Iphone 15 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16",
+          "name": "Iphone 16",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16-plus",
+          "name": "Iphone 16 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16-pro",
+          "name": "Iphone 16 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "iphone-16-pro-max",
+          "name": "Iphone 16 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2017",
+          "name": "Ipad 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2018",
+          "name": "Ipad 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2019",
+          "name": "Ipad 2019",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2020",
+          "name": "Ipad 2020",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2021",
+          "name": "Ipad 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-2022",
+          "name": "Ipad 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2017",
+          "name": "Ipad Pro 12.9 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-10.5-2017",
+          "name": "Ipad Pro 10.5 2017",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2018",
+          "name": "Ipad Pro 11 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2018",
+          "name": "Ipad Pro 12.9 2018",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2020",
+          "name": "Ipad Pro 11 2020",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2020",
+          "name": "Ipad Pro 12.9 2020",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2021",
+          "name": "Ipad Pro 11 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2021",
+          "name": "Ipad Pro 12.9 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2022",
+          "name": "Ipad Pro 11 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-12.9-2022",
+          "name": "Ipad Pro 12.9 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-11-2024",
+          "name": "Ipad Pro 11 2024",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "ipad-pro-13-2024",
+          "name": "Ipad Pro 13 2024",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -393,10 +964,189 @@ export const brandData = {
           "id": "s24-ultra",
           "name": "Galaxy S24 Ultra",
           "image": "/logos/samsung/s24-ultra.jpg"
+        },
+        {
+          "id": "a12",
+          "name": "A12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a20",
+          "name": "A20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a30",
+          "name": "A30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a32",
+          "name": "A32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a33",
+          "name": "A33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a34",
+          "name": "A34",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a50",
+          "name": "A50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a51",
+          "name": "A51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52",
+          "name": "A52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52s",
+          "name": "A52s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a53",
+          "name": "A53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a54",
+          "name": "A54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a73",
+          "name": "A73",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m12",
+          "name": "M12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m21",
+          "name": "M21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m22",
+          "name": "M22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m31",
+          "name": "M31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m32",
+          "name": "M32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m33",
+          "name": "M33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m52",
+          "name": "M52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m53",
+          "name": "M53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m54",
+          "name": "M54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-plus",
+          "name": "Note 10 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20",
+          "name": "Note 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20-ultra",
+          "name": "Note 20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-3",
+          "name": "Z Flip 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-3",
+          "name": "Z Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-4",
+          "name": "Z Flip 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-4",
+          "name": "Z Fold 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-5",
+          "name": "Z Flip 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-5",
+          "name": "Z Fold 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s6",
+          "name": "Tab S6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s7",
+          "name": "Tab S7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s8",
+          "name": "Tab S8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s9",
+          "name": "Tab S9",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "galaxy_a": [
-        
         {
           "id": "a12",
           "name": "Galaxy A12",
@@ -466,6 +1216,211 @@ export const brandData = {
           "id": "galaxy-a31",
           "name": "Galaxy A31",
           "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20",
+          "name": "S20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-plus",
+          "name": "S20 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-ultra",
+          "name": "S20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-fe",
+          "name": "S20 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21",
+          "name": "S21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-plus",
+          "name": "S21 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-ultra",
+          "name": "S21 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-fe",
+          "name": "S21 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22",
+          "name": "S22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-plus",
+          "name": "S22 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-ultra",
+          "name": "S22 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23",
+          "name": "S23",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-plus",
+          "name": "S23 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-ultra",
+          "name": "S23 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-fe",
+          "name": "S23 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24",
+          "name": "S24",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-plus",
+          "name": "S24 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-ultra",
+          "name": "S24 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m12",
+          "name": "M12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m21",
+          "name": "M21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m22",
+          "name": "M22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m31",
+          "name": "M31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m32",
+          "name": "M32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m33",
+          "name": "M33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m52",
+          "name": "M52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m53",
+          "name": "M53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m54",
+          "name": "M54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-plus",
+          "name": "Note 10 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20",
+          "name": "Note 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20-ultra",
+          "name": "Note 20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-3",
+          "name": "Z Flip 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-3",
+          "name": "Z Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-4",
+          "name": "Z Flip 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-4",
+          "name": "Z Fold 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-5",
+          "name": "Z Flip 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-5",
+          "name": "Z Fold 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s6",
+          "name": "Tab S6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s7",
+          "name": "Tab S7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s8",
+          "name": "Tab S8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s9",
+          "name": "Tab S9",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "galaxy_m": [
@@ -513,6 +1468,231 @@ export const brandData = {
           "id": "m54",
           "name": "Galaxy M54",
           "image": "/logos/samsung/m54.jpg"
+        },
+        {
+          "id": "s20",
+          "name": "S20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-plus",
+          "name": "S20 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-ultra",
+          "name": "S20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-fe",
+          "name": "S20 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21",
+          "name": "S21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-plus",
+          "name": "S21 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-ultra",
+          "name": "S21 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-fe",
+          "name": "S21 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22",
+          "name": "S22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-plus",
+          "name": "S22 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-ultra",
+          "name": "S22 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23",
+          "name": "S23",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-plus",
+          "name": "S23 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-ultra",
+          "name": "S23 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-fe",
+          "name": "S23 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24",
+          "name": "S24",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-plus",
+          "name": "S24 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-ultra",
+          "name": "S24 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a12",
+          "name": "A12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a20",
+          "name": "A20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a30",
+          "name": "A30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a32",
+          "name": "A32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a33",
+          "name": "A33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a34",
+          "name": "A34",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a50",
+          "name": "A50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a51",
+          "name": "A51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52",
+          "name": "A52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52s",
+          "name": "A52s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a53",
+          "name": "A53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a54",
+          "name": "A54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a73",
+          "name": "A73",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-plus",
+          "name": "Note 10 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20",
+          "name": "Note 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20-ultra",
+          "name": "Note 20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-3",
+          "name": "Z Flip 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-3",
+          "name": "Z Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-4",
+          "name": "Z Flip 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-4",
+          "name": "Z Fold 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-5",
+          "name": "Z Flip 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-5",
+          "name": "Z Fold 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s6",
+          "name": "Tab S6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s7",
+          "name": "Tab S7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s8",
+          "name": "Tab S8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s9",
+          "name": "Tab S9",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "galaxy_note": [
@@ -535,6 +1715,256 @@ export const brandData = {
           "id": "note-20-ultra",
           "name": "Galaxy Note 20 Ultra",
           "image": "/logos/samsung/note20-ultra.jpg"
+        },
+        {
+          "id": "s20",
+          "name": "S20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-plus",
+          "name": "S20 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-ultra",
+          "name": "S20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-fe",
+          "name": "S20 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21",
+          "name": "S21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-plus",
+          "name": "S21 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-ultra",
+          "name": "S21 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-fe",
+          "name": "S21 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22",
+          "name": "S22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-plus",
+          "name": "S22 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-ultra",
+          "name": "S22 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23",
+          "name": "S23",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-plus",
+          "name": "S23 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-ultra",
+          "name": "S23 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-fe",
+          "name": "S23 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24",
+          "name": "S24",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-plus",
+          "name": "S24 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-ultra",
+          "name": "S24 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a12",
+          "name": "A12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a20",
+          "name": "A20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a30",
+          "name": "A30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a32",
+          "name": "A32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a33",
+          "name": "A33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a34",
+          "name": "A34",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a50",
+          "name": "A50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a51",
+          "name": "A51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52",
+          "name": "A52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52s",
+          "name": "A52s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a53",
+          "name": "A53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a54",
+          "name": "A54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a73",
+          "name": "A73",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m12",
+          "name": "M12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m21",
+          "name": "M21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m22",
+          "name": "M22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m31",
+          "name": "M31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m32",
+          "name": "M32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m33",
+          "name": "M33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m52",
+          "name": "M52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m53",
+          "name": "M53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m54",
+          "name": "M54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-3",
+          "name": "Z Flip 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-3",
+          "name": "Z Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-4",
+          "name": "Z Flip 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-4",
+          "name": "Z Fold 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-5",
+          "name": "Z Flip 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-5",
+          "name": "Z Fold 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s6",
+          "name": "Tab S6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s7",
+          "name": "Tab S7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s8",
+          "name": "Tab S8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s9",
+          "name": "Tab S9",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "galaxy_z": [
@@ -567,6 +1997,246 @@ export const brandData = {
           "id": "z-fold-5",
           "name": "Galaxy Z Fold 5",
           "image": "/logos/samsung/zfold5.jpg"
+        },
+        {
+          "id": "s20",
+          "name": "S20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-plus",
+          "name": "S20 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-ultra",
+          "name": "S20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-fe",
+          "name": "S20 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21",
+          "name": "S21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-plus",
+          "name": "S21 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-ultra",
+          "name": "S21 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-fe",
+          "name": "S21 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22",
+          "name": "S22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-plus",
+          "name": "S22 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-ultra",
+          "name": "S22 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23",
+          "name": "S23",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-plus",
+          "name": "S23 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-ultra",
+          "name": "S23 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-fe",
+          "name": "S23 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24",
+          "name": "S24",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-plus",
+          "name": "S24 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-ultra",
+          "name": "S24 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a12",
+          "name": "A12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a20",
+          "name": "A20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a30",
+          "name": "A30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a32",
+          "name": "A32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a33",
+          "name": "A33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a34",
+          "name": "A34",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a50",
+          "name": "A50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a51",
+          "name": "A51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52",
+          "name": "A52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52s",
+          "name": "A52s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a53",
+          "name": "A53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a54",
+          "name": "A54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a73",
+          "name": "A73",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m12",
+          "name": "M12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m21",
+          "name": "M21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m22",
+          "name": "M22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m31",
+          "name": "M31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m32",
+          "name": "M32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m33",
+          "name": "M33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m52",
+          "name": "M52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m53",
+          "name": "M53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m54",
+          "name": "M54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-plus",
+          "name": "Note 10 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20",
+          "name": "Note 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20-ultra",
+          "name": "Note 20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s6",
+          "name": "Tab S6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s7",
+          "name": "Tab S7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s8",
+          "name": "Tab S8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "tab-s9",
+          "name": "Tab S9",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "galaxy_tab": [
@@ -589,6 +2259,256 @@ export const brandData = {
           "id": "tab-s9",
           "name": "Galaxy Tab S9",
           "image": "/logos/samsung/tab-s9.jpg"
+        },
+        {
+          "id": "s20",
+          "name": "S20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-plus",
+          "name": "S20 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-ultra",
+          "name": "S20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s20-fe",
+          "name": "S20 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21",
+          "name": "S21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-plus",
+          "name": "S21 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-ultra",
+          "name": "S21 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s21-fe",
+          "name": "S21 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22",
+          "name": "S22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-plus",
+          "name": "S22 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s22-ultra",
+          "name": "S22 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23",
+          "name": "S23",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-plus",
+          "name": "S23 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-ultra",
+          "name": "S23 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s23-fe",
+          "name": "S23 Fe",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24",
+          "name": "S24",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-plus",
+          "name": "S24 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "s24-ultra",
+          "name": "S24 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a12",
+          "name": "A12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a20",
+          "name": "A20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a30",
+          "name": "A30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a32",
+          "name": "A32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a33",
+          "name": "A33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a34",
+          "name": "A34",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a50",
+          "name": "A50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a51",
+          "name": "A51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52",
+          "name": "A52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a52s",
+          "name": "A52s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a53",
+          "name": "A53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a54",
+          "name": "A54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "a73",
+          "name": "A73",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m12",
+          "name": "M12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m21",
+          "name": "M21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m22",
+          "name": "M22",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m31",
+          "name": "M31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m32",
+          "name": "M32",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m33",
+          "name": "M33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m52",
+          "name": "M52",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m53",
+          "name": "M53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "m54",
+          "name": "M54",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-plus",
+          "name": "Note 10 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20",
+          "name": "Note 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-20-ultra",
+          "name": "Note 20 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-3",
+          "name": "Z Flip 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-3",
+          "name": "Z Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-4",
+          "name": "Z Flip 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-4",
+          "name": "Z Fold 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-flip-5",
+          "name": "Z Flip 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "z-fold-5",
+          "name": "Z Fold 5",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -681,6 +2601,331 @@ export const brandData = {
           "id": "note-13-pro-plus",
           "name": "Redmi Note 13 Pro+",
           "image": "/logos/xiaomi/note13-pro-plus.jpg"
+        },
+        {
+          "id": "12",
+          "name": "12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13",
+          "name": "13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14",
+          "name": "14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15",
+          "name": "15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "17",
+          "name": "17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9",
+          "name": "Redmi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9a",
+          "name": "Redmi 9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9c",
+          "name": "Redmi 9c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9t",
+          "name": "Redmi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10",
+          "name": "Redmi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10c",
+          "name": "Redmi 10c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12",
+          "name": "Redmi 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12c",
+          "name": "Redmi 12c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13",
+          "name": "Redmi 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13c",
+          "name": "Redmi 13c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9",
+          "name": "Mi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-se",
+          "name": "Mi 9 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t",
+          "name": "Mi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-a3",
+          "name": "Mi A3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t-pro",
+          "name": "Mi 9t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-lite",
+          "name": "Mi 9 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10",
+          "name": "Mi Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-mix-3",
+          "name": "Mi Mix 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10",
+          "name": "Mi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-pro",
+          "name": "Mi 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10-lite",
+          "name": "Mi Note 10 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-lite-5g",
+          "name": "Mi 10 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-pro",
+          "name": "Mi 10t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t",
+          "name": "Mi 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-lite",
+          "name": "Mi 10t Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-5g",
+          "name": "Mi 11 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-ultra",
+          "name": "Mi 11 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-4g",
+          "name": "Mi 11 Lite 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-pro",
+          "name": "Mi 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10s",
+          "name": "Mi 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11i",
+          "name": "Mi 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11",
+          "name": "Mi 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t-pro",
+          "name": "11t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11-lite-5g-ne",
+          "name": "11 Lite 5g Ne",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t",
+          "name": "11t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12x",
+          "name": "12x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-pro",
+          "name": "12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-lite",
+          "name": "12 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-ultra",
+          "name": "12s Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t-pro",
+          "name": "12t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t",
+          "name": "12t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s",
+          "name": "12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-pro",
+          "name": "12s Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-pro",
+          "name": "13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-ultra",
+          "name": "13 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-lite",
+          "name": "13 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t",
+          "name": "13t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t-pro",
+          "name": "13t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-pro",
+          "name": "14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-ultra",
+          "name": "14 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t",
+          "name": "14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t-pro",
+          "name": "14t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15-ultra",
+          "name": "15 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-4",
+          "name": "Mix 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-2",
+          "name": "Mix Fold 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-3",
+          "name": "Mix Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-flip",
+          "name": "Mix Flip",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k50",
+          "name": "K50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k60",
+          "name": "K60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k70",
+          "name": "K70",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "redmi": [
@@ -733,6 +2978,366 @@ export const brandData = {
           "id": "redmi-13c",
           "name": "Redmi 13C",
           "image": "/logos/xiaomi/redmi13c.jpg"
+        },
+        {
+          "id": "12",
+          "name": "12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13",
+          "name": "13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14",
+          "name": "14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15",
+          "name": "15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "17",
+          "name": "17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9",
+          "name": "Note 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9s",
+          "name": "Note 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro",
+          "name": "Note 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro-max",
+          "name": "Note 9 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10s",
+          "name": "Note 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11",
+          "name": "Note 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11s",
+          "name": "Note 11s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro",
+          "name": "Note 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro-plus",
+          "name": "Note 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro-plus",
+          "name": "Note 12 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13",
+          "name": "Note 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro",
+          "name": "Note 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro-plus",
+          "name": "Note 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9",
+          "name": "Mi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-se",
+          "name": "Mi 9 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t",
+          "name": "Mi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-a3",
+          "name": "Mi A3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t-pro",
+          "name": "Mi 9t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-lite",
+          "name": "Mi 9 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10",
+          "name": "Mi Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-mix-3",
+          "name": "Mi Mix 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10",
+          "name": "Mi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-pro",
+          "name": "Mi 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10-lite",
+          "name": "Mi Note 10 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-lite-5g",
+          "name": "Mi 10 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-pro",
+          "name": "Mi 10t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t",
+          "name": "Mi 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-lite",
+          "name": "Mi 10t Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-5g",
+          "name": "Mi 11 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-ultra",
+          "name": "Mi 11 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-4g",
+          "name": "Mi 11 Lite 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-pro",
+          "name": "Mi 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10s",
+          "name": "Mi 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11i",
+          "name": "Mi 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11",
+          "name": "Mi 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t-pro",
+          "name": "11t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11-lite-5g-ne",
+          "name": "11 Lite 5g Ne",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t",
+          "name": "11t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12x",
+          "name": "12x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-pro",
+          "name": "12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-lite",
+          "name": "12 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-ultra",
+          "name": "12s Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t-pro",
+          "name": "12t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t",
+          "name": "12t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s",
+          "name": "12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-pro",
+          "name": "12s Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-pro",
+          "name": "13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-ultra",
+          "name": "13 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-lite",
+          "name": "13 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t",
+          "name": "13t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t-pro",
+          "name": "13t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-pro",
+          "name": "14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-ultra",
+          "name": "14 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t",
+          "name": "14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t-pro",
+          "name": "14t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15-ultra",
+          "name": "15 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-4",
+          "name": "Mix 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-2",
+          "name": "Mix Fold 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-3",
+          "name": "Mix Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-flip",
+          "name": "Mix Flip",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k50",
+          "name": "K50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k60",
+          "name": "K60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k70",
+          "name": "K70",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "mi_series": [
@@ -845,6 +3450,306 @@ export const brandData = {
           "id": "mi-11",
           "name": "Mi 11",
           "image": "/logos/xiaomi/mi11.jpg"
+        },
+        {
+          "id": "12",
+          "name": "12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13",
+          "name": "13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14",
+          "name": "14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15",
+          "name": "15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "17",
+          "name": "17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9",
+          "name": "Note 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9s",
+          "name": "Note 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro",
+          "name": "Note 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro-max",
+          "name": "Note 9 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10s",
+          "name": "Note 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11",
+          "name": "Note 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11s",
+          "name": "Note 11s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro",
+          "name": "Note 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro-plus",
+          "name": "Note 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro-plus",
+          "name": "Note 12 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13",
+          "name": "Note 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro",
+          "name": "Note 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro-plus",
+          "name": "Note 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9",
+          "name": "Redmi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9a",
+          "name": "Redmi 9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9c",
+          "name": "Redmi 9c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9t",
+          "name": "Redmi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10",
+          "name": "Redmi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10c",
+          "name": "Redmi 10c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12",
+          "name": "Redmi 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12c",
+          "name": "Redmi 12c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13",
+          "name": "Redmi 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13c",
+          "name": "Redmi 13c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t-pro",
+          "name": "11t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11-lite-5g-ne",
+          "name": "11 Lite 5g Ne",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t",
+          "name": "11t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12x",
+          "name": "12x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-pro",
+          "name": "12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-lite",
+          "name": "12 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-ultra",
+          "name": "12s Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t-pro",
+          "name": "12t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t",
+          "name": "12t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s",
+          "name": "12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-pro",
+          "name": "12s Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-pro",
+          "name": "13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-ultra",
+          "name": "13 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-lite",
+          "name": "13 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t",
+          "name": "13t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t-pro",
+          "name": "13t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-pro",
+          "name": "14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-ultra",
+          "name": "14 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t",
+          "name": "14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t-pro",
+          "name": "14t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15-ultra",
+          "name": "15 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-4",
+          "name": "Mix 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-2",
+          "name": "Mix Fold 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-3",
+          "name": "Mix Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-flip",
+          "name": "Mix Flip",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k50",
+          "name": "K50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k60",
+          "name": "K60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k70",
+          "name": "K70",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "xiaomi": [
@@ -977,6 +3882,286 @@ export const brandData = {
           "id": "17",
           "name": "17",
           "image": "/logos/xiaomi/17.jpg"
+        },
+        {
+          "id": "note-9",
+          "name": "Note 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9s",
+          "name": "Note 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro",
+          "name": "Note 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro-max",
+          "name": "Note 9 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10s",
+          "name": "Note 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11",
+          "name": "Note 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11s",
+          "name": "Note 11s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro",
+          "name": "Note 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro-plus",
+          "name": "Note 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro-plus",
+          "name": "Note 12 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13",
+          "name": "Note 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro",
+          "name": "Note 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro-plus",
+          "name": "Note 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9",
+          "name": "Redmi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9a",
+          "name": "Redmi 9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9c",
+          "name": "Redmi 9c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9t",
+          "name": "Redmi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10",
+          "name": "Redmi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10c",
+          "name": "Redmi 10c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12",
+          "name": "Redmi 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12c",
+          "name": "Redmi 12c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13",
+          "name": "Redmi 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13c",
+          "name": "Redmi 13c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9",
+          "name": "Mi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-se",
+          "name": "Mi 9 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t",
+          "name": "Mi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-a3",
+          "name": "Mi A3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t-pro",
+          "name": "Mi 9t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-lite",
+          "name": "Mi 9 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10",
+          "name": "Mi Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-mix-3",
+          "name": "Mi Mix 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10",
+          "name": "Mi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-pro",
+          "name": "Mi 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10-lite",
+          "name": "Mi Note 10 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-lite-5g",
+          "name": "Mi 10 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-pro",
+          "name": "Mi 10t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t",
+          "name": "Mi 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-lite",
+          "name": "Mi 10t Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-5g",
+          "name": "Mi 11 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-ultra",
+          "name": "Mi 11 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-4g",
+          "name": "Mi 11 Lite 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-pro",
+          "name": "Mi 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10s",
+          "name": "Mi 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11i",
+          "name": "Mi 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11",
+          "name": "Mi 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-4",
+          "name": "Mix 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-2",
+          "name": "Mix Fold 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-3",
+          "name": "Mix Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-flip",
+          "name": "Mix Flip",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k50",
+          "name": "K50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k60",
+          "name": "K60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k70",
+          "name": "K70",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "mix": [
@@ -999,6 +4184,396 @@ export const brandData = {
           "id": "mix-flip",
           "name": "Mix Flip",
           "image": "/logos/xiaomi/mix-flip.jpg"
+        },
+        {
+          "id": "12",
+          "name": "12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13",
+          "name": "13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14",
+          "name": "14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15",
+          "name": "15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "17",
+          "name": "17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9",
+          "name": "Note 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9s",
+          "name": "Note 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro",
+          "name": "Note 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro-max",
+          "name": "Note 9 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10s",
+          "name": "Note 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11",
+          "name": "Note 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11s",
+          "name": "Note 11s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro",
+          "name": "Note 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro-plus",
+          "name": "Note 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro-plus",
+          "name": "Note 12 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13",
+          "name": "Note 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro",
+          "name": "Note 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro-plus",
+          "name": "Note 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9",
+          "name": "Redmi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9a",
+          "name": "Redmi 9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9c",
+          "name": "Redmi 9c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9t",
+          "name": "Redmi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10",
+          "name": "Redmi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10c",
+          "name": "Redmi 10c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12",
+          "name": "Redmi 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12c",
+          "name": "Redmi 12c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13",
+          "name": "Redmi 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13c",
+          "name": "Redmi 13c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9",
+          "name": "Mi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-se",
+          "name": "Mi 9 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t",
+          "name": "Mi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-a3",
+          "name": "Mi A3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t-pro",
+          "name": "Mi 9t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-lite",
+          "name": "Mi 9 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10",
+          "name": "Mi Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-mix-3",
+          "name": "Mi Mix 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10",
+          "name": "Mi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-pro",
+          "name": "Mi 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10-lite",
+          "name": "Mi Note 10 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-lite-5g",
+          "name": "Mi 10 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-pro",
+          "name": "Mi 10t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t",
+          "name": "Mi 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-lite",
+          "name": "Mi 10t Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-5g",
+          "name": "Mi 11 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-ultra",
+          "name": "Mi 11 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-4g",
+          "name": "Mi 11 Lite 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-pro",
+          "name": "Mi 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10s",
+          "name": "Mi 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11i",
+          "name": "Mi 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11",
+          "name": "Mi 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t-pro",
+          "name": "11t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11-lite-5g-ne",
+          "name": "11 Lite 5g Ne",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t",
+          "name": "11t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12x",
+          "name": "12x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-pro",
+          "name": "12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-lite",
+          "name": "12 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-ultra",
+          "name": "12s Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t-pro",
+          "name": "12t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t",
+          "name": "12t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s",
+          "name": "12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-pro",
+          "name": "12s Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-pro",
+          "name": "13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-ultra",
+          "name": "13 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-lite",
+          "name": "13 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t",
+          "name": "13t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t-pro",
+          "name": "13t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-pro",
+          "name": "14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-ultra",
+          "name": "14 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t",
+          "name": "14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t-pro",
+          "name": "14t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15-ultra",
+          "name": "15 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k50",
+          "name": "K50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k60",
+          "name": "K60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "k70",
+          "name": "K70",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "redmi_k": [
@@ -1016,6 +4591,401 @@ export const brandData = {
           "id": "k70",
           "name": "Redmi K70",
           "image": "/logos/xiaomi/k70.jpg"
+        },
+        {
+          "id": "12",
+          "name": "12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13",
+          "name": "13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14",
+          "name": "14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15",
+          "name": "15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "17",
+          "name": "17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9",
+          "name": "Note 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9s",
+          "name": "Note 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro",
+          "name": "Note 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-9-pro-max",
+          "name": "Note 9 Pro Max",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10s",
+          "name": "Note 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11",
+          "name": "Note 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11s",
+          "name": "Note 11s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro",
+          "name": "Note 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-11-pro-plus",
+          "name": "Note 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro-plus",
+          "name": "Note 12 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13",
+          "name": "Note 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro",
+          "name": "Note 13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-13-pro-plus",
+          "name": "Note 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9",
+          "name": "Redmi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9a",
+          "name": "Redmi 9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9c",
+          "name": "Redmi 9c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-9t",
+          "name": "Redmi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10",
+          "name": "Redmi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-10c",
+          "name": "Redmi 10c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12",
+          "name": "Redmi 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-12c",
+          "name": "Redmi 12c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13",
+          "name": "Redmi 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "redmi-13c",
+          "name": "Redmi 13c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9",
+          "name": "Mi 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-se",
+          "name": "Mi 9 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t",
+          "name": "Mi 9t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-a3",
+          "name": "Mi A3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9t-pro",
+          "name": "Mi 9t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-9-lite",
+          "name": "Mi 9 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10",
+          "name": "Mi Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-mix-3",
+          "name": "Mi Mix 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10",
+          "name": "Mi 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-pro",
+          "name": "Mi 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-note-10-lite",
+          "name": "Mi Note 10 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10-lite-5g",
+          "name": "Mi 10 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-pro",
+          "name": "Mi 10t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t",
+          "name": "Mi 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10t-lite",
+          "name": "Mi 10t Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-5g",
+          "name": "Mi 11 Lite 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-ultra",
+          "name": "Mi 11 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-lite-4g",
+          "name": "Mi 11 Lite 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11-pro",
+          "name": "Mi 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-10s",
+          "name": "Mi 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11i",
+          "name": "Mi 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mi-11",
+          "name": "Mi 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t-pro",
+          "name": "11t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11-lite-5g-ne",
+          "name": "11 Lite 5g Ne",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "11t",
+          "name": "11t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12x",
+          "name": "12x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-pro",
+          "name": "12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12-lite",
+          "name": "12 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-ultra",
+          "name": "12s Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t-pro",
+          "name": "12t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12t",
+          "name": "12t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s",
+          "name": "12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "12s-pro",
+          "name": "12s Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-pro",
+          "name": "13 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-ultra",
+          "name": "13 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13-lite",
+          "name": "13 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t",
+          "name": "13t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "13t-pro",
+          "name": "13t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-pro",
+          "name": "14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14-ultra",
+          "name": "14 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t",
+          "name": "14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "14t-pro",
+          "name": "14t Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "15-ultra",
+          "name": "15 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-4",
+          "name": "Mix 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-2",
+          "name": "Mix Fold 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-fold-3",
+          "name": "Mix Fold 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mix-flip",
+          "name": "Mix Flip",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -1103,6 +5073,61 @@ export const brandData = {
           "id": "honor-90-lite",
           "name": "Honor 90 Lite",
           "image": "/logos/honor/90-lite.jpg"
+        },
+        {
+          "id": "x7b",
+          "name": "X7b",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x8",
+          "name": "X8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x8c",
+          "name": "X8c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9",
+          "name": "X9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9a",
+          "name": "X9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9b",
+          "name": "X9b",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9c",
+          "name": "X9c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-4-pro",
+          "name": "Magic 4 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-5-pro",
+          "name": "Magic 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-6-pro",
+          "name": "Magic 6 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-7-pro",
+          "name": "Magic 7 Pro",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "x_series": [
@@ -1140,6 +5165,106 @@ export const brandData = {
           "id": "x9c",
           "name": "Honor X9c 5G",
           "image": "/logos/honor/x9c.jpg"
+        },
+        {
+          "id": "honor-8s",
+          "name": "Honor 8s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-8x",
+          "name": "Honor 8x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-9s",
+          "name": "Honor 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-10",
+          "name": "Honor 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-10i",
+          "name": "Honor 10i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-20",
+          "name": "Honor 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-20-lite",
+          "name": "Honor 20 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-30i",
+          "name": "Honor 30i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-30s",
+          "name": "Honor 30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-50",
+          "name": "Honor 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-50-lite",
+          "name": "Honor 50 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-60",
+          "name": "Honor 60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-70",
+          "name": "Honor 70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-80",
+          "name": "Honor 80",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-90",
+          "name": "Honor 90",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-90-lite",
+          "name": "Honor 90 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-4-pro",
+          "name": "Magic 4 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-5-pro",
+          "name": "Magic 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-6-pro",
+          "name": "Magic 6 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "magic-7-pro",
+          "name": "Magic 7 Pro",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "magic_series": [
@@ -1162,6 +5287,121 @@ export const brandData = {
           "id": "magic-7-pro",
           "name": "Honor Magic 7 Pro",
           "image": "/logos/honor/magic7-pro.jpg"
+        },
+        {
+          "id": "honor-8s",
+          "name": "Honor 8s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-8x",
+          "name": "Honor 8x",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-9s",
+          "name": "Honor 9s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-10",
+          "name": "Honor 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-10i",
+          "name": "Honor 10i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-20",
+          "name": "Honor 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-20-lite",
+          "name": "Honor 20 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-30i",
+          "name": "Honor 30i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-30s",
+          "name": "Honor 30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-50",
+          "name": "Honor 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-50-lite",
+          "name": "Honor 50 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-60",
+          "name": "Honor 60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-70",
+          "name": "Honor 70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-80",
+          "name": "Honor 80",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-90",
+          "name": "Honor 90",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "honor-90-lite",
+          "name": "Honor 90 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x7b",
+          "name": "X7b",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x8",
+          "name": "X8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x8c",
+          "name": "X8c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9",
+          "name": "X9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9a",
+          "name": "X9a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9b",
+          "name": "X9b",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x9c",
+          "name": "X9c",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -1234,6 +5474,176 @@ export const brandData = {
           "id": "p-smart-2021",
           "name": "P Smart 2021",
           "image": "/logos/huawei/p-smart-2021.jpg"
+        },
+        {
+          "id": "mate-30",
+          "name": "Mate 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-30-pro",
+          "name": "Mate 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-40",
+          "name": "Mate 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-40-pro",
+          "name": "Mate 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-50",
+          "name": "Mate 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-50-pro",
+          "name": "Mate 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-60",
+          "name": "Mate 60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-60-pro",
+          "name": "Mate 60 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-x3",
+          "name": "Mate X3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70",
+          "name": "Pura 70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-pro",
+          "name": "Pura 70 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-pro-plus",
+          "name": "Pura 70 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-ultra",
+          "name": "Pura 70 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80",
+          "name": "Pura 80",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-pro",
+          "name": "Pura 80 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-pro-plus",
+          "name": "Pura 80 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-ultra",
+          "name": "Pura 80 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-8",
+          "name": "Nova 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-8i",
+          "name": "Nova 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-9",
+          "name": "Nova 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-10",
+          "name": "Nova 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-10-pro",
+          "name": "Nova 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-11",
+          "name": "Nova 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-11i",
+          "name": "Nova 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-12s",
+          "name": "Nova 12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-13",
+          "name": "Nova 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-14",
+          "name": "Nova 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-14-pro",
+          "name": "Nova 14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y61",
+          "name": "Nova Y61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y63",
+          "name": "Nova Y63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y70",
+          "name": "Nova Y70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y72",
+          "name": "Nova Y72",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y90",
+          "name": "Nova Y90",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y91",
+          "name": "Nova Y91",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "mate_series": [
@@ -1281,6 +5691,196 @@ export const brandData = {
           "id": "mate-x3",
           "name": "Mate X3",
           "image": "/logos/huawei/mate-x3.jpg"
+        },
+        {
+          "id": "p30",
+          "name": "P30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p30-lite",
+          "name": "P30 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p30-lite-new",
+          "name": "P30 Lite New",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40",
+          "name": "P40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-lite",
+          "name": "P40 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-lite-e",
+          "name": "P40 Lite E",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-pro",
+          "name": "P40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-pro-plus",
+          "name": "P40 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p50",
+          "name": "P50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p50-pro",
+          "name": "P50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p60",
+          "name": "P60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p60-pro",
+          "name": "P60 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p-smart-2021",
+          "name": "P Smart 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70",
+          "name": "Pura 70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-pro",
+          "name": "Pura 70 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-pro-plus",
+          "name": "Pura 70 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-ultra",
+          "name": "Pura 70 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80",
+          "name": "Pura 80",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-pro",
+          "name": "Pura 80 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-pro-plus",
+          "name": "Pura 80 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-ultra",
+          "name": "Pura 80 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-8",
+          "name": "Nova 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-8i",
+          "name": "Nova 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-9",
+          "name": "Nova 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-10",
+          "name": "Nova 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-10-pro",
+          "name": "Nova 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-11",
+          "name": "Nova 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-11i",
+          "name": "Nova 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-12s",
+          "name": "Nova 12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-13",
+          "name": "Nova 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-14",
+          "name": "Nova 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-14-pro",
+          "name": "Nova 14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y61",
+          "name": "Nova Y61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y63",
+          "name": "Nova Y63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y70",
+          "name": "Nova Y70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y72",
+          "name": "Nova Y72",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y90",
+          "name": "Nova Y90",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y91",
+          "name": "Nova Y91",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "pura_series": [
@@ -1323,6 +5923,201 @@ export const brandData = {
           "id": "pura-80-ultra",
           "name": "Pura 80 Ultra",
           "image": "/logos/huawei/pura80-ultra.jpg"
+        },
+        {
+          "id": "p30",
+          "name": "P30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p30-lite",
+          "name": "P30 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p30-lite-new",
+          "name": "P30 Lite New",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40",
+          "name": "P40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-lite",
+          "name": "P40 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-lite-e",
+          "name": "P40 Lite E",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-pro",
+          "name": "P40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-pro-plus",
+          "name": "P40 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p50",
+          "name": "P50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p50-pro",
+          "name": "P50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p60",
+          "name": "P60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p60-pro",
+          "name": "P60 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p-smart-2021",
+          "name": "P Smart 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-30",
+          "name": "Mate 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-30-pro",
+          "name": "Mate 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-40",
+          "name": "Mate 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-40-pro",
+          "name": "Mate 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-50",
+          "name": "Mate 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-50-pro",
+          "name": "Mate 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-60",
+          "name": "Mate 60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-60-pro",
+          "name": "Mate 60 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-x3",
+          "name": "Mate X3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-8",
+          "name": "Nova 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-8i",
+          "name": "Nova 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-9",
+          "name": "Nova 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-10",
+          "name": "Nova 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-10-pro",
+          "name": "Nova 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-11",
+          "name": "Nova 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-11i",
+          "name": "Nova 11i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-12s",
+          "name": "Nova 12s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-13",
+          "name": "Nova 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-14",
+          "name": "Nova 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-14-pro",
+          "name": "Nova 14 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y61",
+          "name": "Nova Y61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y63",
+          "name": "Nova Y63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y70",
+          "name": "Nova Y70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y72",
+          "name": "Nova Y72",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y90",
+          "name": "Nova Y90",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "nova-y91",
+          "name": "Nova Y91",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "nova_series": [
@@ -1410,6 +6205,156 @@ export const brandData = {
           "id": "nova-y91",
           "name": "Nova Y91",
           "image": "/logos/huawei/nova-y91.jpg"
+        },
+        {
+          "id": "p30",
+          "name": "P30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p30-lite",
+          "name": "P30 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p30-lite-new",
+          "name": "P30 Lite New",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40",
+          "name": "P40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-lite",
+          "name": "P40 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-lite-e",
+          "name": "P40 Lite E",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-pro",
+          "name": "P40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p40-pro-plus",
+          "name": "P40 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p50",
+          "name": "P50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p50-pro",
+          "name": "P50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p60",
+          "name": "P60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p60-pro",
+          "name": "P60 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "p-smart-2021",
+          "name": "P Smart 2021",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-30",
+          "name": "Mate 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-30-pro",
+          "name": "Mate 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-40",
+          "name": "Mate 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-40-pro",
+          "name": "Mate 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-50",
+          "name": "Mate 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-50-pro",
+          "name": "Mate 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-60",
+          "name": "Mate 60",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-60-pro",
+          "name": "Mate 60 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "mate-x3",
+          "name": "Mate X3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70",
+          "name": "Pura 70",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-pro",
+          "name": "Pura 70 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-pro-plus",
+          "name": "Pura 70 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-70-ultra",
+          "name": "Pura 70 Ultra",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80",
+          "name": "Pura 80",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-pro",
+          "name": "Pura 80 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-pro-plus",
+          "name": "Pura 80 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pura-80-ultra",
+          "name": "Pura 80 Ultra",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -1562,6 +6507,291 @@ export const brandData = {
           "id": "realme-15t",
           "name": "Realme 15T",
           "image": "/logos/realme/15t.jpg"
+        },
+        {
+          "id": "gt",
+          "name": "Gt",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-master",
+          "name": "Gt Master",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2",
+          "name": "Gt 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2-pro",
+          "name": "Gt 2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo2",
+          "name": "Gt Neo2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-2t",
+          "name": "Gt Neo 2t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-3",
+          "name": "Gt 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3",
+          "name": "Gt Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3t",
+          "name": "Gt Neo 3t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5",
+          "name": "Gt 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5",
+          "name": "Gt Neo 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-240w",
+          "name": "Gt Neo 5 240w",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-se",
+          "name": "Gt Neo 5 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5-pro",
+          "name": "Gt 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6",
+          "name": "Gt 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-6",
+          "name": "Gt Neo 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6t",
+          "name": "Gt 6t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7",
+          "name": "Gt 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7t",
+          "name": "Gt 7t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7-pro",
+          "name": "Gt 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c2",
+          "name": "C2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c3",
+          "name": "C3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c11",
+          "name": "C11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c15",
+          "name": "C15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c20",
+          "name": "C20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21",
+          "name": "C21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21y",
+          "name": "C21y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25",
+          "name": "C25",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25s",
+          "name": "C25s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25y",
+          "name": "C25y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30",
+          "name": "C30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30s",
+          "name": "C30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c31",
+          "name": "C31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c33",
+          "name": "C33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c35",
+          "name": "C35",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c51",
+          "name": "C51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c53",
+          "name": "C53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c55",
+          "name": "C55",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c61",
+          "name": "C61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c63",
+          "name": "C63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c71",
+          "name": "C71",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c75",
+          "name": "C75",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30",
+          "name": "Narzo 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-4g",
+          "name": "Narzo 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-5g",
+          "name": "Narzo 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30a",
+          "name": "Narzo 30a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50",
+          "name": "Narzo 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50a",
+          "name": "Narzo 50a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i",
+          "name": "Narzo 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i-prime",
+          "name": "Narzo 50i Prime",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x",
+          "name": "X",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2",
+          "name": "X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2-pro",
+          "name": "X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x3-superzoom",
+          "name": "X3 Superzoom",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-5g",
+          "name": "X50 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-pro-5g",
+          "name": "X50 Pro 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "xt",
+          "name": "Xt",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "gt_series": [
@@ -1664,6 +6894,336 @@ export const brandData = {
           "id": "gt-7-pro",
           "name": "Realme GT 7 Pro",
           "image": "/logos/realme/gt7-pro.jpg"
+        },
+        {
+          "id": "realme-6",
+          "name": "Realme 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-6s",
+          "name": "Realme 6s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7",
+          "name": "Realme 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7i",
+          "name": "Realme 7i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7-pro",
+          "name": "Realme 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8",
+          "name": "Realme 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8i",
+          "name": "Realme 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8-pro",
+          "name": "Realme 8 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9",
+          "name": "Realme 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9i",
+          "name": "Realme 9i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9-pro-plus",
+          "name": "Realme 9 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10",
+          "name": "Realme 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro",
+          "name": "Realme 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro-plus",
+          "name": "Realme 10 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11",
+          "name": "Realme 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro",
+          "name": "Realme 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro-plus",
+          "name": "Realme 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12",
+          "name": "Realme 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12-plus",
+          "name": "Realme 12 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13",
+          "name": "Realme 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-5g",
+          "name": "Realme 13 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-pro-plus",
+          "name": "Realme 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14",
+          "name": "Realme 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14t",
+          "name": "Realme 14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14-pro-plus",
+          "name": "Realme 14 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15",
+          "name": "Realme 15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-5g",
+          "name": "Realme 15 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-pro",
+          "name": "Realme 15 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15t",
+          "name": "Realme 15t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c2",
+          "name": "C2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c3",
+          "name": "C3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c11",
+          "name": "C11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c15",
+          "name": "C15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c20",
+          "name": "C20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21",
+          "name": "C21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21y",
+          "name": "C21y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25",
+          "name": "C25",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25s",
+          "name": "C25s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25y",
+          "name": "C25y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30",
+          "name": "C30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30s",
+          "name": "C30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c31",
+          "name": "C31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c33",
+          "name": "C33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c35",
+          "name": "C35",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c51",
+          "name": "C51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c53",
+          "name": "C53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c55",
+          "name": "C55",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c61",
+          "name": "C61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c63",
+          "name": "C63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c71",
+          "name": "C71",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c75",
+          "name": "C75",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30",
+          "name": "Narzo 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-4g",
+          "name": "Narzo 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-5g",
+          "name": "Narzo 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30a",
+          "name": "Narzo 30a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50",
+          "name": "Narzo 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50a",
+          "name": "Narzo 50a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i",
+          "name": "Narzo 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i-prime",
+          "name": "Narzo 50i Prime",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x",
+          "name": "X",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2",
+          "name": "X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2-pro",
+          "name": "X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x3-superzoom",
+          "name": "X3 Superzoom",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-5g",
+          "name": "X50 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-pro-5g",
+          "name": "X50 Pro 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "xt",
+          "name": "Xt",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "c_series": [
@@ -1776,6 +7336,326 @@ export const brandData = {
           "id": "c75",
           "name": "Realme C75",
           "image": "/logos/realme/c75.jpg"
+        },
+        {
+          "id": "realme-6",
+          "name": "Realme 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-6s",
+          "name": "Realme 6s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7",
+          "name": "Realme 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7i",
+          "name": "Realme 7i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7-pro",
+          "name": "Realme 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8",
+          "name": "Realme 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8i",
+          "name": "Realme 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8-pro",
+          "name": "Realme 8 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9",
+          "name": "Realme 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9i",
+          "name": "Realme 9i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9-pro-plus",
+          "name": "Realme 9 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10",
+          "name": "Realme 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro",
+          "name": "Realme 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro-plus",
+          "name": "Realme 10 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11",
+          "name": "Realme 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro",
+          "name": "Realme 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro-plus",
+          "name": "Realme 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12",
+          "name": "Realme 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12-plus",
+          "name": "Realme 12 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13",
+          "name": "Realme 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-5g",
+          "name": "Realme 13 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-pro-plus",
+          "name": "Realme 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14",
+          "name": "Realme 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14t",
+          "name": "Realme 14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14-pro-plus",
+          "name": "Realme 14 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15",
+          "name": "Realme 15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-5g",
+          "name": "Realme 15 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-pro",
+          "name": "Realme 15 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15t",
+          "name": "Realme 15t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt",
+          "name": "Gt",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-master",
+          "name": "Gt Master",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2",
+          "name": "Gt 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2-pro",
+          "name": "Gt 2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo2",
+          "name": "Gt Neo2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-2t",
+          "name": "Gt Neo 2t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-3",
+          "name": "Gt 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3",
+          "name": "Gt Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3t",
+          "name": "Gt Neo 3t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5",
+          "name": "Gt 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5",
+          "name": "Gt Neo 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-240w",
+          "name": "Gt Neo 5 240w",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-se",
+          "name": "Gt Neo 5 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5-pro",
+          "name": "Gt 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6",
+          "name": "Gt 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-6",
+          "name": "Gt Neo 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6t",
+          "name": "Gt 6t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7",
+          "name": "Gt 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7t",
+          "name": "Gt 7t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7-pro",
+          "name": "Gt 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30",
+          "name": "Narzo 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-4g",
+          "name": "Narzo 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-5g",
+          "name": "Narzo 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30a",
+          "name": "Narzo 30a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50",
+          "name": "Narzo 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50a",
+          "name": "Narzo 50a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i",
+          "name": "Narzo 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i-prime",
+          "name": "Narzo 50i Prime",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x",
+          "name": "X",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2",
+          "name": "X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2-pro",
+          "name": "X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x3-superzoom",
+          "name": "X3 Superzoom",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-5g",
+          "name": "X50 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-pro-5g",
+          "name": "X50 Pro 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "xt",
+          "name": "Xt",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "narzo_series": [
@@ -1818,6 +7698,396 @@ export const brandData = {
           "id": "narzo-50i-prime",
           "name": "Realme Narzo 50i Prime",
           "image": "/logos/realme/narzo-50i-prime.jpg"
+        },
+        {
+          "id": "realme-6",
+          "name": "Realme 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-6s",
+          "name": "Realme 6s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7",
+          "name": "Realme 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7i",
+          "name": "Realme 7i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7-pro",
+          "name": "Realme 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8",
+          "name": "Realme 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8i",
+          "name": "Realme 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8-pro",
+          "name": "Realme 8 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9",
+          "name": "Realme 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9i",
+          "name": "Realme 9i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9-pro-plus",
+          "name": "Realme 9 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10",
+          "name": "Realme 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro",
+          "name": "Realme 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro-plus",
+          "name": "Realme 10 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11",
+          "name": "Realme 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro",
+          "name": "Realme 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro-plus",
+          "name": "Realme 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12",
+          "name": "Realme 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12-plus",
+          "name": "Realme 12 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13",
+          "name": "Realme 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-5g",
+          "name": "Realme 13 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-pro-plus",
+          "name": "Realme 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14",
+          "name": "Realme 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14t",
+          "name": "Realme 14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14-pro-plus",
+          "name": "Realme 14 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15",
+          "name": "Realme 15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-5g",
+          "name": "Realme 15 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-pro",
+          "name": "Realme 15 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15t",
+          "name": "Realme 15t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt",
+          "name": "Gt",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-master",
+          "name": "Gt Master",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2",
+          "name": "Gt 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2-pro",
+          "name": "Gt 2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo2",
+          "name": "Gt Neo2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-2t",
+          "name": "Gt Neo 2t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-3",
+          "name": "Gt 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3",
+          "name": "Gt Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3t",
+          "name": "Gt Neo 3t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5",
+          "name": "Gt 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5",
+          "name": "Gt Neo 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-240w",
+          "name": "Gt Neo 5 240w",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-se",
+          "name": "Gt Neo 5 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5-pro",
+          "name": "Gt 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6",
+          "name": "Gt 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-6",
+          "name": "Gt Neo 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6t",
+          "name": "Gt 6t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7",
+          "name": "Gt 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7t",
+          "name": "Gt 7t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7-pro",
+          "name": "Gt 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c2",
+          "name": "C2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c3",
+          "name": "C3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c11",
+          "name": "C11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c15",
+          "name": "C15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c20",
+          "name": "C20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21",
+          "name": "C21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21y",
+          "name": "C21y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25",
+          "name": "C25",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25s",
+          "name": "C25s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25y",
+          "name": "C25y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30",
+          "name": "C30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30s",
+          "name": "C30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c31",
+          "name": "C31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c33",
+          "name": "C33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c35",
+          "name": "C35",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c51",
+          "name": "C51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c53",
+          "name": "C53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c55",
+          "name": "C55",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c61",
+          "name": "C61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c63",
+          "name": "C63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c71",
+          "name": "C71",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c75",
+          "name": "C75",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x",
+          "name": "X",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2",
+          "name": "X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x2-pro",
+          "name": "X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x3-superzoom",
+          "name": "X3 Superzoom",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-5g",
+          "name": "X50 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "x50-pro-5g",
+          "name": "X50 Pro 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "xt",
+          "name": "Xt",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "x_series": [
@@ -1855,6 +8125,401 @@ export const brandData = {
           "id": "xt",
           "name": "Realme XT",
           "image": "/logos/realme/xt.jpg"
+        },
+        {
+          "id": "realme-6",
+          "name": "Realme 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-6s",
+          "name": "Realme 6s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7",
+          "name": "Realme 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7i",
+          "name": "Realme 7i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-7-pro",
+          "name": "Realme 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8",
+          "name": "Realme 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8i",
+          "name": "Realme 8i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-8-pro",
+          "name": "Realme 8 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9",
+          "name": "Realme 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9i",
+          "name": "Realme 9i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-9-pro-plus",
+          "name": "Realme 9 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10",
+          "name": "Realme 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro",
+          "name": "Realme 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-10-pro-plus",
+          "name": "Realme 10 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11",
+          "name": "Realme 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro",
+          "name": "Realme 11 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-11-pro-plus",
+          "name": "Realme 11 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12",
+          "name": "Realme 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-12-plus",
+          "name": "Realme 12 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13",
+          "name": "Realme 13",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-5g",
+          "name": "Realme 13 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-13-pro-plus",
+          "name": "Realme 13 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14",
+          "name": "Realme 14",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14t",
+          "name": "Realme 14t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-14-pro-plus",
+          "name": "Realme 14 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15",
+          "name": "Realme 15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-5g",
+          "name": "Realme 15 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15-pro",
+          "name": "Realme 15 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "realme-15t",
+          "name": "Realme 15t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt",
+          "name": "Gt",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-master",
+          "name": "Gt Master",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2",
+          "name": "Gt 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-2-pro",
+          "name": "Gt 2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo2",
+          "name": "Gt Neo2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-2t",
+          "name": "Gt Neo 2t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-3",
+          "name": "Gt 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3",
+          "name": "Gt Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-3t",
+          "name": "Gt Neo 3t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5",
+          "name": "Gt 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5",
+          "name": "Gt Neo 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-240w",
+          "name": "Gt Neo 5 240w",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-5-se",
+          "name": "Gt Neo 5 Se",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-5-pro",
+          "name": "Gt 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6",
+          "name": "Gt 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-neo-6",
+          "name": "Gt Neo 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-6t",
+          "name": "Gt 6t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7",
+          "name": "Gt 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7t",
+          "name": "Gt 7t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-7-pro",
+          "name": "Gt 7 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c2",
+          "name": "C2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c3",
+          "name": "C3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c11",
+          "name": "C11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c15",
+          "name": "C15",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c20",
+          "name": "C20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21",
+          "name": "C21",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c21y",
+          "name": "C21y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25",
+          "name": "C25",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25s",
+          "name": "C25s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c25y",
+          "name": "C25y",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30",
+          "name": "C30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c30s",
+          "name": "C30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c31",
+          "name": "C31",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c33",
+          "name": "C33",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c35",
+          "name": "C35",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c51",
+          "name": "C51",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c53",
+          "name": "C53",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c55",
+          "name": "C55",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c61",
+          "name": "C61",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c63",
+          "name": "C63",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c71",
+          "name": "C71",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "c75",
+          "name": "C75",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30",
+          "name": "Narzo 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-4g",
+          "name": "Narzo 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30-5g",
+          "name": "Narzo 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-30a",
+          "name": "Narzo 30a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50",
+          "name": "Narzo 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50a",
+          "name": "Narzo 50a",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i",
+          "name": "Narzo 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "narzo-50i-prime",
+          "name": "Narzo 50i Prime",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -1932,6 +8597,181 @@ export const brandData = {
           "id": "note-50-pro-plus",
           "name": "Note 50 Pro+",
           "image": "/logos/infinix/note50-pro-plus.jpg"
+        },
+        {
+          "id": "hot-10",
+          "name": "Hot 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10i",
+          "name": "Hot 10i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10lite",
+          "name": "Hot 10lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10s",
+          "name": "Hot 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10t",
+          "name": "Hot 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-11",
+          "name": "Hot 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12",
+          "name": "Hot 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12pro",
+          "name": "Hot 12pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12play",
+          "name": "Hot 12play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12i",
+          "name": "Hot 12i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20",
+          "name": "Hot 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20i",
+          "name": "Hot 20i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20s",
+          "name": "Hot 20s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30",
+          "name": "Hot 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30-play",
+          "name": "Hot 30 Play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40i",
+          "name": "Hot 40i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40pro",
+          "name": "Hot 40pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50",
+          "name": "Hot 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50i",
+          "name": "Hot 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50pro",
+          "name": "Hot 50pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60i",
+          "name": "Hot 60i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60-pro-plus",
+          "name": "Hot 60 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-hd",
+          "name": "Smart 6 Hd",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-plus",
+          "name": "Smart 6 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-7-plus",
+          "name": "Smart 7 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-9",
+          "name": "Smart 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-x-pro",
+          "name": "Zero X Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-4g",
+          "name": "Zero 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-5g",
+          "name": "Zero 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-4g",
+          "name": "Zero 40 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-5g",
+          "name": "Zero 40 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-10-pro",
+          "name": "Gt 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-20-pro",
+          "name": "Gt 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30-pro",
+          "name": "Gt 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30",
+          "name": "Gt 30",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "hot_series": [
@@ -2044,6 +8884,141 @@ export const brandData = {
           "id": "hot-60-pro-plus",
           "name": "Hot 60 Pro+",
           "image": "/logos/infinix/hot60-pro-plus.jpg"
+        },
+        {
+          "id": "note-7",
+          "name": "Note 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-7-lite",
+          "name": "Note 7 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-8",
+          "name": "Note 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30",
+          "name": "Note 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30i",
+          "name": "Note 30i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro",
+          "name": "Note 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro-4g",
+          "name": "Note 40 Pro 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50",
+          "name": "Note 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro",
+          "name": "Note 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro-plus",
+          "name": "Note 50 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-hd",
+          "name": "Smart 6 Hd",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-plus",
+          "name": "Smart 6 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-7-plus",
+          "name": "Smart 7 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-9",
+          "name": "Smart 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-x-pro",
+          "name": "Zero X Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-4g",
+          "name": "Zero 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-5g",
+          "name": "Zero 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-4g",
+          "name": "Zero 40 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-5g",
+          "name": "Zero 40 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-10-pro",
+          "name": "Gt 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-20-pro",
+          "name": "Gt 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30-pro",
+          "name": "Gt 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30",
+          "name": "Gt 30",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "smart_series": [
@@ -2066,6 +9041,231 @@ export const brandData = {
           "id": "smart-9",
           "name": "Smart 9",
           "image": "/logos/infinix/smart9.jpg"
+        },
+        {
+          "id": "note-7",
+          "name": "Note 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-7-lite",
+          "name": "Note 7 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-8",
+          "name": "Note 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30",
+          "name": "Note 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30i",
+          "name": "Note 30i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro",
+          "name": "Note 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro-4g",
+          "name": "Note 40 Pro 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50",
+          "name": "Note 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro",
+          "name": "Note 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro-plus",
+          "name": "Note 50 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10",
+          "name": "Hot 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10i",
+          "name": "Hot 10i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10lite",
+          "name": "Hot 10lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10s",
+          "name": "Hot 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10t",
+          "name": "Hot 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-11",
+          "name": "Hot 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12",
+          "name": "Hot 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12pro",
+          "name": "Hot 12pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12play",
+          "name": "Hot 12play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12i",
+          "name": "Hot 12i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20",
+          "name": "Hot 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20i",
+          "name": "Hot 20i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20s",
+          "name": "Hot 20s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30",
+          "name": "Hot 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30-play",
+          "name": "Hot 30 Play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40i",
+          "name": "Hot 40i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40pro",
+          "name": "Hot 40pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50",
+          "name": "Hot 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50i",
+          "name": "Hot 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50pro",
+          "name": "Hot 50pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60i",
+          "name": "Hot 60i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60-pro-plus",
+          "name": "Hot 60 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-x-pro",
+          "name": "Zero X Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-4g",
+          "name": "Zero 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-5g",
+          "name": "Zero 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-4g",
+          "name": "Zero 40 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-5g",
+          "name": "Zero 40 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-10-pro",
+          "name": "Gt 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-20-pro",
+          "name": "Gt 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30-pro",
+          "name": "Gt 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30",
+          "name": "Gt 30",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "zero_series": [
@@ -2093,6 +9293,226 @@ export const brandData = {
           "id": "zero-40-5g",
           "name": "Zero 40 5G",
           "image": "/logos/infinix/zero-40-5g.jpg"
+        },
+        {
+          "id": "note-7",
+          "name": "Note 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-7-lite",
+          "name": "Note 7 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-8",
+          "name": "Note 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30",
+          "name": "Note 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30i",
+          "name": "Note 30i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro",
+          "name": "Note 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro-4g",
+          "name": "Note 40 Pro 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50",
+          "name": "Note 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro",
+          "name": "Note 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro-plus",
+          "name": "Note 50 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10",
+          "name": "Hot 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10i",
+          "name": "Hot 10i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10lite",
+          "name": "Hot 10lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10s",
+          "name": "Hot 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10t",
+          "name": "Hot 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-11",
+          "name": "Hot 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12",
+          "name": "Hot 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12pro",
+          "name": "Hot 12pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12play",
+          "name": "Hot 12play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12i",
+          "name": "Hot 12i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20",
+          "name": "Hot 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20i",
+          "name": "Hot 20i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20s",
+          "name": "Hot 20s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30",
+          "name": "Hot 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30-play",
+          "name": "Hot 30 Play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40i",
+          "name": "Hot 40i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40pro",
+          "name": "Hot 40pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50",
+          "name": "Hot 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50i",
+          "name": "Hot 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50pro",
+          "name": "Hot 50pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60i",
+          "name": "Hot 60i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60-pro-plus",
+          "name": "Hot 60 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-hd",
+          "name": "Smart 6 Hd",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-plus",
+          "name": "Smart 6 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-7-plus",
+          "name": "Smart 7 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-9",
+          "name": "Smart 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-10-pro",
+          "name": "Gt 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-20-pro",
+          "name": "Gt 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30-pro",
+          "name": "Gt 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "gt-30",
+          "name": "Gt 30",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "gt_series": [
@@ -2115,6 +9535,231 @@ export const brandData = {
           "id": "gt-30",
           "name": "GT 30",
           "image": "/logos/infinix/gt30.jpg"
+        },
+        {
+          "id": "note-7",
+          "name": "Note 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-7-lite",
+          "name": "Note 7 Lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-8",
+          "name": "Note 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10",
+          "name": "Note 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-10-pro",
+          "name": "Note 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12",
+          "name": "Note 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-12-pro",
+          "name": "Note 12 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30",
+          "name": "Note 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-30i",
+          "name": "Note 30i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro",
+          "name": "Note 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-40-pro-4g",
+          "name": "Note 40 Pro 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50",
+          "name": "Note 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro",
+          "name": "Note 50 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "note-50-pro-plus",
+          "name": "Note 50 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10",
+          "name": "Hot 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10i",
+          "name": "Hot 10i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10lite",
+          "name": "Hot 10lite",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10s",
+          "name": "Hot 10s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-10t",
+          "name": "Hot 10t",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-11",
+          "name": "Hot 11",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12",
+          "name": "Hot 12",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12pro",
+          "name": "Hot 12pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12play",
+          "name": "Hot 12play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-12i",
+          "name": "Hot 12i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20",
+          "name": "Hot 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20i",
+          "name": "Hot 20i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-20s",
+          "name": "Hot 20s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30",
+          "name": "Hot 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-30-play",
+          "name": "Hot 30 Play",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40i",
+          "name": "Hot 40i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-40pro",
+          "name": "Hot 40pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50",
+          "name": "Hot 50",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50i",
+          "name": "Hot 50i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-50pro",
+          "name": "Hot 50pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60i",
+          "name": "Hot 60i",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "hot-60-pro-plus",
+          "name": "Hot 60 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-hd",
+          "name": "Smart 6 Hd",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-6-plus",
+          "name": "Smart 6 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-7-plus",
+          "name": "Smart 7 Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "smart-9",
+          "name": "Smart 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-x-pro",
+          "name": "Zero X Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-4g",
+          "name": "Zero 30 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-30-5g",
+          "name": "Zero 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-4g",
+          "name": "Zero 40 4g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "zero-40-5g",
+          "name": "Zero 40 5g",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }
@@ -2212,6 +9857,176 @@ export const brandData = {
           "id": "camon-40-premier",
           "name": "Camon 40 Premier 5G",
           "image": "/logos/tecno/camon40-premier.jpg"
+        },
+        {
+          "id": "spark-7",
+          "name": "Spark 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8",
+          "name": "Spark 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8p",
+          "name": "Spark 8p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8c",
+          "name": "Spark 8c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-9",
+          "name": "Spark 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-9-pro",
+          "name": "Spark 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-10",
+          "name": "Spark 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-10-pro",
+          "name": "Spark 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20",
+          "name": "Spark 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20c",
+          "name": "Spark 20c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20-pro-plus",
+          "name": "Spark 20 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-go-2022",
+          "name": "Spark Go 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-go-2024",
+          "name": "Spark Go 2024",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30",
+          "name": "Spark 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30-5g",
+          "name": "Spark 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30-pro",
+          "name": "Spark 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40",
+          "name": "Spark 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40-pro",
+          "name": "Spark 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40-pro-plus",
+          "name": "Spark 40 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo",
+          "name": "Pova Neo",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo-2",
+          "name": "Pova Neo 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo-3",
+          "name": "Pova Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-4",
+          "name": "Pova 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-4-pro",
+          "name": "Pova 4 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-5",
+          "name": "Pova 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-5-pro",
+          "name": "Pova 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6",
+          "name": "Pova 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6-neo",
+          "name": "Pova 6 Neo",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6-pro",
+          "name": "Pova 6 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-x2",
+          "name": "Phantom X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-x2-pro",
+          "name": "Phantom X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-fold",
+          "name": "Phantom V Fold",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-fold2",
+          "name": "Phantom V Fold2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-flip2",
+          "name": "Phantom V Flip2",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "spark_series": [
@@ -2309,6 +10124,171 @@ export const brandData = {
           "id": "spark-40-pro-plus",
           "name": "Spark 40 Pro+",
           "image": "/logos/tecno/spark40-pro-plus.jpg"
+        },
+        {
+          "id": "camon-16",
+          "name": "Camon 16",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17",
+          "name": "Camon 17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17p",
+          "name": "Camon 17p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17-pro",
+          "name": "Camon 17 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18",
+          "name": "Camon 18",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18p",
+          "name": "Camon 18p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18-premier",
+          "name": "Camon 18 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-19",
+          "name": "Camon 19",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20",
+          "name": "Camon 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20-pro",
+          "name": "Camon 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20-premier",
+          "name": "Camon 20 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30",
+          "name": "Camon 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-5g",
+          "name": "Camon 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30s",
+          "name": "Camon 30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-pro",
+          "name": "Camon 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-premier",
+          "name": "Camon 30 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-40",
+          "name": "Camon 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-40-premier",
+          "name": "Camon 40 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo",
+          "name": "Pova Neo",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo-2",
+          "name": "Pova Neo 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo-3",
+          "name": "Pova Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-4",
+          "name": "Pova 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-4-pro",
+          "name": "Pova 4 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-5",
+          "name": "Pova 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-5-pro",
+          "name": "Pova 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6",
+          "name": "Pova 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6-neo",
+          "name": "Pova 6 Neo",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6-pro",
+          "name": "Pova 6 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-x2",
+          "name": "Phantom X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-x2-pro",
+          "name": "Phantom X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-fold",
+          "name": "Phantom V Fold",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-fold2",
+          "name": "Phantom V Fold2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-flip2",
+          "name": "Phantom V Flip2",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "pova_series": [
@@ -2361,6 +10341,216 @@ export const brandData = {
           "id": "pova-6-pro",
           "name": "Pova 6 Pro 5G",
           "image": "/logos/tecno/pova6-pro.jpg"
+        },
+        {
+          "id": "camon-16",
+          "name": "Camon 16",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17",
+          "name": "Camon 17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17p",
+          "name": "Camon 17p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17-pro",
+          "name": "Camon 17 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18",
+          "name": "Camon 18",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18p",
+          "name": "Camon 18p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18-premier",
+          "name": "Camon 18 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-19",
+          "name": "Camon 19",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20",
+          "name": "Camon 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20-pro",
+          "name": "Camon 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20-premier",
+          "name": "Camon 20 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30",
+          "name": "Camon 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-5g",
+          "name": "Camon 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30s",
+          "name": "Camon 30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-pro",
+          "name": "Camon 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-premier",
+          "name": "Camon 30 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-40",
+          "name": "Camon 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-40-premier",
+          "name": "Camon 40 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-7",
+          "name": "Spark 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8",
+          "name": "Spark 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8p",
+          "name": "Spark 8p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8c",
+          "name": "Spark 8c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-9",
+          "name": "Spark 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-9-pro",
+          "name": "Spark 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-10",
+          "name": "Spark 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-10-pro",
+          "name": "Spark 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20",
+          "name": "Spark 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20c",
+          "name": "Spark 20c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20-pro-plus",
+          "name": "Spark 20 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-go-2022",
+          "name": "Spark Go 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-go-2024",
+          "name": "Spark Go 2024",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30",
+          "name": "Spark 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30-5g",
+          "name": "Spark 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30-pro",
+          "name": "Spark 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40",
+          "name": "Spark 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40-pro",
+          "name": "Spark 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40-pro-plus",
+          "name": "Spark 40 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-x2",
+          "name": "Phantom X2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-x2-pro",
+          "name": "Phantom X2 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-fold",
+          "name": "Phantom V Fold",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-fold2",
+          "name": "Phantom V Fold2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "phantom-v-flip2",
+          "name": "Phantom V Flip2",
+          "image": "/logos/default-phone.jpg"
         }
       ],
       "phantom_series": [
@@ -2388,6 +10578,241 @@ export const brandData = {
           "id": "phantom-v-flip2",
           "name": "Phantom V Flip 2 5G",
           "image": "/logos/tecno/phantom-v-flip2.jpg"
+        },
+        {
+          "id": "camon-16",
+          "name": "Camon 16",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17",
+          "name": "Camon 17",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17p",
+          "name": "Camon 17p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-17-pro",
+          "name": "Camon 17 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18",
+          "name": "Camon 18",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18p",
+          "name": "Camon 18p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-18-premier",
+          "name": "Camon 18 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-19",
+          "name": "Camon 19",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20",
+          "name": "Camon 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20-pro",
+          "name": "Camon 20 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-20-premier",
+          "name": "Camon 20 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30",
+          "name": "Camon 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-5g",
+          "name": "Camon 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30s",
+          "name": "Camon 30s",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-pro",
+          "name": "Camon 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-30-premier",
+          "name": "Camon 30 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-40",
+          "name": "Camon 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "camon-40-premier",
+          "name": "Camon 40 Premier",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-7",
+          "name": "Spark 7",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8",
+          "name": "Spark 8",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8p",
+          "name": "Spark 8p",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-8c",
+          "name": "Spark 8c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-9",
+          "name": "Spark 9",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-9-pro",
+          "name": "Spark 9 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-10",
+          "name": "Spark 10",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-10-pro",
+          "name": "Spark 10 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20",
+          "name": "Spark 20",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20c",
+          "name": "Spark 20c",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-20-pro-plus",
+          "name": "Spark 20 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-go-2022",
+          "name": "Spark Go 2022",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-go-2024",
+          "name": "Spark Go 2024",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30",
+          "name": "Spark 30",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30-5g",
+          "name": "Spark 30 5g",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-30-pro",
+          "name": "Spark 30 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40",
+          "name": "Spark 40",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40-pro",
+          "name": "Spark 40 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "spark-40-pro-plus",
+          "name": "Spark 40 Pro Plus",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo",
+          "name": "Pova Neo",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo-2",
+          "name": "Pova Neo 2",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-neo-3",
+          "name": "Pova Neo 3",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-4",
+          "name": "Pova 4",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-4-pro",
+          "name": "Pova 4 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-5",
+          "name": "Pova 5",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-5-pro",
+          "name": "Pova 5 Pro",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6",
+          "name": "Pova 6",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6-neo",
+          "name": "Pova 6 Neo",
+          "image": "/logos/default-phone.jpg"
+        },
+        {
+          "id": "pova-6-pro",
+          "name": "Pova 6 Pro",
+          "image": "/logos/default-phone.jpg"
         }
       ]
     }

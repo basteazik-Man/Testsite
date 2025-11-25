@@ -1,9 +1,9 @@
 // src/components/admin/ModelEditor.jsx
-// ИСПРАВЛЕНО: Пустые поля для новых услуг
+// ИСПРАВЛЕН ПУТЬ К priceUtils
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { calculateFinalPrice, safeParseFloat } from "../../../utils/priceUtils";
+import { calculateFinalPrice, safeParseFloat } from "../../utils/priceUtils"; // ИСПРАВЛЕН ПУТЬ!
 
 export default function ModelEditor({ modelKey, services, onChange }) {
   const [localServices, setLocalServices] = useState(services || []);
@@ -158,7 +158,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
                         value={service.name || ""}
                         onChange={(e) => updateService(index, { name: e.target.value })}
                         className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm"
-                        placeholder="Название услуги" // ДОБАВЛЕН placeholder
+                        placeholder="Название услуги"
                       />
                     </div>
 
@@ -174,7 +174,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
                           updateService(index, { price: raw === "" ? "" : raw });
                         }}
                         className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-center"
-                        placeholder="0" // ДОБАВЛЕН placeholder
+                        placeholder="0"
                         min="0"
                         step="100"
                       />
@@ -191,7 +191,7 @@ export default function ModelEditor({ modelKey, services, onChange }) {
                         }}
                         onBlur={() => handleDiscountBlur(index)}
                         className="w-full p-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 text-sm text-center"
-                        placeholder="0" // ДОБАВЛЕН placeholder
+                        placeholder="0"
                         min="0"
                         max="100"
                         step="5"

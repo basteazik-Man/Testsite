@@ -18,7 +18,6 @@ export default function BrandPage() {
   const [selectedCategory, setSelectedCategory] = useState(getInitialCategory);
 
   const data = brandData[brand?.toLowerCase()];
-  const brandPrices = PRICES[brand?.toLowerCase()];
 
   // Обработка ошибок - проверка наличия бренда
   if (!brand) {
@@ -64,52 +63,22 @@ export default function BrandPage() {
     }
   }, [selectedCategory, brand]);
 
-  // НОВАЯ ФУНКЦИЯ: Получить ВСЕ модели для отображения (из brandData + из PRICES)
-  const getAllModelsForCategory = () => {
-    if (!selectedCategory) return [];
-
-    // Модели из brandData для выбранной категории
-    const modelsFromBrandData = hasCategories && selectedCategory
-      ? data.categories[selectedCategory] || []
-      : [];
-
-    // Модели из PRICES (данных цен) для этого бренда
-    const modelsFromPrices = brandPrices?.models ? Object.keys(brandPrices.models) : [];
-
-    // Объединяем модели, убираем дубликаты
-    const allModelsMap = new Map();
-
-    // Сначала добавляем модели из brandData
-    modelsFromBrandData.forEach(model => {
-      allModelsMap.set(model.id, {
-        id: model.id,
-        name: model.name,
-        image: model.image,
-        from: 'brandData'
-      });
-    });
-
-    // Затем добавляем модели из PRICES, которых нет в brandData
-    modelsFromPrices.forEach(modelKey => {
-      if (!allModelsMap.has(modelKey)) {
-        // Создаем человеко-читаемое название из ключа модели
-        const modelName = modelKey
-          .replace(/-/g, ' ')
-          .replace(/\b\w/g, letter => letter.toUpperCase());
-        
-        allModelsMap.set(modelKey, {
-          id: modelKey,
-          name: modelName,
-          image: "/logos/default-phone.jpg",
-          from: 'prices'
-        });
-      }
-    });
-
-    return Array.from(allModelsMap.values());
+  // ФУНКЦИЯ: Получить модели для выбранной категории ТОЛЬКО из brandData
+  const getModelsForCategory = () => {
+    if (!selectedCategory || !hasCategories) return [];
+    
+    // Берем модели ТОЛЬКО из brandData для выбранной категории
+    const modelsFromBrandData = data.categories[selectedCategory] || [];
+    
+    return modelsFromBrandData;
   };
 
-  const modelsToDisplay = getAllModelsForCategory();
+  const modelsToDisplay = getModelsForCategory();
+
+  // ФУНКЦИЯ: Получить отображаемое название категории
+  const getCategoryDisplayName = (category) => {
+    return category.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-10 px-4" style={{ position: 'relative', zIndex: 1 }}>
@@ -138,7 +107,7 @@ export default function BrandPage() {
                 }`}
                 style={{ cursor: 'pointer' }}
               >
-                {cat.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+                {getCategoryDisplayName(cat)}
                 {getCategoryModelCount(cat) > 0 && ` (${getCategoryModelCount(cat)})`}
               </button>
             ))}
@@ -151,24 +120,16 @@ export default function BrandPage() {
               <button
                 key={model.id}
                 onClick={() => navigate(`/brand/${brand}/model/${encodeURIComponent(model.id)}`)}
-                className="bg-white rounded-2xl py-4 px-6 text-gray-800 font-semibold border border-gray-200 shadow-md hover:shadow-xl transition-all text-base md:text-lg w-full text-center relative z-10 hover:border-blue-300 hover:bg-blue-50 group"
+                className="bg-white rounded-2xl py-4 px-6 text-gray-800 font-semibold border border-gray-200 shadow-md hover:shadow-xl transition-all text-base md:text-lg w-full text-center relative z-10 hover:border-blue-300 hover:bg-blue-50"
                 style={{ cursor: 'pointer' }}
-                title={model.from === 'prices' ? "Модель из данных цен" : "Модель из каталога"}
               >
-                <div className="flex flex-col items-center">
-                  <span>{model.name}</span>
-                  {model.from === 'prices' && (
-                    <span className="text-xs text-green-600 mt-1 bg-green-100 px-2 py-1 rounded-full">
-                      ✓ с ценами
-                    </span>
-                  )}
-                </div>
+                {model.name}
               </button>
             ))
           ) : (
             <p className="col-span-full text-center text-gray-500 relative z-10">
               {hasCategories && categories.length > 0
-                ? "В этой категории пока нет моделей с данными."
+                ? "В этой категории пока нет моделей."
                 : "Модели не найдены."}
             </p>
           )}
@@ -176,10 +137,7 @@ export default function BrandPage() {
 
         {/* Информация о количестве моделей */}
         <div className="mt-6 text-center text-sm text-gray-600">
-          Всего моделей: {modelsToDisplay.length} 
-          {modelsToDisplay.filter(m => m.from === 'prices').length > 0 && 
-            ` (${modelsToDisplay.filter(m => m.from === 'prices').length} с ценами)`
-          }
+          Всего моделей в категории: {modelsToDisplay.length}
         </div>
 
         {/* БЛОК ДОСТАВКИ */}
@@ -208,27 +166,6 @@ export default function BrandPage() {
 
   // Вспомогательная функция для подсчета моделей в категории
   function getCategoryModelCount(category) {
-    const modelsFromBrandData = data.categories[category]?.length || 0;
-    const modelsFromPrices = brandPrices?.models ? 
-      Object.keys(brandPrices.models).filter(modelKey => {
-        // Проверяем, относится ли модель к этой категории (простая эвристика)
-        const modelName = modelKey.toLowerCase();
-        const categoryName = category.toLowerCase();
-        
-        // Для Samsung
-        if (brand.toLowerCase() === 'samsung') {
-          if (categoryName.includes('galaxy_s') && modelName.match(/s\d+/)) return true;
-          if (categoryName.includes('galaxy_a') && modelName.match(/a\d+/)) return true;
-          if (categoryName.includes('galaxy_m') && modelName.match(/m\d+/)) return true;
-          if (categoryName.includes('galaxy_note') && modelName.includes('note')) return true;
-          if (categoryName.includes('galaxy_z') && (modelName.includes('flip') || modelName.includes('fold'))) return true;
-          if (categoryName.includes('galaxy_tab') && modelName.includes('tab')) return true;
-        }
-        
-        // Общая проверка по названию
-        return modelName.includes(categoryName.replace('galaxy_', '').replace('_', ''));
-      }).length : 0;
-    
-    return modelsFromBrandData + modelsFromPrices;
+    return data.categories[category]?.length || 0;
   }
 }

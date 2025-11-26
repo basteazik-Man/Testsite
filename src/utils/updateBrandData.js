@@ -1,5 +1,5 @@
 // src/utils/updateBrandData.js
-// ПОЛНОСТЬЮ ПЕРЕПИСАН - правильное удаление и добавление моделей
+// ИСПРАВЛЕНО: Модели теперь не дублируются во все категории
 
 import { brandData as existingBrandData } from '../data/brandData';
 
@@ -25,7 +25,7 @@ export const generateUpdatedBrandData = (pricesData) => {
     Object.entries(updatedBrandData[brandKey].categories).forEach(([categoryName, categoryModels]) => {
       const modelsToKeep = [];
       
-      // 1. Сначала обрабатываем существующие модели в brandData
+      // 1. Сначала обрабатываем существующие модели в brandData (очистка удаленных)
       categoryModels.forEach(existingModel => {
         const modelId = existingModel.id;
         
@@ -49,25 +49,29 @@ export const generateUpdatedBrandData = (pricesData) => {
 
       // 2. Добавляем новые модели из админки
       adminModels.forEach(modelKey => {
+        // Проверяем, есть ли уже эта модель в текущей категории
         const modelExists = modelsToKeep.some(model => model.id === modelKey);
         
         if (!modelExists) {
           const modelData = brandInfo.models[modelKey];
-          let targetCategory = categoryName;
           
-          // Определяем категорию из данных админки
+          // ВАЖНОЕ ИСПРАВЛЕНИЕ: По умолчанию targetCategory = null.
+          // Раньше здесь было categoryName, из-за чего модели без метки попадали во все категории подряд.
+          let targetCategory = null;
+          
+          // Определяем категорию ТОЛЬКО если она явно указана в админке (для новых моделей)
           if (modelData && typeof modelData === 'object' && modelData._category) {
             targetCategory = modelData._category;
           }
           
-          // Добавляем только если это текущая категория
-          if (targetCategory === categoryName) {
+          // Добавляем модель, ТОЛЬКО если она явно предназначена для текущей категории цикла
+          if (targetCategory && targetCategory === categoryName) {
             const modelName = getModelDisplayName(modelKey, modelData);
             
             modelsToKeep.push({
               id: modelKey,
               name: modelName,
-              image: "/logos/default-phone.jpg"
+              image: "/logos/default-phone.jpg" // Дефолтная картинка для новых
             });
 
             addedModels.push({
@@ -82,7 +86,7 @@ export const generateUpdatedBrandData = (pricesData) => {
         }
       });
 
-      // Обновляем категорию
+      // Обновляем категорию очищенным списком
       updatedBrandData[brandKey].categories[categoryName] = modelsToKeep;
     });
   });

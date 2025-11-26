@@ -2,11 +2,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { useSearch } from "../hooks/useSearch"; // Убедись, что путь верный
-import { BRANDS } from "../data/brands";       // Убедись, что путь верный
-import { FaShieldAlt, FaRocket, FaWallet, FaSearch } from "react-icons/fa"; // Добавили иконки
+import { useSearch } from "../hooks/useSearch";
+import { BRANDS } from "../data/brands";
+import { FaShieldAlt, FaRocket, FaWallet, FaSearch } from "react-icons/fa";
 
-// Импортируем панель (если она есть в проекте)
+// Импортируем панель
 import DynamicHeroPanel from "../components/DynamicHeroPanel";
 
 const FALLBACK_BRANDS = [
@@ -21,13 +21,11 @@ export default function Home() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const navigate = useNavigate();
 
-  // Безопасный вызов хука
   const searchHook = useSearch || (() => ({ searchResults: [] }));
   const { searchResults: results = [] } = searchHook(query);
 
   const searchRef = useRef(null);
 
-  // Закрытие подсказок при клике вне
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -78,7 +76,6 @@ export default function Home() {
     },
   ];
 
-  // Анимация появления контейнера
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
@@ -92,7 +89,7 @@ export default function Home() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-slate-50 text-gray-800">
       
-      {/* === ФОНОВЫЕ ДЕКОРАЦИИ (BLOBS) === */}
+      {/* === ФОНОВЫЕ ДЕКОРАЦИИ === */}
       <div className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-blue-300/30 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute top-[20%] right-[-10%] w-96 h-96 bg-purple-300/30 rounded-full blur-[100px] pointer-events-none" />
 
@@ -112,14 +109,13 @@ export default function Home() {
             Вернем жизнь вашим гаджетам. Быстро. Честно. Профессионально.
           </p>
         
-          {/* ПОИСК */}
           <div ref={searchRef} className="relative w-full max-w-2xl mx-auto">
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-200"></div>
               <div className="relative flex bg-white rounded-2xl shadow-xl">
                 <input
                   type="text"
-                  placeholder="Введите модель устройства (например: iPhone 13)..."
+                  placeholder="Найти модель (например: iPhone 13)..."
                   value={query}
                   onChange={handleInputChange}
                   onFocus={() => query.trim().length > 0 && setShowSuggestions(true)}
@@ -128,7 +124,7 @@ export default function Home() {
                 />
                 <button
                   onClick={handleSearchAll}
-                  className="px-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-r-2xl transition-colors flex items-center gap-2"
+                  className="px-6 sm:px-8 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-r-2xl transition-colors flex items-center gap-2"
                 >
                   <FaSearch />
                   <span className="hidden sm:inline">Найти</span>
@@ -136,7 +132,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Выпадающий список */}
             <AnimatePresence>
               {showSuggestions && query.trim().length > 0 && (
                 <motion.ul
@@ -167,9 +162,10 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* === БЛОК ПРЕИМУЩЕСТВ (НОВОЕ) === */}
+        {/* === БЛОК ПРЕИМУЩЕСТВ (СКРЫТ НА МОБИЛЬНЫХ) === */}
+        {/* hidden md:grid — скрывает блок на экранах меньше 768px */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-5xl mb-16"
+          className="hidden md:grid grid-cols-3 gap-6 w-full max-w-5xl mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -183,7 +179,7 @@ export default function Home() {
             <motion.div 
               key={index} 
               variants={itemVariants}
-              className="bg-white p-6 rounded-2xl shadow-lg shadow-gray-200/50 flex flex-col items-center text-center hover:translate-y-[-5px] transition-transform duration-300"
+              className="bg-white p-6 rounded-2xl shadow-lg shadow-gray-200/50 flex flex-col items-center text-center hover:translate-y-[-5px] transition-transform duration-300 border border-gray-100"
             >
               <item.icon className={`text-4xl mb-4 ${item.color}`} />
               <h3 className="font-bold text-lg mb-2">{item.title}</h3>
@@ -192,12 +188,12 @@ export default function Home() {
           ))}
         </motion.div>
 
-        {/* === HERO PANEL (Твоя панель) === */}
-        <div className="w-full mb-16">
+        {/* === HERO PANEL (Центрирован) === */}
+        <div className="w-full flex justify-center mb-12 md:mb-16">
            <DynamicHeroPanel />
         </div>
 
-        {/* === БРЕНДЫ === */}
+        {/* === БРЕНДЫ (ЦВЕТНЫЕ) === */}
         <motion.section 
           className="w-full max-w-6xl mb-16"
           initial={{ opacity: 0 }}
@@ -205,8 +201,8 @@ export default function Home() {
           viewport={{ once: true }}
         >
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-800">Популярные бренды</h2>
-            <button onClick={() => navigate('/brands')} className="text-blue-600 font-medium hover:underline">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Популярные бренды</h2>
+            <button onClick={() => navigate('/brands')} className="text-blue-600 font-medium hover:underline text-sm md:text-base">
               Все бренды →
             </button>
           </div>
@@ -218,12 +214,13 @@ export default function Home() {
                 onClick={() => navigate(`/brand/${brand.id}`)}
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white shadow-md hover:shadow-xl hover:shadow-blue-500/20 transition-all border border-transparent hover:border-blue-100"
+                className="flex flex-col items-center justify-center p-6 rounded-2xl bg-white shadow-md hover:shadow-xl hover:bg-blue-50 transition-all duration-300"
               >
+                {/* Убран grayscale, логотипы всегда цветные */}
                 <img
                   src={brand.logo}
                   alt={brand.title}
-                  className="w-12 h-12 object-contain mb-3 grayscale hover:grayscale-0 transition-all duration-300"
+                  className="w-12 h-12 object-contain mb-3"
                 />
                 <span className="font-semibold text-gray-700 text-sm">{brand.title}</span>
               </motion.button>
@@ -233,7 +230,7 @@ export default function Home() {
 
         {/* === УСЛУГИ (КРУПНЫЕ КАРТОЧКИ) === */}
         <motion.section className="w-full max-w-6xl">
-           <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center md:text-left">Другие услуги</h2>
+           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center md:text-left">Другие услуги</h2>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {categories.map((cat) => (
               <motion.div
@@ -241,20 +238,19 @@ export default function Home() {
                 onClick={() => navigate(`/services?category=${cat.id}`)}
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
-                className={`relative overflow-hidden cursor-pointer rounded-3xl p-8 text-white shadow-2xl ${cat.shadow} bg-gradient-to-br ${cat.gradient} group`}
+                className={`relative overflow-hidden cursor-pointer rounded-3xl p-6 md:p-8 text-white shadow-2xl ${cat.shadow} bg-gradient-to-br ${cat.gradient} group`}
               >
-                {/* Декоративный круг внутри карточки */}
                 <div className="absolute top-[-20px] right-[-20px] w-32 h-32 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
                 
                 <div className="relative z-10 flex items-center justify-between">
                   <div>
-                    <h3 className="text-3xl font-bold mb-2">{cat.title}</h3>
-                    <p className="text-white/80 font-medium">{cat.desc}</p>
+                    <h3 className="text-2xl md:text-3xl font-bold mb-2">{cat.title}</h3>
+                    <p className="text-white/80 font-medium text-sm md:text-base">{cat.desc}</p>
                     <div className="mt-6 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold group-hover:bg-white group-hover:text-blue-600 transition-colors">
                       Рассчитать стоимость →
                     </div>
                   </div>
-                  <span className="text-6xl drop-shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
+                  <span className="text-5xl md:text-6xl drop-shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
                     {cat.icon}
                   </span>
                 </div>

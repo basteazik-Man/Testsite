@@ -14,6 +14,10 @@ const FALLBACK_BRANDS = [
   { id: "samsung", title: "Samsung", logo: "/logos/samsung.svg" },
   { id: "xiaomi", title: "Xiaomi", logo: "/logos/xiaomi.svg" },
   { id: "honor", title: "Honor", logo: "/logos/honor.svg" },
+  { id: "oneplus", title: "OnePlus", logo: "/logos/oneplus.svg" },
+  { id: "blackview", title: "Blackview", logo: "/logos/blackview.svg" },
+  { id: "doogee", title: "Doogee", logo: "/logos/doogee.svg" },
+  { id: "oukitel", title: "Oukitel", logo: "/logos/oukitel.svg" },
 ];
 
 export default function Home() {
@@ -200,11 +204,8 @@ export default function Home() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <div className="flex items-center justify-between mb-8">
+          <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-800">Популярные бренды</h2>
-            <button onClick={() => navigate('/brands')} className="text-blue-600 font-medium hover:underline text-sm md:text-base">
-              Все бренды →
-            </button>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">

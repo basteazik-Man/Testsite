@@ -1,8 +1,8 @@
 // === brandData.js ===
 // Автоматически обновлено через админку Chip&Gadget
-// Сгенерировано: 26.11.2025, 02:49:05
-// Новые модели: 1680
-// Удаленные модели: 0
+// Сгенерировано: 26.11.2025, 03:10:03
+// Новые модели: 0
+// Удаленные модели: 2
 
 export const brandData = {
   "apple": {
@@ -1148,11 +1148,6 @@ export const brandData = {
           "image": "/logos/samsung/a12.jpg"
         },
         {
-          "id": "a20",
-          "name": "Galaxy A20",
-          "image": "/logos/samsung/a20.jpg"
-        },
-        {
           "id": "a30",
           "name": "Galaxy A30",
           "image": "/logos/samsung/a30.jpg"
@@ -1206,11 +1201,6 @@ export const brandData = {
           "id": "a73",
           "name": "Galaxy A73",
           "image": "/logos/samsung/a73.jpg"
-        },
-        {
-          "id": "galaxy-a31",
-          "name": "Galaxy A31",
-          "image": "/logos/default-phone.jpg"
         },
         {
           "id": "s20",

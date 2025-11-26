@@ -1,5 +1,5 @@
 // src/components/admin/BrandEditor.jsx
-// УПРОЩЕННАЯ ВЕРСИЯ - только добавление в существующие категории
+// ИСПРАВЛЕНО: Сохранение категории (_category) при редактировании услуг
 
 import React, { useState, useMemo } from "react";
 import ModelEditor from "./ModelEditor";
@@ -48,10 +48,10 @@ export default function BrandEditor({ brandKey, data, onChange }) {
       return;
     }
 
-    // Создаем новую модель
+    // Создаем новую модель с явным указанием категории
     const newModel = {
       _customName: modelName,
-      _category: selectedCategory,
+      _category: selectedCategory, // ВАЖНО: Эта метка нужна для экспорта
       services: []
     };
 
@@ -92,19 +92,46 @@ export default function BrandEditor({ brandKey, data, onChange }) {
     if (!newName || newName === currentName) return;
 
     const modelData = brand.models[modelKey];
-    const updatedModel = {
-      ...modelData,
-      _customName: newName
-    };
+    let updatedModel;
+
+    // Проверяем структуру, чтобы не потерять данные
+    if (Array.isArray(modelData)) {
+        // Если была старая структура (массив), превращаем в объект
+        updatedModel = {
+            services: modelData,
+            _customName: newName
+        };
+    } else {
+        // Если новая (объект), обновляем имя
+        updatedModel = {
+            ...modelData,
+            _customName: newName
+        };
+    }
     
     const updatedModels = { ...brand.models, [modelKey]: updatedModel };
     updateBrand({ models: updatedModels });
   };
 
-  const handleModelChange = (modelKey, updated) => {
+  // ВАЖНОЕ ИСПРАВЛЕНИЕ: Сохраняем метаданные (_category) при обновлении услуг
+  const handleModelChange = (modelKey, updatedServices) => {
+    const currentModelData = brand.models[modelKey];
+    let newModelData;
+
+    if (currentModelData && !Array.isArray(currentModelData) && typeof currentModelData === 'object') {
+      // Если это новая модель (объект), сохраняем её свойства (_category, _customName) и обновляем services
+      newModelData = {
+        ...currentModelData,
+        services: updatedServices
+      };
+    } else {
+      // Если это старая модель (просто массив), так и оставляем массивом
+      newModelData = updatedServices;
+    }
+
     const newBrand = {
       ...brand,
-      models: { ...brand.models, [modelKey]: updated },
+      models: { ...brand.models, [modelKey]: newModelData },
     };
     onChange(brandKey, newBrand);
   };

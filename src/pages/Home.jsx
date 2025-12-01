@@ -110,11 +110,11 @@ export default function Home() {
             Ремонт <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">будущего</span>
           </h1>
           
-          {/* Кнопка "Перейти в магазин" вместо описания */}
+          {/* Кнопка "Перейти в магазин" с тем же градиентом */}
           <div className="mb-8">
             <button
               onClick={() => navigate('/store')}
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
             >
               <span className="text-2xl">🛒</span>
               <span>Перейти в магазин</span>

@@ -99,19 +99,27 @@ export default function Home() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-20 flex flex-col items-center">
         
-        {/* === ЗАГОЛОВОК И ПОИСК === */}
+        {/* === ЗАГОЛОВОК И КНОПКА МАГАЗИНА === */}
         <motion.div 
           className="text-center max-w-3xl mb-10"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-800 mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-800 mb-6 tracking-tight">
             Ремонт <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">будущего</span>
           </h1>
-          <p className="text-lg text-gray-500 mb-8">
-            Вернем жизнь вашим гаджетам. Быстро. Честно. Профессионально.
-          </p>
+          
+          {/* Кнопка "Перейти в магазин" вместо описания */}
+          <div className="mb-8">
+            <button
+              onClick={() => navigate('/store')}
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+            >
+              <span className="text-2xl">🛒</span>
+              <span>Перейти в магазин</span>
+            </button>
+          </div>
         
           <div ref={searchRef} className="relative w-full max-w-2xl mx-auto">
             <div className="relative group">
@@ -226,74 +234,6 @@ export default function Home() {
                 <span className="font-semibold text-gray-700 text-sm">{brand.title}</span>
               </motion.button>
             ))}
-          </div>
-        </motion.section>
-
-        {/* === МАГАЗИН ТЕХНИКИ (НОВЫЙ БЛОК) === */}
-        <motion.section 
-          className="w-full max-w-6xl mb-16"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-        >
-          <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800">🛒 Магазин техники</h2>
-            <p className="text-gray-500 mt-2">Новая и б/у техника с гарантией</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              onClick={() => navigate('/store?category=smartphones')}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative overflow-hidden cursor-pointer rounded-3xl p-6 md:p-8 text-white shadow-2xl shadow-amber-500/30 bg-gradient-to-br from-amber-500 to-orange-600 group"
-            >
-              <div className="absolute top-[-20px] right-[-20px] w-32 h-32 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
-              
-              <div className="relative z-10 flex items-center justify-between">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">Смартфоны</h3>
-                  <p className="text-white/80 font-medium text-sm md:text-base">Apple, Samsung, Xiaomi и другие</p>
-                  <div className="mt-6 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold group-hover:bg-white group-hover:text-orange-600 transition-colors">
-                    Смотреть все →
-                  </div>
-                </div>
-                <span className="text-5xl md:text-6xl drop-shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-                  📱
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              onClick={() => navigate('/store?category=laptops')}
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative overflow-hidden cursor-pointer rounded-3xl p-6 md:p-8 text-white shadow-2xl shadow-purple-500/30 bg-gradient-to-br from-purple-600 to-indigo-700 group"
-            >
-              <div className="absolute top-[-20px] right-[-20px] w-32 h-32 bg-white/20 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500" />
-              
-              <div className="relative z-10 flex items-center justify-between">
-                <div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-2">Ноутбуки</h3>
-                  <p className="text-white/80 font-medium text-sm md:text-base">MacBook, игровые, для работы</p>
-                  <div className="mt-6 inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-sm font-semibold group-hover:bg-white group-hover:text-purple-600 transition-colors">
-                    Смотреть все →
-                  </div>
-                </div>
-                <span className="text-5xl md:text-6xl drop-shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-                  💻
-                </span>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="mt-6 text-center">
-            <button
-              onClick={() => navigate('/store')}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-xl font-semibold text-lg hover:from-green-600 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
-            >
-              🛒 Перейти в магазин
-            </button>
           </div>
         </motion.section>
 

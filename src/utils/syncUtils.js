@@ -64,18 +64,21 @@ export const syncData = async () => {
     const localPrices = localStorage.getItem('chipgadget_prices');
     const localCategoryServices = localStorage.getItem('chipgadget_category_services');
     const localDelivery = localStorage.getItem('chipgadget_delivery');
+    const localProducts = localStorage.getItem('chipgadget_products'); // Добавляем товары
 
     const localData = {
       prices: localPrices ? JSON.parse(localPrices) : {},
       categoryServices: localCategoryServices ? JSON.parse(localCategoryServices) : {},
       delivery: localDelivery ? JSON.parse(localDelivery) : {},
+      products: localProducts ? JSON.parse(localProducts) : {}, // Добавляем товары
       lastSync: new Date().toISOString(),
     };
 
     console.log('Local data keys:', {
       prices: Object.keys(localData.prices).length,
       categoryServices: Object.keys(localData.categoryServices).length,
-      delivery: Object.keys(localData.delivery).length
+      delivery: Object.keys(localData.delivery).length,
+      products: Object.keys(localData.products).length // Добавляем товары
     });
 
     // Если в облаке нет данных, сохраняем локальные
@@ -102,6 +105,9 @@ export const syncData = async () => {
       localStorage.setItem('chipgadget_prices', JSON.stringify(cloudData.prices));
       localStorage.setItem('chipgadget_category_services', JSON.stringify(cloudData.categoryServices));
       localStorage.setItem('chipgadget_delivery', JSON.stringify(cloudData.delivery));
+      if (cloudData.products) {
+        localStorage.setItem('chipgadget_products', JSON.stringify(cloudData.products));
+      }
       return { action: 'download', data: cloudData };
     }
   } catch (error) {
